@@ -5,7 +5,7 @@
 ### *Nosotros*
 
 
-### *Somos una empresa dedicada exclusivamente a muebles , especificamente al interior del hogar , estamos en el rubro hace 5 años ,contamos con fabrica propia, una excelente atencion al cliente.Ofreciendo envios a todo el pais y increibles descuentos.*
+### *Somos una empresa dedicada exclusivamente a muebles, especificamente al interior del hogar, estamos en el rubro hace 5 años, contamos con fabrica propia, una excelente atencion al cliente. Ofreciendo envios a todo el pais e increibles descuentos.*
 ### *Interiores Belo está dirigido a los clientes que deseen renovar o redecorar su hogar con nuestros muebles hechos a medida.*
 
 ## Nos encontamos en :
