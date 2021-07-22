@@ -5,7 +5,8 @@
 ### *Nosotros*
 
 
-### *Somos una empresa dedicada exclusivamente a muebles , especificamente al interior del hogar , estamos en el rubro hace 5 años ,contamos con fabrica propia, una excelente atencion al cliente.Ofreciendo envios a todo el pais y increibles descuentos.*
+### *Somos una empresa dedicada exclusivamente a muebles , especificamente al interior del hogar , estamos en el rubro hace 5 años ,contamos con fabrica propia, una excelente atencion al cliente.Ofreciendo envios a todo el pais y increibles descuentos.
+Interiores Belo está dirigido aquellas personas con ganas de renovar o redecorar su hogar con nuestros muebles hechos a medida*
 
 ## Nos encontamos en :
 
@@ -35,12 +36,12 @@
 
 ### Integrantes Del Grupo: 
 
-## Lucila Rodriguez 
+## Lucila Rodriguez, San Miguel
 
-## Florencia Coquiz
+## Florencia Coquiz, San Miguel
 
-## Aylen Belo
+## Aylen Belo, San Miguel
 
-## Marcos Zarate 
+## Marcos Zarate, San Miguel 
 
 
