@@ -1,3 +1,5 @@
+![Logo](/integradorSprint/img/wireframes/logo/logo2.png "Logo")
+
 ## **Interiores Belo**
 
 > *Que tu hogar resalte su belleza interior* - Interiores Belo
