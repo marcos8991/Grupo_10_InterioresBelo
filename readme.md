@@ -1,4 +1,4 @@
-![Logo](/integradorSprint/img/wireframes/logo/logo2.png "Logo")
+![Logo](/img/wireframes/logo/logo2.png "Logo")
 
 ## **Interiores Belo**
 
