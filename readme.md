@@ -20,12 +20,19 @@
 ## Elementos usados.
 
 [Monaco](https://www.monacodh.com.ar) 
+Nos inspiramos en el diseño del carrousel y productos. 
 
 [Manfroni](http://www.manfroni.net) 
+ Nos inspiramos en el tipo de diseño de muebles para el home.
 
 [easy](https://www.easy.com.ar/tienda/es/easyar/muebles-de-interior) 
+ Nos inspiramos en el tipo de carrito de compras.
 
 [Decostyle](https://decostyle.com.ar) 
+ Nos inspiramos en las categorias.
+ 
+ [Hogar-Deco](https://hogar-deco.com.ar)
+ Nos inspiramos en el footer.
 
 
 
@@ -38,12 +45,12 @@
 
 ### Integrantes Del Grupo: 
 
-## Lucila Rodriguez, San Miguel
+## Lucila Rodriguez tengo 18 años, Actualmente me estoy  formando para ser desarrolladora web Full Stack en Digital House, vivo en San Miguel.
 
-## Florencia Coquiz, San Miguel
+## Florencia Coquiz, tengo 30 años, me encanta la tecnologia, vivo en San Miguel, realicé un curso de Armado y reparacion de pc ,redes, Operador de pc. Actualmente me estoy capacitando para ser desarrolladora web full strack en Digital House.
 
-## Aylen Belo, San Miguel
+## Aylen Belo, tengo 19 años, me gusta la tecnología, los idiomas y la música. Vivo en San Miguel de Tucumán y actualmente me estoy capacitando para ser desarrolladora web full stack en Digital House. 
 
-## Marcos Zarate, San Miguel 
+## Marcos Zarate, tengo 22 años, me gusta el fútbol y me dedico a la música.Actualmente me estoy capacitando para ser desarrollador web full stack en Digital House. 
 
 
