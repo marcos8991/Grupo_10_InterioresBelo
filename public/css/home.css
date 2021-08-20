@@ -1,0 +1,32 @@
+main{
+    margin: 5px auto;
+}
+main section{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main section div{
+    position: relative;
+    margin: 10px auto;
+    opacity: 0.87;
+}
+
+main section div h1{
+    position: absolute;
+}
+
+main section div h1 a{
+    color: white;
+    text-align: center;
+    text-transform:uppercase;
+    text-decoration: none;
+}
+
+main section div a img{
+    width: 280px;
+    height: 360px;
+}

@@ -1,0 +1,127 @@
+header{
+    background-color: #A4C7CF;
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 170px;
+    height: 100px;
+    margin-top: 8px;
+}
+
+header .logo img{
+    width: 100%;
+    background-position: center;
+}
+
+header .buscador {
+    width: 45%;
+    text-align: center;
+    border-radius: 7px;
+}
+
+header .buscador form{
+    display: flex;
+    height: 24px;
+    
+}
+
+header .buscador form input{
+    width: 110px;
+    margin-left: 2px;
+    text-align: center;
+    border: 0px;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: bolder; 
+    opacity: 0.85;
+    border-radius: 12px 0 0 12px;
+ }
+
+header .buscador form button{
+    width: 30px;
+    border: 0px;
+    padding: 2px;
+    background-color: white;
+    opacity: 0.85;
+    border-radius: 0 12px 12px 0;
+}
+
+header .buscador form button i{
+ margin-right: 2px;
+ text-align: center;
+ margin-bottom: 2px;
+
+}
+header .user a{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header{
+        height: 60px;
+    }
+
+    header .logo {
+        width: 100px;
+    }
+    header .buscador{
+        width: 25px
+    }
+    header .buscador {
+        width: 45%;
+        text-align: center;
+    }
+    
+    header .buscador form{
+        display: flex;
+    }
+    
+    header .buscador form input{
+        width: 60px;
+        padding: 2px;
+        font-size: 14px;
+        height: 20px;
+     }
+    
+    header .buscador form button{
+        width: 3px;
+    }
+    
+    header .buscador form button i{
+     margin-right: 2px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    header{
+        height: 110px;
+    }
+    header .logo {
+      width: 190px;
+    }
+    header .buscador {
+        width: 320px;
+        height: 60px;
+    }
+    header .buscador form input{
+        width: 80%;
+        height: 40px;
+        font-size: 23px;
+    }
+    header .buscador form button{
+        width: 20%;
+        height: 40px;
+    }
+
+    header .user a{
+        display: flex;
+        flex-direction: row;
+        width: 20px;
+    }
+}

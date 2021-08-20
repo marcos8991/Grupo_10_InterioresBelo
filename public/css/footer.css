@@ -1,0 +1,57 @@
+footer{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: #A4C7CF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer  .logo{
+    width: 170px;
+    height: 100px;
+    margin-top: 8px;
+}
+
+footer .logo img{
+    width: 100%;
+    background-position: center;
+}
+
+
+footer div h3{
+    text-transform:uppercase;
+    font-size: 18px;
+}
+
+footer .contactos {
+    padding:  7px; ;
+}
+footer .redes {
+    padding:  7px; ;
+}
+
+footer .iconos{
+    margin: 5px auto;
+    padding: 7px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .iconos a{
+    color: black;
+}
+
+footer .info {
+    padding:  7px; ;
+}
+
+footer .info div a{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   color: #000;
+   text-decoration: none;
+   padding: 4px;
+}
