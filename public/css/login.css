@@ -9,6 +9,7 @@
     color: black;
     padding: 2em;
     align-items: center; 
+    border-radius: 10px;
 } 
 
  .login-register .contenedor{
@@ -37,7 +38,7 @@
 /* EMAIL Y CONTRASEÑA */
 .ingresar .input-contenedor input{
     width: 100%;
-    background-color: #9DB2B1;
+    background-color: var(--color-celesteOscuro);
     display: flex;
     transition: all .4s;
     justify-content: center; 
@@ -59,7 +60,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #0E2D43;
+    background-color: var(--color-azul); 
     color: white;
     transition: all .5s;
     display: flex;
@@ -87,7 +88,7 @@
     
     transform: translate(-1%);
     cursor: pointer;
-    background-color: #3b5998;
+    background-color: var(--color-facebook);
     color: white;
     transition: all .5s;
     text-align: center;
@@ -96,7 +97,7 @@
 
 
 .ingresar .btn-facebook i{
-    background-color:#3b5998 ;
+    background-color:var(--color-facebook);
     color: white;
 }
 
@@ -107,13 +108,13 @@
     border-radius: 5px;
     transform: translate(-1%);
     cursor: pointer;
-    background-color: #de5246;
+    background-color: var(--color-google);
     color: white;
     transition: all .5s;
 }
 
 .ingresar .btn-google i{
-    background-color: #de5246;
+    background-color: var(--color-google);
     color: white;
 }
 
@@ -148,7 +149,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 0em 12em ;
+        padding: 2em 10em ;
         align-items: center; 
         
     }
@@ -156,6 +157,19 @@
     .ingresar .input-contenedor input{
        display: flex;
        width: 300px;
+       height: 40px;
+    }
+
+    .btn-iniciar{
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        align-items: center;
+        
+        
+
     }
    
 }
@@ -170,14 +184,27 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 0em 12em ;
+        padding: 1em 14em ;
         align-items: center; 
         
     }
 
     .ingresar .input-contenedor input{
        display: flex;
-       width: 350px;
+       width: 400px;
+       height: 50px;
+    }
+
+    .btn-iniciar{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        align-items: center;
+        
+        
+
     }
 
 }
