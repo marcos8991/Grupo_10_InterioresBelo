@@ -1,0 +1,183 @@
+
+.contenedor{
+    background: #FFFFFF;
+    width: 90%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    color: black;
+    padding: 2em;
+    align-items: center; 
+} 
+
+ .login-register .contenedor{
+    
+    margin: 0 auto;
+} 
+
+.input-contenedor{
+    margin-bottom: 10px;
+}
+
+/* usuario */
+.ingresar .input-contenedor label{
+    color: black;
+    display: flex;
+    transition: all .4s; 
+    
+}
+
+.ingresar .input-contenedor {
+    /* position: relative; */
+    margin: 25px 0;
+    
+}
+
+/* EMAIL Y CONTRASEÑA */
+.ingresar .input-contenedor input{
+    width: 100%;
+    background-color: #9DB2B1;
+    display: flex;
+    transition: all .4s;
+    justify-content: center; 
+}
+
+
+
+/* iniciar sesion */
+
+.ingresar .comentario{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.btn-iniciar{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0E2D43;
+    color: white;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+/* redes */
+
+
+.redes {
+    
+    display: flex;
+    justify-content:space-around;
+    margin: 0 1px 1px 1px;
+}
+
+.ingresar .btn-facebook{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    
+    transform: translate(-1%);
+    cursor: pointer;
+    background-color: #3b5998;
+    color: white;
+    transition: all .5s;
+    text-align: center;
+    
+}
+
+
+.ingresar .btn-facebook i{
+    background-color:#3b5998 ;
+    color: white;
+}
+
+.ingresar .btn-google{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    transform: translate(-1%);
+    cursor: pointer;
+    background-color: #de5246;
+    color: white;
+    transition: all .5s;
+}
+
+.ingresar .btn-google i{
+    background-color: #de5246;
+    color: white;
+}
+
+/* crea tu cuenta */
+
+
+.ingresar .crea-cuenta p{
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    
+    
+}
+
+.crea-cuenta a{
+    font-size: 14px;
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+/* tablet */
+
+@media (min-width:768px) {
+    
+    .contenedor{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0em 12em ;
+        align-items: center; 
+        
+    }
+
+    .ingresar .input-contenedor input{
+       display: flex;
+       width: 300px;
+    }
+   
+}
+
+
+/* PC */
+
+@media (min-width:1024px) {
+   
+    .contenedor{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0em 12em ;
+        align-items: center; 
+        
+    }
+
+    .ingresar .input-contenedor input{
+       display: flex;
+       width: 350px;
+    }
+
+}
