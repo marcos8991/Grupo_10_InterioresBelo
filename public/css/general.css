@@ -7,3 +7,7 @@
 body{
     background-color: #E5F1F0;
 }
+
+input, button{
+    border-radius: 5px;
+}
