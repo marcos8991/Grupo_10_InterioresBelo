@@ -67,39 +67,60 @@ header .user a{
 /* Tablet */
 @media (min-width: 768px) {
     header{
-        height: 60px;
+        height: 92px;
+        align-items: center;
     }
 
     header .logo {
-        width: 100px;
+        width: 170px;
     }
-    header .buscador{
-        width: 25px
-    }
+    
     header .buscador {
-        width: 45%;
-        text-align: center;
+        width: 200px;
+        text-align: center;   
+        height: 38px;
     }
     
     header .buscador form{
-        display: flex;
+        align-items: flex-end;
     }
-    
     header .buscador form input{
-        width: 60px;
+        width: 80%;
         padding: 2px;
-        font-size: 14px;
-        height: 20px;
+        font-size: 16px;
+        padding-left: 20px;
+        border-radius: 33px 0 0 33px;
      }
     
     header .buscador form button{
-        width: 3px;
+        width: 20%;
+        border-radius: 0 33px 33px 0;
     }
     
+
     header .buscador form button i{
      margin-right: 2px;
+     height: 100%;
+     font-size: 15px;
     }
 
+    header .user{
+        width: 80px;
+        height: 37px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 50px;
+    }
+
+    header .user a{
+        display: block;
+        width: 20px;
+    }
+
+    header .user a i{
+        font-size: 24px;
+        color: black;
+    }
 }
 
 /* Pc */
@@ -108,25 +129,50 @@ header .user a{
         height: 110px;
     }
     header .logo {
-      width: 190px;
+      width: 200px;
     }
     header .buscador {
-        width: 320px;
-        height: 60px;
+        width: 300px;
+        height: 44px;
+    }
+
+    header .buscador form{
+        align-items: flex-start;
     }
     header .buscador form input{
         width: 80%;
         height: 40px;
-        font-size: 23px;
+        font-size: 24px;
+        text-align: center;
+        padding-left: 20px;
+        border-radius: 23px 0 0 23px;
     }
     header .buscador form button{
         width: 20%;
         height: 40px;
+        border-radius: 0 23px 23px 0;
+    }
+
+    header .buscador form button i{
+        font-size: 22px;
+        height: 10px;
+    }
+
+    header .user{
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 50px;
     }
 
     header .user a{
-        display: flex;
-        flex-direction: row;
+        display: block;
         width: 20px;
+    }
+
+    header .user a i{
+        font-size: 30px;
+        color: black;
     }
 }
