@@ -1,28 +1,24 @@
 body{
     
-    display: flex;
+/*     
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; */
     background: var(--color-celeste); 
     
 } 
-
-main{
-    background-image: url(/images/david-van-dijk-3LTht2nxd34-unsplash.jpg);
-}
-
 
 form{
     align-items: center;
 }
 
-input , 
+ input , 
 button{
     padding: 10px;
     border: none;
-    border-radius: 5px;  
-}
+    border-radius: 5px;
+    
+} 
 
 
 h3{
@@ -32,17 +28,7 @@ h3{
 } 
 
 
-::placeholder { color: #FFFFFF; }
-
-
-@media (min-width:1024px) {
-    main{
-        
-        right: 40px;
-        position: relative;
-        background-repeat: no-repeat;
-    }
-} 
+/* ::placeholder { color: #FFFFFF; }  */
 
 
 
@@ -50,6 +36,11 @@ h3{
 
 
 
+
+.login-register main{
+    padding: 27px 0;
+    margin-bottom: 0 ;
+}
 
 
 
@@ -60,24 +51,15 @@ h3{
     display: flex;
     justify-content: center;
     flex-direction: column; 
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 2em;
     align-items: center; 
     border-radius: 10px;
     
 } 
 
-/* IMAGENES */
-/* .imagenes{
-    
-} */
-
-
-
-
 
  .login-register .contenedor{
-    
     margin: 0 auto;
 } 
 
@@ -105,8 +87,13 @@ h3{
     background-color: var(--color-celesteOscuro);
     display: flex;
     transition: all .4s;
-    justify-content: center; 
+    justify-content: center;
+    
 } 
+
+.ingresar .input-contenedor input::placeholder{
+    color: #FFFFFF;
+}
 
 
 
@@ -244,11 +231,10 @@ h3{
  @media (min-width:1024px) {
    
     .contenedor{
-        
+        padding: 25px ;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 1em 8em ;
         align-items: center; 
         
     }
@@ -268,5 +254,16 @@ h3{
         align-items: center;
         
 
+    }
+}
+
+@media (min-width:1440px) {
+    .contenedor{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;  
+        
     }
 }
