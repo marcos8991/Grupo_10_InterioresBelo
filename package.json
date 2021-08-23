@@ -1,7 +1,7 @@
 {
-  "name": "integradorSprint",
+  "name": "integradorsprint",
   "version": "1.0.0",
-  "description": "",
+  "description": "> *Que tu hogar resalte su belleza interior* - Interiores Belo",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
