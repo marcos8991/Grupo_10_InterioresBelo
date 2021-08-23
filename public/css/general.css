@@ -5,39 +5,6 @@
     box-sizing: border-box; 
 }
 
-body{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: var(--color-celeste); 
-    
-}
-
-form{
-    align-items: center;
-}
-
-input , 
-button{
-    padding: 10px;
-    border: none;
-    border-radius: 5px;  
-}
-
-
-h3{
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-
-::placeholder { color: #FFFFFF; }
-
-
-
 /* Color-variables */
 
 :root{
