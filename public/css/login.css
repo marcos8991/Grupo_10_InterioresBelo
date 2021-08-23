@@ -1,3 +1,57 @@
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--color-celeste); 
+    
+} 
+
+main{
+    background-image: url(/images/david-van-dijk-3LTht2nxd34-unsplash.jpg);
+}
+
+
+form{
+    align-items: center;
+}
+
+input , 
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;  
+}
+
+
+h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+} 
+
+
+::placeholder { color: #FFFFFF; }
+
+
+@media (min-width:1024px) {
+    main{
+        
+        right: 40px;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+} 
+
+
+
+
+
+
+
+
+
 
 .contenedor{
     background: #FFFFFF;
@@ -10,7 +64,17 @@
     padding: 2em;
     align-items: center; 
     border-radius: 10px;
+    
 } 
+
+/* IMAGENES */
+/* .imagenes{
+    
+} */
+
+
+
+
 
  .login-register .contenedor{
     
@@ -22,7 +86,7 @@
 }
 
 /* usuario */
-.ingresar .input-contenedor label{
+ .ingresar .input-contenedor label{
     color: black;
     display: flex;
     transition: all .4s; 
@@ -30,10 +94,10 @@
 }
 
 .ingresar .input-contenedor {
-    /* position: relative; */
-    margin: 25px 0;
+     position: relative; 
+     margin: 25px 0;
     
-}
+} 
 
 /* EMAIL Y CONTRASEÑA */
 .ingresar .input-contenedor input{
@@ -42,13 +106,13 @@
     display: flex;
     transition: all .4s;
     justify-content: center; 
-}
+} 
 
 
 
 /* iniciar sesion */
 
-.ingresar .comentario{
+ .ingresar .comentario{
     font-size: 20px;
     text-align: center;
     padding: 15px 0;
@@ -70,9 +134,10 @@
 }
 
 
+
 /* redes */
 
-
+ 
 .redes {
     
     display: flex;
@@ -116,7 +181,7 @@
 .ingresar .btn-google i{
     background-color: var(--color-google);
     color: white;
-}
+} 
 
 /* crea tu cuenta */
 
@@ -137,7 +202,7 @@
     justify-content: center;
     
 
-}
+} 
 
 
 /* tablet */
@@ -172,19 +237,19 @@
 
     }
    
-}
+} 
 
 
 /* PC */
 
-@media (min-width:1024px) {
+ @media (min-width:1024px) {
    
     .contenedor{
         
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 1em 14em ;
+        padding: 1em 8em ;
         align-items: center; 
         
     }
@@ -203,8 +268,6 @@
         font-size: 25px;
         align-items: center;
         
-        
 
     }
-
 }

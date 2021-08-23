@@ -1,9 +1,9 @@
-*{
+ *{
     font-family: 'Sanchez', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-}
+} 
 
 
 /* Color-variables */
@@ -14,47 +14,9 @@
     --color-celesteOscuro:#9DB2B1;
     --color-facebook:#3b5998 ;
     --color-google:#de5246;  
-}
+} 
 
 
-body{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: var(--color-celeste); 
-    
-}
-
-form{
-    align-items: center;
-}
-
-input , 
-button{
-    padding: 10px;
-    border: none;
-    border-radius: 5px;  
-}
-
-
-h3{
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-
-::placeholder { color: #FFFFFF; }
-
-
-@media (min-width:1024px) {
-    main{
-        position: absolute;
-        right: 40px;
-    }
-}
 
 
 
