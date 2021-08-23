@@ -1,22 +1,13 @@
 {
-  "name": "integradorSprint",
+  "name": "proyectointegrador",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marcos8991/IntegradorSprint.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marcos8991/IntegradorSprint/issues"
-  },
-  "homepage": "https://github.com/marcos8991/IntegradorSprint#readme",
   "dependencies": {
     "express": "^4.17.1"
   }

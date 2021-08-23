@@ -1,0 +1,104 @@
+header{
+    background-color: #A4C7CF;
+}
+
+header{
+    
+    display: flex;
+}
+header  img{
+    width: 100%;
+    /* margin-left: 5px;
+    margin-bottom: 5px;  */ 
+    
+}
+header .logo{
+    width: 160px;
+}
+
+header .buscador {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   flex-wrap: wrap;
+}
+
+header .buscador input{
+    width: 130px;
+    text-align: center;
+}
+/*header .buscador button*/
+    
+header .buscador button i{
+    position: absolute;
+    font-size: 30px;
+    width: 40px;
+    height: 50px;
+}
+header .user a{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header{
+        height: 92px;
+        align-items: center;
+    }
+
+    header .logo {
+        width: 170px;
+    }
+    
+    header .buscador {
+        width: 200px;
+        text-align: center;   
+        height: 38px;
+        
+    }
+    
+    header .buscador form{
+        align-items: flex-end;
+    }
+    header .buscador form input{
+        width: 80%;
+        height: 100%;
+        padding: 2px;
+        font-size: 16px;
+        padding-left: 20px;
+        border-radius: 33px 0 0 33px;
+     }
+    
+    /* AGREGA HEIGHT MARCOS100% */
+    header .buscador form button{
+        width: 20%;
+        border-radius: 0 33px 33px 0;
+        height: 100%;
+    }
+    
+    /* AGREGA MARGIN TOP MARCOS*/
+    header .buscador form button i{
+     margin-right: 2px;
+     height: 100%;
+     font-size: 15px;
+     margin-top: 3px;
+     
+    }
+
+    header .user{
+        width: 80px;
+        height: 37px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 50px;
+    }
+
+    header .user a{
+        display: block;
+        width: 20px;
+    }
+
+    header .user a i{
+        font-size: 24px;
+        color: black;
+    }
+}

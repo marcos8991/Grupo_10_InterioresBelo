@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+header{
+    background-color: #A4C7CF;
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+ /* Logo */
+header .logo{
+    width: 170px;
+    height: 100px;
+    margin-top: 8px;
+}
+
+header .logo a img{
+    width: 100%;
+    background-position: center;
+}
+
+/* Barra de busqueda */
+header .buscador {
+    width: 45%;
+    text-align: center;
+    border-radius: 7px;
+}
+
+header .buscador form{
+    display: flex;
+    height: 24px;
+    
+}
+/* AGREGA HEIGHT 100% MARCOS*/
+header .buscador form input{
+    width: 110px;
+    margin-left: 2px;
+    text-align: center;
+    border: 0px;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: bolder; 
+    opacity: 0.85;
+    border-radius: 12px 0 0 12px;
+    height: 100%;
+ }
+/* AGREGA HEIGHT 100% MARCOS*/
+header .buscador form button{
+    width: 30px;
+    border: 0px;
+    padding: 2px;
+    background-color: white;
+    opacity: 0.85;
+    border-radius: 0 12px 12px 0;
+    color: gray;
+    height: 100%;
+}
+
+header .buscador form button i{
+ margin-right: 2px;
+ text-align: center;
+ margin-bottom: 2px;
+
+}
+
+header .user a{
+    display: none;
+}
+
+
+
+*{
+    font-family: 'Sanchez', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E5F1F0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.container > h1{
+    padding: 20px 0;
+}
+
+.cart{
+    display: flex;
+}
+.product{
+    display: flex;
+    background-color: white;
+    width: 300%;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.product2{
+    display: flex;
+    background-color: white;
+    width: 300%;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.subtitulo{
+    background-color: white;
+    width: 300%;
+    overflow:hidden;
+    display: flex; 
+    align-items: center;
+
+    border: 1px solid black;
+}
+
+.product > img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.product2 > img{
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.agregar{
+    display: flex;
+    background-color: white;
+    width: 300%;
+    height: 73px;
+    overflow: hidden;
+    border: 1px solid black;
+    
+}
+
+
+
+.separador hr{
+    display: flex;
+    height: 1px;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.cart-total{
+    flex: 0.25;
+    background-color: white;
+    margin-left: 560px;
+    padding: 20px;
+    height: 240px;
+    border: 1px solid black;
+}
+
+.cart-total hr{
+    display: flex;
+    width: 200px;
+    height: 3px;
+    background-color: black;
+}
+
+.cart-total p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.cart-total a{
+    display: block;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 50px;
+    background-color: #9DB2B1;
+    border: 1px solid #5A7C7A;
+}
+
+.agregar a{
+    display: block;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-left: 50px;
+    background-color: #9DB2B1;
+    border: 1px solid #5A7C7A;
+}
+
+/*footer*/
+
+footer{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: #A4C7CF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer  .logo{
+    width: 170px;
+    height: 100px;
+    margin-top: 8px;
+}
+
+footer .logo img{
+    width: 100%;
+    background-position: center;
+}
+
+
+footer div h3{
+    text-transform:uppercase;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+footer .contactos {
+    padding:  7px;
+}
+footer .fb-ig {
+    padding:  7px;
+} 
+
+footer .iconos{
+    margin: 5px 20px;
+    padding: 7px;
+  display: flex;
+    justify-content: space-around;
+}
+
+footer .iconos a{
+    color: black;
+    font-size: 18px;
+}
+
+footer .info {
+    padding:  7px;
+}
+
+footer .info div a{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   color: #000;
+   text-decoration: none;
+   padding: 4px;
+   text-align: center;
+}
+
+
+
+
+/*tablets*/
+@media (max-width: 768px){
+    /**/
+}
+
+/*celular*/
+
+@media (max-width: 460px){
+    /**/
+}
