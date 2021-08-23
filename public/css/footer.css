@@ -26,17 +26,19 @@ footer div h3{
     text-align: center;
 }
 
+
+
 footer .contactos {
-    padding:  7px; ;
+    padding:  7px;
 }
-footer .redes {
-    padding:  7px; ;
-}
+footer .fb-ig {
+    padding:  7px;
+} 
 
 footer .iconos{
     margin: 5px 20px;
     padding: 7px;
-    display: flex;
+  display: flex;
     justify-content: space-around;
 }
 
@@ -99,7 +101,7 @@ footer .info div a{
         margin-top: 16px;
     }
 
-    footer .redes{
+    footer .fb-ig{
         margin-top: 16px;
     }
 }
@@ -153,7 +155,7 @@ footer .info div a{
         font-size: 18px;
     }
 
-    footer .redes{
+    footer .fb-ig{
         margin-top: 13px;
     }
 }
