@@ -1,114 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi carro de compras</title>
-    <link rel="stylesheet" type="text/css" href="/css/productCart.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 
-<body>
-<header>
-    <div class="logo">
-        <a href="/"><img  src="/images/logo-removebg-preview.png" alt=""></a>
-    </div>
-    <div class="buscador">
-        <form>
-            <input class="buscar" type="text" placeholder="¿Qué buscas?" >
-           <button><i class="fas fa-search"></i></button> 
-        </form>
-    </div>
-    <div class="user">
-       <a href="/register.html"><i class="far fa-user"></i></a> 
-       <a href="/productDetail.html"> <i class="fas fa-shopping-cart"></i></a>
-    </div>
-</header>
-
-
-<main>
-    <div class="container">
-        <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi carro de compras</h1>
-        <div class="separador">
-            <hr>
+<body class="productCart">
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/images/logo-removebg-preview.png" alt=""></a>
         </div>
-        <div class="cart">
-            <div class="products">
-                <div class="subtitulo">
-                <h3>Producto</h3>
-                <h3>Precio     Cantidad</h3>
-                </div>
-                
-                <div class="product">
-                    <img src="/images/sillaConstantine.png">
-                    <div class="product-info">
-                        <h3 class="product-name">Silla Constantine</h3>
-                        <h4 class="product-price">$7022</h4>
-                        <p class="product-quantity">
-                        <input type="text" value=" 1" style="width : 23px; height : 14px"> <i class="fa fa-sort" aria-hidden="true"></i>
-                        </p>
+        <div class="buscador">
+            <form>
+                <input class="buscar" type="text" placeholder="¿Qué buscas?">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="user">
+            <a href="/register.html"><i class="far fa-user"></i></a>
+            <a href="/productDetail.html"> <i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi carro de compras</h1>
+            <div class="separador">
+                <hr>
+            </div>
+            <div class="cart">
+                <div class="products">
+                    <div class="subtitulos">
+                    <div class="subtitulo">
+                        <h4>Producto</h4>
+                    </div>
+                    <div class="subtitulo2">
+                        <h4>Precio</h4>
+                        <h4>Cantidad</h4>
+                    </div>
+                    </div>
+            
+
+                    <div class="product">
+                        <div class="silla">
+                        <img src="/images/sillaConstantine.png">
+                        
+                    </div>
+                    <h3 class="product-name">Silla Constantine</h3>
+                        <div class="product-info">
+                            
+                            
+
+
+                            <div class="pr-quantity">
+                                <h4 class="product-price">$7022  </h4>
+                                <input type="text" value=" 1">  <i class="fa fa-sort" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product2">
+                        <div class="sillon">
+                        <img src="/images/sillonBalder.png">
+                    </div>
+                    <h3 class="product-name2">Sillón Balder</h3>
+                        <div class="product-info">
+                            
+                            
+                            <div class="pr-quantity2">
+                                <h4 class="product-price2">$37022</h4>
+                                <input type="text" value=" 1"> <i class="fa fa-sort" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+                  <div class="boton-agrega">  
+                    <div class="agregar">
+                        <a href="#">Agregar productos</a>
                     </div>
                 </div>
-                <div class="product2">
-                    <img src="/images/sillonBalder.png">
-                    <div class="product-info">
-                        <h3 class="product-name">Sillón Balder</h3>
-                        <h4 class="product-price">$37022</h4>
-                        <p class="product-quantity">
-                        <input type="text" value=" 1" style="width : 23px; height : 14px"> <i class="fa fa-sort" aria-hidden="true"></i>
-                        </p>
-                    </div>
                 </div>
-                <div class="agregar">
-                    <a href="#">Agregar productos</a>
+                <div class="cart-total">
+                    <p>
+                        <span>Resumen del pedido</span>
+                        <hr>
+                    </p>
+                    <p>
+                        <h4>Total: $44.044</h4>
+                        
+                    </p>
+                    <a href="#">Comprar</a>
                 </div>
-            </div>
-            <div class="cart-total">
-                <p>
-                    <span>Resumen del pedido</span>
-                    <hr>
-                </p>
-                <p>
-                    <h4>Total: $44.044</h4>
-                </p>
-                <a href="#">Comprar</a>
-            </div>
+            
         </div>
-    </div>
-    
-</main>
+        </div>
 
-<footer>
-    <div class="logo">
-        <a href="/home"><img src="/images/logo-removebg-preview.png" alt=""></a>
-    </div>
-    <div class="detalles">
-        <div class="contactos">
-        <h3>contactos</h3>
-        <div class="iconos">
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blanck"><i class="far fa-envelope"></i></a> 
-            <a href="https://goo.gl/maps/4WUeS9EQxytH9qqL7" target="_blanck"><i class="fas fa-map-marker-alt"></i></a>
-            <a href="" target="_blanck"><i class="fas fa-phone-alt"></i></a>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href="/home"><img src="/images/logo-removebg-preview.png" alt=""></a>
         </div>
-        </div>
-        <div class="fb-ig">
-            <h3>seguinos</h3>
-            <div class="iconos">
-                <a href="https://m.facebook.com/" target="_blanck"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/?hl=es" target="_blanck"><i class="fab fa-instagram"></i></a>
+        <div class="detalles">
+            <div class="contactos">
+                <h3>contactos</h3>
+                <div class="iconos">
+                    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blanck"><i
+                            class="far fa-envelope"></i></a>
+                    <a href="https://goo.gl/maps/4WUeS9EQxytH9qqL7" target="_blanck"><i
+                            class="fas fa-map-marker-alt"></i></a>
+                    <a href="" target="_blanck"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+            <div class="fb-ig">
+                <h3>seguinos</h3>
+                <div class="iconos">
+                    <a href="https://m.facebook.com/" target="_blanck"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/?hl=es" target="_blanck"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="info">
+                <h3>Informacion util</h3>
+                <div>
+                    <a href="">Sobre Nosotros</a>
+                    <a href="/productDetail.html">Productos</a>
+                    <a href=""> Terminos y Condiciones</a>
+                </div>
             </div>
         </div>
-        <div class="info">
-             <h3>Informacion util</h3>
-             <div>
-                  <a href="">Sobre Nosotros</a>
-                  <a href="/productDetail.html">Productos</a>
-                  <a href=""> Terminos y Condiciones</a>
-            </div>
-        </div>
-    </div>   
-</footer>
+    </footer>
 </body>
+
 </html>

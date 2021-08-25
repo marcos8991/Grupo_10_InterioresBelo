@@ -1,0 +1,22 @@
+ *{
+    font-family: 'Sanchez', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Color-variables */
+
+:root{
+    --color-celeste:#E5F1F0;
+    --color-azul:#0E2D43;
+    --color-celesteOscuro:#9DB2B1;
+    --color-facebook:#3b5998 ;
+    --color-google:#de5246;  
+} 
+
+
+
+
+
+

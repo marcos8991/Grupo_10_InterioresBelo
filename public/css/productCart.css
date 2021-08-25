@@ -1,90 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 
-header{
-    background-color: #A4C7CF;
-    display: flex;
-    height: 100px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
- /* Logo */
-header .logo{
-    width: 170px;
-    height: 100px;
-    margin-top: 8px;
-}
-
-header .logo a img{
-    width: 100%;
-    background-position: center;
-}
-
-/* Barra de busqueda */
-header .buscador {
-    width: 45%;
-    text-align: center;
-    border-radius: 7px;
-}
-
-header .buscador form{
-    display: flex;
-    height: 24px;
-    
-}
-/* AGREGA HEIGHT 100% MARCOS*/
-header .buscador form input{
-    width: 110px;
-    margin-left: 2px;
-    text-align: center;
-    border: 0px;
-    padding: 2px;
-    font-size: 14px;
-    font-weight: bolder; 
-    opacity: 0.85;
-    border-radius: 12px 0 0 12px;
-    height: 100%;
- }
-/* AGREGA HEIGHT 100% MARCOS*/
-header .buscador form button{
-    width: 30px;
-    border: 0px;
-    padding: 2px;
-    background-color: white;
-    opacity: 0.85;
-    border-radius: 0 12px 12px 0;
-    color: gray;
-    height: 100%;
-}
-
-header .buscador form button i{
- margin-right: 2px;
- text-align: center;
- margin-bottom: 2px;
-
-}
-
-header .user a{
-    display: none;
-}
-
-
-
-*{
-    font-family: 'Sanchez', serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     background-color: #E5F1F0;
 }
 
+
 .container{
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px;
 }
 
 .container > h1{
@@ -94,53 +18,128 @@ body{
 .cart{
     display: flex;
 }
-.product{
+
+.product-name{
     display: flex;
-    background-color: white;
-    width: 300%;
-    height: 70px;
-    overflow: hidden;
-    border: 1px solid black;
+    /* justify-content: flex-end;
+    padding: 20px 330px 0px 0px; */
+    font-size: 18px
+}
+.product-name2{
+    display: flex;
+    /* text-align: left;
+    padding: 20px 360px 0px 10px; */
+    font-size: 18px;
 }
 
-.product2{
-    display: flex;
+.products{
+    width: 700px;
+    margin-left: 0px;
+}
+
+.product{
+    display:flex;
     background-color: white;
-    width: 300%;
-    height: 70px;
-    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+
+.product2{
+    display:flex;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+.pr-quantity{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+    margin-right: 20px;
+}
+
+.pr-quantity input{
+    width: 40px;
+    height: 20px;
     border: 1px solid black;
+    
+}
+
+h4.product-price{
+    display:flex;
+    padding-right: 30px;
+}
+
+.pr-quantity2{
+    display: flex;
+    padding: 30px 0px;
+    margin-right: 20px;
+}
+.pr-quantity2 input{
+    width: 40px;
+    height: 20px;
+    border: 1px solid black;
+}
+h4.product-price2{
+    display: flex;
+    padding-right: 30px;
+}
+
+.products .subtitulos{
+    display: flex;
+    border: 1px solid rgb(184, 184, 184);
+    height: 16%;
 }
 
 .subtitulo{
     background-color: white;
-    width: 300%;
-    overflow:hidden;
+    width: 90%;
     display: flex; 
     align-items: center;
-
-    border: 1px solid black;
 }
 
-.product > img{
+.subtitulo2{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    width: 30%;
+    padding-top: 10px;
+}
+
+.product .silla{
     width: 50px;
-    height: 50px;
-    object-fit: cover;
+    padding: 15px 0px;
 }
 
-.product2 > img{
-    width: 40px;
-    height: 50px;
-    object-fit: cover;
+.product .silla img{
+    width: 100%;
+    
 }
+
+.product2 .sillon{
+    width: 60px;
+    padding: 20px 0px;
+}
+.product2 .sillon img{
+    width: 100%;
+}
+
+
 
 .agregar{
     display: flex;
     background-color: white;
-    width: 300%;
-    height: 73px;
+    width: 200%;
+    height: 80px;
+    padding: 5px 0;
+    padding-left: 260px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid rgb(184, 184, 184);
     
 }
 
@@ -149,18 +148,21 @@ body{
 .separador hr{
     display: flex;
     height: 1px;
-    width: 500px;
+    margin-left: 100px;
+    width: 90%;
     margin-bottom: 30px;
 }
 
 .cart-total{
     flex: 0.25;
     background-color: white;
-    margin-left: 560px;
+    padding-top: 500px;
+    margin-left: 90px;
     padding: 20px;
-    height: 240px;
-    border: 1px solid black;
+    height: 290px;
+    border: 1px solid rgb(184, 184, 184);
 }
+
 
 .cart-total hr{
     display: flex;
@@ -180,9 +182,15 @@ body{
     text-align: center;
     height: 40px;
     line-height: 40px;
-    margin-top: 50px;
+    margin-top: 95px;
     background-color: #9DB2B1;
     border: 1px solid #5A7C7A;
+}
+
+.boton-agrega{
+    display:flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .agregar a{
@@ -192,86 +200,181 @@ body{
     height: 40px;
     line-height: 40px;
     margin-top: 10px;
-    margin-left: 50px;
     background-color: #9DB2B1;
     border: 1px solid #5A7C7A;
 }
 
-/*footer*/
 
-footer{
-    padding-top: 10px;
-    padding-bottom: 15px;
-    background-color: #A4C7CF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-footer  .logo{
-    width: 170px;
-    height: 100px;
-    margin-top: 8px;
-}
-
-footer .logo img{
-    width: 100%;
-    background-position: center;
-}
-
-
-footer div h3{
-    text-transform:uppercase;
-    font-size: 18px;
-    text-align: center;
-}
-
-
-
-footer .contactos {
-    padding:  7px;
-}
-footer .fb-ig {
-    padding:  7px;
-} 
-
-footer .iconos{
-    margin: 5px 20px;
-    padding: 7px;
-  display: flex;
-    justify-content: space-around;
-}
-
-footer .iconos a{
-    color: black;
-    font-size: 18px;
-}
-
-footer .info {
-    padding:  7px;
-}
-
-footer .info div a{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   color: #000;
-   text-decoration: none;
-   padding: 4px;
-   text-align: center;
-}
 
 
 
 
 /*tablets*/
 @media (max-width: 768px){
-    /**/
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        width: 300px;
+        padding: 0px;
+        
+    }
+
+    .cart{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+} 
+
+    
+    .container h1{
+        display:flex;
+        font-size: 20px;
+    }
+    .products{
+        width: 700px;
+        margin-left: 0px;
+    }
+
+    .cart-total{
+        flex: 0.25;
+        background-color: white;
+        width: 700px;
+        padding: 20px;
+        margin-top: 10px;
+        margin-left: 0px;
+        height: 30px;
+        border: 1px solid rgb(184, 184, 184);
+    }
+
+    .cart-total a{
+        width:150px;
+        margin: 0 auto;
+    }
 }
 
 /*celular*/
 
-@media (max-width: 460px){
-    /**/
+@media (max-width: 320px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        width: 300px;
+        padding: 0px;
+        
+    }
+
+    .cart{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+} 
+
+    .subtitulos{
+        width:290px;
+    }
+    .subtitulo h4{
+        font-size:13px;
+        
+    }
+    .subtitulo2 h4{
+        font-size: 13px;
+        padding-right: 30%;
+        
+    }
+    .subtitulo2{
+        padding: 0px 20px 10px 0px;
+       
+        height: 25px;
+        
+    }
+
+     .product-name{
+        display: flex;
+        padding:20px 0px;
+        
+        font-size: 13px
+    }
+
+    .product-name2{
+        display:flex;
+        padding:20px 0px;
+        font-size: 13px;
+    }
+
+    .product-price{
+        font-size: 13px;
+        padding-left: 40px;
+    }
+    
+   .product-price2{
+       font-size:13px;
+       padding-left: 0px;
+   }
+
+    
+    .product .silla img{
+        width: 40px;
+        height:40px;
+        
+        
+    } 
+
+
+    .products{
+        width: 290px;
+        margin-left: 0px;
+    }
+
+    .agregar a{
+        display: flex;
+        color: white;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 10px;
+        margin-right: 800px;
+        background-color: #9DB2B1;
+        border: 1px solid #5A7C7A;
+    }
+
+    .agregar{
+        display: flex;
+        background-color: white;
+        width: 200%;
+        height: 80px;
+        padding: 5px 50px 0px 100px;
+        overflow: hidden;
+        border: 1px solid rgb(184, 184, 184);
+        
+    }
+
+    .cart-total{
+        flex: 0.25;
+        background-color: white;
+        width: 80%;
+        padding: 20px;
+        margin-top: 10px;
+        margin-left: 0px;
+        height: 30px;
+        border: 1px solid rgb(184, 184, 184);
+    }
+
+    .separador hr{
+        display: none;
+    }
+
+    .cart-total a{
+     display: block;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    background-color: #9DB2B1;
+    border: 1px solid #5A7C7A;
+}
 }

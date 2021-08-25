@@ -1,0 +1,269 @@
+body{
+    
+/*     
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    background: var(--color-celeste); 
+    
+} 
+
+form{
+    align-items: center;
+}
+
+ input , 
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    
+} 
+
+
+h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+} 
+
+
+/* ::placeholder { color: #FFFFFF; }  */
+
+
+
+
+
+
+
+
+.login-register main{
+    padding: 27px 0;
+    margin-bottom: 0 ;
+}
+
+
+
+.contenedor{
+    background: #FFFFFF;
+    width: 90%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    color: rgb(0, 0, 0);
+    padding: 2em;
+    align-items: center; 
+    border-radius: 10px;
+    
+} 
+
+
+ .login-register .contenedor{
+    margin: 0 auto;
+} 
+
+.input-contenedor{
+    margin-bottom: 10px;
+}
+
+/* usuario */
+ .ingresar .input-contenedor label{
+    color: black;
+    display: flex;
+    transition: all .4s; 
+    
+}
+
+.ingresar .input-contenedor {
+     position: relative; 
+     margin: 25px 0;
+    
+} 
+
+/* EMAIL Y CONTRASEÑA */
+.ingresar .input-contenedor input{
+    width: 100%;
+    background-color: var(--color-celesteOscuro);
+    display: flex;
+    transition: all .4s;
+    justify-content: center;
+    
+} 
+
+.ingresar .input-contenedor input::placeholder{
+    color: #FFFFFF;
+}
+
+
+
+/* iniciar sesion */
+
+ .ingresar .comentario{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.btn-iniciar{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-azul); 
+    color: white;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+
+/* redes */
+
+ 
+.redes {
+    display: flex;
+    justify-content:space-around;
+    margin: 0 1px 1px 1px;
+}
+
+.ingresar .btn-facebook{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    
+    transform: translate(-1%);
+    cursor: pointer;
+    background-color: var(--color-facebook);
+    color: white;
+    transition: all .5s;
+    text-align: center;
+    
+}
+
+
+.ingresar .btn-facebook i{
+    background-color:var(--color-facebook);
+    color: white;
+}
+
+.ingresar .btn-google{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    transform: translate(-1%);
+    cursor: pointer;
+    background-color: var(--color-google);
+    color: white;
+    transition: all .5s;
+}
+
+.ingresar .btn-google i{
+    background-color: var(--color-google);
+    color: white;
+} 
+
+/* crea tu cuenta */
+
+
+.ingresar .crea-cuenta p{
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    
+    
+}
+
+.crea-cuenta a{
+    font-size: 14px;
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: center;
+    
+
+} 
+
+
+/* tablet */
+
+@media (min-width:768px) {
+    
+    .contenedor{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2em 10em ;
+        align-items: center; 
+        
+    }
+
+    .ingresar .input-contenedor input{
+       display: flex;
+       width: 300px;
+       height: 40px;
+    }
+
+    .btn-iniciar{
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        align-items: center;
+        
+        
+
+    }
+   
+} 
+
+
+/* PC */
+
+ @media (min-width:1024px) {
+   
+    .contenedor{
+        padding: 25px ;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        
+    }
+
+    .ingresar .input-contenedor input{
+       display: flex;
+       width: 400px;
+       height: 50px;
+    }
+
+    .btn-iniciar{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        align-items: center;
+        
+
+    }
+}
+
+@media (min-width:1440px) {
+    .contenedor{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;  
+        
+    }
+}
