@@ -82,8 +82,13 @@
 }
 .descripcion div .btn-Carrito{
     background-color: var(--color-azul) ;
-    color: white;
+    
 }
+.descripcion div .btn-Carrito a{
+    color:white;
+    text-decoration: none;
+}
+
 .descripcion .pagos {
     margin-top: 10px;
 }
