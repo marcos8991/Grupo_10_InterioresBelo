@@ -1,0 +1,171 @@
+.Detalle-Producto{
+    background-color:#E5F1F0;
+} 
+.general p{
+    font-size: 20px;
+}
+
+.general  section .Constantine{
+    color: black;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    height: 370px;
+    
+}
+.general .Constantine h1 {
+    text-align: center;
+
+    font-size: 30px;
+}
+
+.general .Constantine img{
+    width: 240px;
+    padding: 3px;
+    
+}
+.general .descripcion{
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    width: 290px;
+    margin: 0 auto;
+} 
+
+/* botón de detalle */
+.btn-Detalle{
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #88c2bf;
+    color: white;
+    text-align: center;
+    
+}
+.Detalle {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+.Visa {
+    color:#1a1f71;
+    font-size: 35px;
+    padding: 0px 10px;
+}
+.Mastercard {
+    color: red;
+    font-size: 35px;
+    padding: 0px 10px;
+
+}
+
+.productosRelacionados img{
+    width: 100px;
+}
+
+.descripcion .Detalle p{
+    font-size: 15px;
+    padding: 1px;
+}
+
+.Tarjetas{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 10px;
+    
+}
+.descripcion div .btn-Carrito{
+    background-color: var(--color-azul) ;
+    
+}
+.descripcion div .btn-Carrito a{
+    color:white;
+    text-decoration: none;
+}
+
+.descripcion .pagos {
+    margin-top: 10px;
+}
+.descripcion .pagos a {
+    color: black;
+    text-decoration: none;
+    
+
+}
+ .descripcion .pagos a i{
+     margin-right: 1px;
+ }
+ .general h2{
+     text-align: center;
+     display: none;
+ }
+ .general .productosRelacionados{
+     display: none;
+ }
+
+ /* Tablet */
+ @media (min-width:768px) {
+     .general section{
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+         margin: 10px auto;
+     }
+     .general .descripcion{
+         margin: 0px;
+     }
+     .general h2 {
+         display: block;
+     }
+     .general .productosRelacionados  {
+         display: block;
+         display: flex;
+         justify-content: space-around;
+         margin-top: 5px;
+
+     }
+     .general .productosRelacionados div h3{
+         font-size: 22px;
+         text-align: center;
+     }
+     .general .productosRelacionados div {
+        width: 190px;
+     }
+     .general .productosRelacionados .SofaMonaco img{
+         width: 90%;
+         margin-left: 4px;
+         
+     }
+     .general .productosRelacionados .SillaRoma img{
+         width: 90%;
+         margin-left: 20px;
+     }
+     .general .productosRelacionados .SillaEsmeralda img{
+         width: 80%;
+         margin-left: 16px;
+    
+     }
+     .general .productosRelacionados .SillaBaltic img {
+         width: 64%;
+         margin-left: 42px;
+         
+     }
+     
+     
+ }
+
+/*  Escritorio */
+@media (min-width:1024px){
+    .general h2 {
+        margin: 16px auto ;
+    }
+    .general section{
+        justify-content: space-evenly;
+    }
+}
