@@ -112,7 +112,10 @@ h3{
     font-size: 17px;
     text-align: center;
 }
-
+.btn-iniciar a{
+    color: white;
+    text-decoration: none;
+}
 
 
 /* redes */
@@ -215,6 +218,8 @@ h3{
         
 
     }
+
+    
    
 } 
 
