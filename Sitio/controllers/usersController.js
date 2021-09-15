@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
     register : (req,res) => {
-        return res.render('register')
+        return res.render('register');
     },
     login : (req,res) => {
-        return res.render('login')
+        return res.render('login');
     }
 }
