@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const { productCart, productDetail, admin } = require('../controllers/productsController');
+const { cart, detail } = require('../controllers/productsController');
 
-router.get('/productCart',productCart );
-router.get('/productDetail',productDetail);
-router.get('/admin',admin);
+router.get('/productCart', cart );
+router.get('/productDetail', detail);
+
 module.exports = router;

@@ -2,12 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = {
-    productCart : (req,res) => {
-        return res.render('productCart')
+    cart : (req,res) => {
+        return res.render('products/productCart')
     },
-    productDetail : (req,res) => {
-        return res.render('productDetail')
-    },
-
-    
+    detail : (req,res) => {
+        return res.render('products/productDetail')
+    }
 }

@@ -2,9 +2,11 @@
     font-family: 'Sanchez', serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
-
+.login-register, .home, .productCart, .Detalle-Producto {
+    background-color: var(--color-celeste);
+}
 /* Color-variables */
 
 :root{
