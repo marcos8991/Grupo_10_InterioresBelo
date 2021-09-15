@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %> 
+<body class="login-register">
+
+    <%- include('../partials/header') %> 
+
+    <main>
+
+        <div class="contenedor">
+            
+
+
+            <!-- logo -->
+            
+                <div class="Logo">
+                    <img src="/images/logo2 4.png" alt="">
+
+                </div>
+                
+            
+            
+
+        
+            <div class="ingresar">
+                <h3 class="bienvenido">BIENVENIDO</h3>
+
+                    <form action="" method="POST">
+
+                        <div class="input-contenedor">
+                            <label for="email">Email</label>
+                             <input type="email" placeholder="Ingresa tu email" id="email" name="email">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <label for="pass">Contraseña</label>
+                            <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password" minlength="8">
+                        </div>
+                
+               
+
+
+                        <!-- iniciar-sesion -->
+                        <div>
+                            <button class="btn-iniciar" type="submit"><a href="/">Iniciar sesión</a> </button>
+                        </div>
+
+                        <div class="comentario">
+                            <p>O inicia sesión con</p>
+                        </div>
+
+                        <!-- botones redes -->
+                        <div class="redes">
+                            <div>
+                                <button class="btn-facebook"><i class="fab fa-facebook"></i>Facebook</button>
+                            </div>
+                            
+                            <div>
+                                <button class="btn-google"><i class="fab fa-google"></i>Google</button>
+                            </div>
+
+                        </div>
+                        
+
+                        <!-- crea tu cuenta -->
+
+                        <div class="crea-cuenta">
+                            <p>¿Todavia no tenes una cuenta?</p>
+                            <a href="/users/register">Crea tu cuenta</a>
+                            
+                        </div>
+                        
+                
+                </div>
+        
+
+
+            </form>
+        </div>
+        
+    </main>
+
+    <%- include('../partials/footer') %> </body>
+</html>
