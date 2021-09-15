@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+
+
+<body class="productCart">
+    <%- include('../partials/header') %> 
+
+    <main>
+        <div class="container">
+            <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi carro de compras</h1>
+            <div class="separador">
+                <hr>
+            </div>
+            <div class="cart">
+                <div class="products">
+                    <div class="subtitulos">
+                        <div class="subtitulo">
+                            <h4>Producto</h4>
+                        </div>
+                        <div class="subtitulo2">
+                            <h4>Precio </h4>
+
+                            <h4> Cantidad</h4>
+                        </div>
+                    </div>
+
+                    <div class="separador-hr">
+                        <hr>
+                    </div>
+
+                    <div class="product">
+                        <div class="silla">
+                            <img src="/images/sillaConstantine.png">
+
+                        </div>
+                        <h3 class="product-name">Silla Constantine</h3>
+                        <div class="product-info">
+
+
+                            <div class="pr-quantity">
+                                <h4 class="product-price">$7022 </h4>
+                                <input type="text" value=" 1"> <i class="fa fa-sort" aria-hidden="true"></i>
+                            </div>
+
+
+
+                        </div>
+
+                        
+                    </div>
+
+
+                    <div class="separador1">
+                        <hr>
+                    </div>
+
+                    <div class="product2">
+                        <div class="sillon">
+                            <img src="/images/sillonBalder.png">
+                        </div>
+                        <h3 class="product-name2">Sillón Balder</h3>
+                        <div class="product-info">
+
+
+                            <div class="pr-quantity2">
+                                <h4 class="product-price2">$37022</h4>
+                                <input type="text" value=" 1"> <i class="fa fa-sort" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="separador2">
+                        <hr>
+                    </div>
+
+                    
+                    <div class="boton-agrega">  
+                        <div class="agregar">
+                            <a href="#">Agregar productos</a>
+                        </div>
+                    
+                </div>
+
+            <section class="container-total">
+                <div class="cart-total">
+                    <p>
+                        <span>Resumen del pedido</span>
+                        
+                    </p>
+                    <div class="separador3">
+                        <hr>
+                    </div>
+                    <p>
+                        <h4>Total: $44.044</h4>
+
+                    </p>
+                    <a href="#">Comprar</a>
+                </div>
+            </section>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('../partials/footer') %> 
+</body>
+
+</html>
