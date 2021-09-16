@@ -1,5 +1,6 @@
 ### Implementen nuevamente la dinámica de la estrella de mar, resaltando aquello que hay que:
 
+
 1. Comenzar a hacer
 
  - Respetar las fechas limites establecidas en trello.
@@ -28,4 +29,4 @@
 
 5. Dejar de hacer
  
- - No atrasarnos 
+ - No atrasarnos

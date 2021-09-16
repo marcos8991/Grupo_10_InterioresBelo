@@ -2,15 +2,16 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-    <body class="administracion">
+    <body class="admin">
 
         <%- include('../partials/header') %>
-            <main class="admin">
-                <div class="row">
-                    <div class="col-12 col-lg-10 mx-auto">
-                        <div class="card shadow mt-5">
+            <main>
+                <div class="row"> 
+                    <div class="col-12 col-lg-10 mx-auto"> 
+                        <div class="card shadow mt-5"> 
                             <div class="card-header">
                                 <%= title %> 
+
                             </div>
                             <div class="card-body">
                                 <table class="table">
@@ -21,35 +22,32 @@
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Promocion</th>
                                         <th scope="col">Precio</th>
-                                        
                                       </tr>
-                                      
                                     </thead>
                                     <tbody>
                                         <% products.forEach(product => { %>
                                             <tr>
-                                                <th scope="row"></th>
+                                                <th scope="row"><%= product.id %> </th>
                                                 <td><img width="100" src="/images/<%= product.image %> " alt=""></td>
                                                 <td><%= product.name %> </td>
-                                                <td><%= product.promo %> </td>
-                                                <td><%= product.price %> </td>
+                                                <td><%= product.promo  %></td>
+                                                <td><%= product.price  %></td>
                                               </tr>
                                         <% }) %>
                                      
-                                      
+                                     
                                     </tbody>
                                   </table>
+                                  
                             </div>
 
                         </div>
-                       
 
-                        
+                    </div>
 
                     </div>
                 </div>
-             
-            
+                
 
             </main>
 
