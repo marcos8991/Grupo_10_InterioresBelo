@@ -1,11 +1,11 @@
 ### Implementen nuevamente la dinámica de la estrella de mar, resaltando aquello que hay que:
 
+
 1. Comenzar a hacer
- 
- - Establecer reuniones semanales 
- - Mas preguntas a los profes
+
  - Respetar las fechas limites establecidas en trello.
- - 
+ - Pedir ayuda
+ - Estar al tanto de lo que esta haciendo el resto del equipo
 
 
 2. Hacer más
@@ -16,14 +16,15 @@
   	
 
 3. Continuar haciendo
-
+ - Establecer reuniones semanales 
  - Ayudarnos 
  - Tareas 
- - Reuniones 
+ - Reuniones
+ - Mas preguntas a los profes
 
 4. Hacer menos
 	
- -
+ - 
 
 
 5. Dejar de hacer

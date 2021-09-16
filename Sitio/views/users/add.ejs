@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="add">
+    <%- include('../partials/header') %> 
+    <main>
+     <div class="row">
+          <div class="col-12 col-lg-10 mt-5 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Agregar producto</h4>
+                </div>
+                <div class="card-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                          <label for="inputname" class="form-label">Nombre de Producto</label>
+                          <input type="text" placeholder = "Nombre del producto" class="form-control" id="inputname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="Precio" placeholder="$">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="Cuotas" class="form-label">Cuotas</label>
+                            <select id="Cuotas" class="form-select">
+                                <option value="" hidden>Elegir cuotas</option>
+                                <option value="1">Hasta 3 cuotas</option>
+                                <option value="2">Hasta 6 cuotas</option>
+                                <option value="3">Hasta 12 cuotas</option>
+                                <option value="4">Hasta 18 cuotas</option>
+                              </select>
+                          </div>
+                        <div class="col-12">
+                          <label for="descripcion" class="form-label">Descripcion</label>
+                          <textarea style="resize: none; height: 100px;width: 100%;"
+                          type="text" placeholder ="Descripcion" class="form-control" id="descripcion"></textarea>
+                        </div>
+                        <div class="SubirImagen">
+                            <div class="btn-Subir">
+                                <label for="image" class="btn btn-outline-secondary btn-#3b5998 w-100 mt-2">Subir imagen</label>
+                                <input hidden class="form-control" type="file" id="image" name="image">
+                              </div>
+                           </div>
+
+                        <div class="btn-Agregar">
+                          <button type="submit" class="btn btn-primary">Agregar</button>
+                        </div>
+                      </form>
+
+                </div>
+            </div>
+         </div>
+
+     </div>   
+    </main>
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>
