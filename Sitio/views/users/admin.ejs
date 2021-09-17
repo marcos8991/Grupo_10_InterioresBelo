@@ -6,7 +6,7 @@
 
         <%- include('../partials/header') %>
             <main>
-                <div class="row"> 
+                <div class="row mx-auto"> 
                     <div class="col-12 col-lg-10 mx-auto"> 
                         <div class="card shadow mt-5"> 
                             <div class="card-header">
@@ -17,21 +17,21 @@
                                 <table class="table">
                                     <thead>
                                       <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Imagen</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Promocion</th>
-                                        <th scope="col">Precio</th>
+                                        <th class="id" scope="col">#</th>
+                                        <th class="admin-img" scope="col">Imagen</th>
+                                        <th class="admin-name" scope="col">Nombre</th>
+                                        <th class="admin-promo" scope="col">Promocion</th>
+                                        <th class="admin-price" scope="col">Precio</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                         <% products.forEach(product => { %>
                                             <tr>
                                                 <th scope="row"><%= product.id %> </th>
-                                                <td><img width="100" src="/images/<%= product.image %> " alt=""></td>
-                                                <td><%= product.name %> </td>
-                                                <td><%= product.promo  %></td>
-                                                <td><%= product.price  %></td>
+                                                <td class="admin-img"><img width="100" src="/images/<%= product.image %> " alt=""></td>
+                                                <td  class="admin-name"><%= product.name %> </td>
+                                                <td  class="admin-promo"><%= product.promo  %></td>
+                                                <td class="admin-price"><%= product.price  %></td>
                                               </tr>
                                         <% }) %>
                                      
