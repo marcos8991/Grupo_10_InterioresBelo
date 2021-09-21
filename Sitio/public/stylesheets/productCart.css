@@ -8,8 +8,9 @@
 .cart{
     display: flex;
     background-color: white;
-    width: 100%;
-    margin: auto;
+    width:300px;
+    height: 306px;
+   
     border: 1px solid rgb(184, 184, 184);
 }
 
@@ -168,11 +169,11 @@ h3.product-name2{
     display: block;
     color: white;
     text-align: center;
-    height: 40px;
+    
     width: 170px;
     line-height: 40px;
-    margin-top: 15px;
-   
+    
+    margin-left: 20px;
     background-color: #9DB2B1;
     border: 1px solid #5A7C7A;
 }
@@ -183,9 +184,10 @@ h3.product-name2{
 
 .cart-total{
     background-color: white;
-    
+    padding: 4px;
+    width: 299px;
     border: 1px solid rgb(184, 184, 184);
-    
+    margin-top: 31px;
 }
 
 .separador3{
@@ -200,7 +202,7 @@ h3.product-name2{
     height: 40px;
     width: 170px;
     margin-top: 15px;
-    margin-left: 21%;
+    margin-left: 23%;
     line-height: 40px;
     background-color: #9DB2B1;
     border: 1px solid #5A7C7A;
@@ -211,9 +213,9 @@ h3.product-name2{
 }
 
 
-footer{
+.productCart footer{
     margin-top: 200px;
-}
+} 
 
 
 /* tablets */
@@ -222,9 +224,8 @@ footer{
     .cart{
         display: flex;
         background-color: white;
-        width: 90%;
-        height: 250px;
-        margin: 10px;
+        width: 700px;
+        height: 312px;
         border: 1px solid rgb(184, 184, 184);
     }
 
@@ -299,11 +300,13 @@ footer{
     }
 
     .cart-total {
-        width: 238%;
+        width: 700px;
+        height: 150px;
     }
     .cart-total a{
         width: 170px;
         margin-left: 39%;
+        margin-top: -17px;
     }
 }
 
@@ -325,9 +328,9 @@ footer{
     }
     
     .cart{
-        width: 90%;
-        margin: 50px;
-        height: 275px;
+        width: 923px;
+        margin: 0px;
+        height: 328px;
         margin-top: 50px;
     }
 
@@ -364,7 +367,7 @@ footer{
         margin-left: 160px;
     }
     .agregar a {
-        margin-top: 25px;
+        margin-top: 5px;
     }
 
     .container-total .cart-total{
@@ -380,6 +383,7 @@ footer{
     }
     .cart-total a{
         margin-left: 41%;
+        margin-top: -2px;
     }
 
     .cart-total h4{
@@ -388,7 +392,7 @@ footer{
     }
 
 
-    footer {
+    .productCart footer {
         margin-top: 361px;
     } 
    
