@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 
-h1{
+.productCart h1{
     font-size: 20px;
     padding-top: 30px;
 }
@@ -16,16 +16,14 @@ h1{
 
 .subtitulo h4{
     font-size: 14px;
-    padding-top: 10px;
-    padding-left: 10px;
+    position: absolute;
+    text-align: start;
 }
 
 .subtitulo2 h4{
     font-size: 14px;
     padding-top: 10px;
     padding-right: 25px;
-    
-
 }
 
 .product-name{

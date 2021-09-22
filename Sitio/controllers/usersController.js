@@ -20,4 +20,5 @@ module.exports = {
     edit:(req,res) => {
         return res.render('users/edit')
     }
+    
 }
