@@ -16,6 +16,10 @@ module.exports = {
     }  ,
     add:(req,res) => {
         return res.render('users/add')
+    },
+
+    edit : (req,res) => {
+        return res.render('users/edit')
     }
     
 }

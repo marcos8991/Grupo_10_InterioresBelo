@@ -7,6 +7,12 @@
 }
 
 
+
+
+
+
+
+
 @media (min-width: 768px) {
     .admin .row .card-body .admin-img{
         display: table-cell;
@@ -15,4 +21,8 @@
     .admin .row .card-body .admin-promo{
         display: table-cell;
     }
+    
+    
+    
+    
 }

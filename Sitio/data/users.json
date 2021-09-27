@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "",
+        "categoría": "",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "",
+        "categoría": "",
+        "imagen": ""
+    },
+
+    {
+        "id": 3,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "",
+        "categoría": "",
+        "imagen": ""
+    }
+]
