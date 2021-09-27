@@ -8,11 +8,9 @@ const {register,login ,admin, add, edit} = require('../controllers/usersControll
 /* GET users listing. */
 router.get('/register',register);
 router.get('/login',login);
-router.get('/admin',admin)
-router.get('/add',add)
-router.get('/edit',edit)
-
-
+router.get('/admin',admin);
+router.get('/add',add);
+router.get('/edit', edit);
 
 
 module.exports = router;

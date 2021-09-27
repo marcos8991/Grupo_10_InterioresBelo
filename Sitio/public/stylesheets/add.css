@@ -1,9 +1,30 @@
 .add .btn-Agregar {
     text-align: center ;
+   
 }
 
 .add .SubirImagen .btn-Subir  {
     text-align:center; 
+    transition: all linear .5s;
+
 }
 
+/* .add .SubirImagen .btn-Subir label {
+    transition: all ease .3s;
+    
+}
 
+.add .SubirImagen .btn-Subir label:hover {
+background-color:var(--color-celesteOscuro) ;
+} */
+
+
+.add .btn-Agregar button{
+    border: none;
+    background-color: var(--color-azul);
+    transition: all ease .3s;
+}
+
+.add .btn-Agregar button:hover{
+    background-color:#071e2e ;
+}

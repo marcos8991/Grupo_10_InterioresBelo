@@ -6,6 +6,10 @@
     display: none;
 }
 
+.admin .row .card-body .admin-{
+    display: none;
+} 
+
 
 
 
@@ -21,8 +25,9 @@
     .admin .row .card-body .admin-promo{
         display: table-cell;
     }
-    
-    
-    
+
+    .admin .row .card-body .admin-{
+        display: table-cell;
+    } 
     
 }
