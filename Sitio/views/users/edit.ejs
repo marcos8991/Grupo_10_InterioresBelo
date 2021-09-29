@@ -11,29 +11,29 @@
                     <h4>Editar producto</h4>
                 </div>
                 <div class="card-body">
-                    <form class="row g-3">
+                    <form action="/product/edit/<%= product.id %>?_method=PUT" class="row g-3" method="POST">
                         <div class="col-12">
-                          <label for="inputname" class="form-label">Nombre de Producto</label>
-                          <input type="text" placeholder = "Nombre del producto" class="form-control" id="inputname">
+                          <label for="name" class="form-label">Nombre de Producto</label>
+                          <input type="text" placeholder = "Nombre del producto" class="form-control" id="name" name="name" value="<%= product.name %> "> 
                         </div>
                         <div class="col-md-6">
-                            <label for="Precio" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="Precio" placeholder="$">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="price" name="price" placeholder="$" >
                           </div>
                           <div class="col-md-6">
-                            <label for="Cuotas" class="form-label">Cuotas</label>
-                            <select id="Cuotas" class="form-select">
+                            <label for="promo" class="form-label">Cuotas</label>
+                            <select id="promo" class="form-select" name="promo">
                                 <option value="" hidden>Elegir cuotas</option>
-                                <option value="1">Hasta 3 cuotas</option>
-                                <option value="2">Hasta 6 cuotas</option>
-                                <option value="3">Hasta 12 cuotas</option>
-                                <option value="4">Hasta 18 cuotas</option>
+                                <option value="<%= product.promo %> ">Hasta 3 cuotas</option>
+                                <option value="<%= product.promo %> ">Hasta 6 cuotas</option>
+                                <option value="<%= product.promo %> ">Hasta 12 cuotas</option>
+                                <option value="<%= product.promo %> ">Hasta 18 cuotas</option>
                               </select>
                           </div>
                         <div class="col-12">
-                          <label for="descripcion" class="form-label">Descripcion</label>
+                          <label for="description" class="form-label">Descripcion</label>
                           <textarea style="resize: none; height: 100px;width: 100%;"
-                          type="text" placeholder ="Descripcion" class="form-control" id="descripcion"></textarea>
+                          type="text" placeholder ="Descripcion" class="form-control" id="description"  name="description" ></textarea>
                         </div>
                         <div class="SubirImagen ">
                             <div class="btn-Subir">

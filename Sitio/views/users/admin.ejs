@@ -35,9 +35,9 @@
                                                 <td class="admin-price"><%= product.price  %></td>
                                                 <td class="admin-">
                                                  <div class="d-flex justify-content-around"> 
-                                                    <a href="/product/edit" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                                                    <a href="/product/edit/<%= product.id %> " class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
                                                     <div>
-                                                      <form action="" method="POST">
+                                                      <form action="/product/destroy/<%= product.id %>?_method=DELETE " method="POST">
                                                         <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
                                                       </form>
                                                     </div>

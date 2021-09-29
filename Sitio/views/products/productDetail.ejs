@@ -14,10 +14,10 @@
 
           
             <div class="Constantine">
-                <h1> Silla Constantine</h1>
-                <p>$7022</p>
-                <p>hasta 18 cuotas</p>
-                <img src="/images/silla.png" alt="">
+                <h1> <%= product.name %> </h1>
+                <p><%= product.price %> </p>
+                <p><%= product.promo %> </p>
+                <img src="/images/<%= product.image %> " alt="">
             </div>
             <div class="descripcion">
                 <div>
@@ -25,14 +25,14 @@
 
                 </div>
                 <div class="Detalle">
-                    <p> Cuerpo: 1</p>
-                    <p> Ancho total: 81 cm</p>
+                    <p> <%= product.description %> </p>
+                    <!-- <p> Ancho total: 81 cm</p>
                     <p>Ancho asiento: 43 cm </p>
                     <p> Profundidad total de asiento: 74 cm</p>
                     <p> Profundidad de asiento: 57 cm</p>
                     <p> Altura: 77 cm </p>
                     <p> Altura del asinto: 42 cm </p>
-                    <p> Color: Blanco , Negro, Gris</p>
+                    <p> Color: Blanco , Negro, Gris</p> -->
 
                 </div>
                 <div class="Tarjetas">

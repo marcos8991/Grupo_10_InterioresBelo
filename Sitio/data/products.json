@@ -1,47 +1,34 @@
 [
-    {
-        "id" : 1,
-        "name" : "Silla Constantine",
-        "price" : "$7022",
-        "description":"Silla con capacidad para 1 cuerpo , tiene un ancho de 81cm y una altura de 43cm",
-        "image": "sillaConstantine.png" ,
-        "promo" : "hasta 18 cuotas"
-    },
-
-    {
-        "id" : 2,
-        "name" : "Silla Esmeralda",
-        "price" : "$14000",
-        "description":"Silla con capacidad para 1 cuerpo , tiene un ancho de 70cm y una altura de 54cm,disponible en varios colores",
-        "image": "silla1111.jpg" ,
-        "promo" : "hasta 6 cuotas"
-    },
-
-    {
-        "id" : 3,
-        "name" : "Sofa Monaco",
-        "price" : "$5023",
-        "description":"sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
-        "image": "silla3-removebg-preview.png" ,
-        "promo" : "hasta 12 cuotas"
-    },
-
-
-    {
-        "id" : 4,
-        "name" : "Silla Roma",
-        "price" : "$9000",
-        "description":"Silla con capacidad para 1 cuerpo , tiene un ancho de 40cm y una altura de 50cm",
-        "image": "silla5-removebg-preview.png" ,
-        "promo" : "hasta 18 cuotas"
-    },
-
-    {
-        "id" : 5,
-        "name" : "Silla Baltic",
-        "price" : "$4500",
-        "description":"Silla con capacidad para 1 cuerpo , tiene un ancho de 45cm y una altura de 54cm",
-        "image": "silla4-removebg-preview.png" ,
-        "promo" : "hasta 12 cuotas"
-    }
+   {
+      "id": 1,
+      "name": "Silla Esmeralda",
+      "price": "$14000",
+      "description": "Silla con capacidad para 1 cuerpo , tiene un ancho de 70cm y una altura de 54cm,disponible en varios colores",
+      "image": "silla1111.jpg",
+      "promo": "hasta 6 cuotas"
+   },
+   {
+      "id": 2,
+      "name": "Sofa Monaco",
+      "price": "$5023",
+      "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
+      "image": "silla3-removebg-preview.png",
+      "promo": "hasta 12 cuotas"
+   },
+   {
+      "id": 5,
+      "name": "nombre",
+      "description": "",
+      "price": 4000,
+      "promo": "Se rompe",
+      "image": "no-image.png"
+   },
+   {
+      "id": 6,
+      "name": "Silla de madera",
+      "description": "Descripcion de este producto",
+      "price": 4000,
+      "promo": "Hasta 18 cuotas",
+      "image": "no-image.png"
+   }
 ]
