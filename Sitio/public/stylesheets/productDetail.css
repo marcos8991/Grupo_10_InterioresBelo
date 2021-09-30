@@ -72,6 +72,7 @@
 .descripcion .Detalle p{
     font-size: 15px;
     padding: 1px;
+    margin-top: 20px;
 }
 
 .Tarjetas{
@@ -107,6 +108,11 @@
  }
  .general .productosRelacionados{
      display: none;
+ }
+
+ .general .productosRelacionados a{
+     color: black;
+     text-decoration: none;
  }
 
  /* Tablet */

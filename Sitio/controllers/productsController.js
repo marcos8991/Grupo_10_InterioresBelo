@@ -11,7 +11,8 @@ module.exports = {
     detail : (req,res) => {
         
         return res.render('products/productDetail',{
-            product : products.find(product => product.id === +req.params.id)
+            product : products.find(product => product.id === +req.params.id),
+            products
         })
     },
 
