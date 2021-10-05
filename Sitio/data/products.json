@@ -16,19 +16,19 @@
       "promo": "hasta 12 cuotas"
    },
    {
-      "id": 5,
-      "name": "nombre",
-      "description": "",
-      "price": 4000,
-      "promo": "Se rompe",
-      "image": "no-image.png"
+      "id": 3,
+      "name": "Silla Baltic",
+      "price": "$5023",
+      "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
+      "image": "silla4-removebg-preview.png",
+      "promo": "hasta 12 cuotas"
    },
    {
-      "id": 6,
-      "name": "Silla de madera",
-      "description": "Descripcion de este producto",
-      "price": 4000,
-      "promo": "Hasta 18 cuotas",
-      "image": "no-image.png"
+      "id": 4,
+      "name": "Silla Roma",
+      "price": "$5023",
+      "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
+      "image": "silla5-removebg-preview.png",
+      "promo": "hasta 12 cuotas"
    }
 ]

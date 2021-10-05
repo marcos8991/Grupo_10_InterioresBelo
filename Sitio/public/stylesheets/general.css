@@ -7,6 +7,8 @@
 .login-register, .home, .productCart, .Detalle-Producto , .add , .admin {
     background-color: var(--color-celeste);
 }
+
+
 /* Color-variables */
 
 :root{

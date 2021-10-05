@@ -1,30 +1,30 @@
 [
     {
         "id": 1,
-        "nombre": "",
-        "apellido": "",
-        "email": "",
-        "contraseña": "",
-        "categoría": "",
-        "imagen": ""
+        "nombre": "Clara",
+        "apellido": "Molina",
+        "email": "molina100@gmail.com",
+        "contraseña": "123456789",
+        "categoría": "usuario",
+        "imagen": "user-image.jpg"
     },
     {
         "id": 2,
-        "nombre": "",
-        "apellido": "",
-        "email": "",
-        "contraseña": "",
-        "categoría": "",
-        "imagen": ""
+        "nombre": "Ignacio",
+        "apellido": "Duncan",
+        "email": "nacho@hotmail.com",
+        "contraseña": "messi500",
+        "categoría": "usuario",
+        "imagen": "user-image.jpg"
     },
 
     {
         "id": 3,
-        "nombre": "",
-        "apellido": "",
-        "email": "",
-        "contraseña": "",
-        "categoría": "",
-        "imagen": ""
+        "nombre": "Abril",
+        "apellido": "Alberdi",
+        "email": "abril_alberdi@gmail.com",
+        "contraseña": "password",
+        "categoría": "usuario",
+        "imagen": "user-image.jpg"
     }
 ]
