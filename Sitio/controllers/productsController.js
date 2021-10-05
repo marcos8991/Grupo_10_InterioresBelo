@@ -91,7 +91,7 @@ module.exports = {
         
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8')
 
-        res.redirect('/product/admin')
+        res.redirect('/product/admin');
     }
     
 
