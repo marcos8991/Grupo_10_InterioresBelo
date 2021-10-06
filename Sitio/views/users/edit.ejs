@@ -18,22 +18,22 @@
                         </div>
                         <div class="col-md-6">
                             <label for="price" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="price" name="price" placeholder="$" >
+                            <input type="number" class="form-control" id="price" name="price" placeholder="$" value="<%= product.price %>">
                           </div>
                           <div class="col-md-6">
-                            <label for="promo" class="form-label">Cuotas</label>
-                            <select id="promo" class="form-select" name="promo">
+                            <label for="discount" class="form-label">Cuotas</label>
+                            <select id="discount" class="form-select" name="discount">
                                 <option value="" hidden>Elegir cuotas</option>
-                                <option value="<%= product.promo %> ">Hasta 3 cuotas</option>
-                                <option value="<%= product.promo %> ">Hasta 6 cuotas</option>
-                                <option value="<%= product.promo %> ">Hasta 12 cuotas</option>
-                                <option value="<%= product.promo %> ">Hasta 18 cuotas</option>
+                                <option value="hasta 3 cuotas" <%= product.discount === 'hasta 3 cuotas' ? 'selected' : null %> >Hasta 3 cuotas</option>
+                                <option value="hasta 6 cuotas" <%= product.discount === 'hasta 6 cuotas' ? 'selected' : null %> >Hasta 6 cuotas</option>
+                                <option value="hasta 12 cuotas" <%= product.discount === 'hasta 12 cuotas'? 'selected' : null %> >Hasta 12 cuotas</option>
+                                <option value="hasta 18 cuotas" <%= product.discount === 'hasta 18 cuotas' ? 'selected' : null %> >Hasta 18 cuotas</option>
                               </select>
                           </div>
                         <div class="col-12">
                           <label for="description" class="form-label">Descripcion</label>
                           <textarea style="resize: none; height: 100px;width: 100%;"
-                          type="text" placeholder ="Descripcion" class="form-control" id="description"  name="description" ></textarea>
+                          type="text" placeholder ="Descripcion" class="form-control" id="description"  name="description"><%= product.description %></textarea>
                         </div>
                         <div class="SubirImagen ">
                             <div class="btn-Subir">

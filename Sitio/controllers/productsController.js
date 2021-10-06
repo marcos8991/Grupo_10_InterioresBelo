@@ -28,22 +28,20 @@ module.exports = {
 
     //vista para añadir
     add:(req,res) => {
-        return res.render('users/add',{
-            
-        })
+        return res.render('users/add')
     },
 
     //logica para añadir el producto
     store : (req,res) => {
 
-        const {name,description,price,promo} = req.body;
+        const {name,description,price,discount} = req.body;
         
         let product = {
             id : products[products.length - 1].id + 1,
             name : name.trim(),
             description:description.trim(),
             price : +price, 
-            promo,
+            discount,
             image : 'no-image.png'
             
      }
@@ -62,6 +60,7 @@ module.exports = {
     edit : (req,res) => {
         return res.render('users/edit',{
             product : products.find(product => product.id === +req.params.id)
+            
         })
     },
 
@@ -69,13 +68,13 @@ module.exports = {
     //logica para actualizar un producto
     update : (req,res) => {
        
-        const {name,description,price,promo} = req.body;
+        const {name,description,price,discount} = req.body;
         let productModified = {
             id : +req.params.id,
             name : name.trim(),
             description:description.trim(),
             price : +price, 
-            promo,
+            discount : +discount,
             image : 'no-image.png'
             
      }

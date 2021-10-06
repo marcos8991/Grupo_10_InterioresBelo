@@ -2,33 +2,33 @@
    {
       "id": 1,
       "name": "Silla Esmeralda",
-      "price": "$14000",
-      "description": "Silla con capacidad para 1 cuerpo , tiene un ancho de 70cm y una altura de 54cm,disponible en varios colores",
-      "image": "silla1111.jpg",
-      "promo": "hasta 6 cuotas"
+      "description": "Silla esmeralda esta es una descripcion",
+      "price": 16000,
+      "discount": "hasta 6 cuotas",
+      "image": "silla1111.jpg"
    },
    {
       "id": 2,
       "name": "Sofa Monaco",
-      "price": "$5023",
+      "price": 5023,
       "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
       "image": "silla3-removebg-preview.png",
-      "promo": "hasta 12 cuotas"
+      "discount": "hasta 12 cuotas"
    },
    {
       "id": 3,
       "name": "Silla Baltic",
-      "price": "$5023",
+      "price": 5023,
       "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
       "image": "silla4-removebg-preview.png",
-      "promo": "hasta 12 cuotas"
+      "discount": "hasta 12 cuotas"
    },
    {
       "id": 4,
       "name": "Silla Roma",
-      "price": "$5023",
+      "price": 5023,
       "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
       "image": "silla5-removebg-preview.png",
-      "promo": "hasta 12 cuotas"
+      "discount": "hasta 12 cuotas"
    }
 ]
