@@ -83,14 +83,24 @@
 
 1. Comenzar a hacer
 
+- No subestimar el tiempo
+- 
 2. Hacer más
+
+- Cosultas a los profes
+- Reuniones semanales
 
 3. Continuar haciendo
 
 - Repasar videos de las clases
 - Repasar los Trabajos practicos
+- Comunicacion 
+- Estar al tanto de lo que esta haciendo el resto del equipo
 
 4. Hacer menos
 
+- Comenzar tarde
+
 5. Dejar de hacer
 
+- Dejar pasar el tiempo
