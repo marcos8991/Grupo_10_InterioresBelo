@@ -33,7 +33,7 @@ module.exports = {
 
     //logica para añadir el producto
     store : (req,res) => {
-
+         
         const {name,description,price,discount} = req.body;
         
         let product = {
