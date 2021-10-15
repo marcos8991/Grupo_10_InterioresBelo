@@ -4,7 +4,7 @@ bcrypt = require('bcryptjs')
 
 module.exports = [
     body('email')
-    .custom((value,{req})=>{
+    .custom((value,{req}) => {
         let user = users.find(user => user.email === value && bcrypt.compareSync(req.body.password,user.password));
 
         if (user) {

@@ -30,7 +30,7 @@ module.exports = {
 
         fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
 
-        return res.redirect('/')
+        return res.redirect('users/login')
     },
 
 
@@ -50,6 +50,13 @@ module.exports = {
                 avatar : user.avatar,
                 rol : user.rol
             }
+            return res.redirect('/')
+
+        }else{
+            return res.render('users/login',{
+                errores : errors.mapped(),
+               
+            })
         }
 
         

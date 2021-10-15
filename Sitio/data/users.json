@@ -5,6 +5,14 @@
       "email": "marcos@gmail.com",
       "password": "$2a$10$9.0UYDgj6jo6aEsXBJdb8O.O6HG648.pdrYFiX0qfhtcpJNtgXBOq",
       "avatar": "user-image.jpg",
-      "rol" : "user"
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "agustin zarate",
+      "email": "agustin@gmail.com",
+      "password": "$2a$10$dLsQglO/YhJiKpXdJKDvC.i2R.cXKLUpe8GcJUVDk/Uu9xIGDEgXe",
+      "avatar": "user-image.jpg",
+      "rol": "user"
    }
 ]

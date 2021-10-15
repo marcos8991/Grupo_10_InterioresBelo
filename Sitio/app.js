@@ -12,6 +12,9 @@ const methodOverride = require('method-override');
 //session
 const session = require('express-session')
 
+//
+const localsUserCheck = require('./middlewares/localsUserCheck')
+
 //rutas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -37,6 +40,7 @@ app.use(session({
   secret:"interioresBelo"
 }))
 
+app.use(localsUserCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
