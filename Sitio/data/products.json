@@ -38,5 +38,13 @@
       "price": 16500,
       "discount": "hasta 18 cuotas",
       "image": "img-product-1634088175807.png"
+   },
+   {
+      "id": 6,
+      "name": "Silla de escritorio",
+      "description": "una descripcion muy larga de producto",
+      "price": 20000,
+      "discount": "hasta 12 cuotas",
+      "image": "img-product-1634309134114.png"
    }
 ]
