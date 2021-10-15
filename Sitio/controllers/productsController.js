@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"))
 
+const {validationResult} = require('express-validator');
+
+
+
 module.exports = {
     cart : (req,res) => {
         return res.render('products/productCart')
@@ -33,24 +37,36 @@ module.exports = {
 
     //logica para añadir el producto
     store : (req,res) => {
-         
-        const {name,description,price,discount} = req.body;
+        let errors = validationResult(req)
         
-        let product = {
-            id : products[products.length - 1].id + 1,
-            name : name.trim(),
-            description:description.trim(),
-            price : +price, 
-            discount,
-            image : 'no-image.png'
+        if (errors.isEmpty()) {
+            const {name,description,price,discount} = req.body;
+        
+            let product = {
+                id : products[products.length - 1].id + 1,
+                name : name.trim(),
+                description:description.trim(),
+                price : +price, 
+                discount,
+                image : req.file ? req.file.filename : 'no-image.png'
             
-     }
+            }
+            products.push(product);
 
-        products.push(product);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8')
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8')
     
-        return res.redirect('admin')
+            return res.redirect('admin')
+        }else{
+            return res.render('users/add',{
+                
+                errors : errors.mapped(),
+                old : req.body
+
+            })
+        }
+        
+
+        
     },
     
     
@@ -67,21 +83,36 @@ module.exports = {
     
     //logica para actualizar un producto
     update : (req,res) => {
-       
-        const {name,description,price,discount} = req.body;
-        let productModified = {
-            id : +req.params.id,
-            name : name.trim(),
-            description:description.trim(),
-            price : +price, 
-            discount : +discount,
-            image : 'no-image.png'
+        let errors = validationResult(req)
+        let product = products.find(product => product.id === +req.params.id);
+        if (errors.isEmpty()) {
             
-     }
+            const {name,description,price,discount} = req.body;
+           
+            
+            let productModified = {
+                id : +req.params.id,
+                name : name.trim(),
+                description:description.trim(),
+                price : +price, 
+                discount,
+                image : product.image
+            
+            }
         let productsModified = products.map(product => product.id === +req.params.id ? productModified : product)
 
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8')
+        
         return res.redirect('/product/admin')
+    
+        }else{
+            return res.render('users/edit',{
+                
+                errors : errors.mapped(),
+                product
+            })
+        }
+        
     },
 
     
@@ -92,7 +123,5 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8')
 
         res.redirect('/product/admin');
-    }
-    
-
+    } 
 }

@@ -30,5 +30,13 @@
       "description": "sofa con capacidad para 3 cuerpo , tiene un ancho de 2m y una altura de 40cm , excelente para disfrutar en familia",
       "image": "silla5-removebg-preview.png",
       "discount": "hasta 12 cuotas"
+   },
+   {
+      "id": 5,
+      "name": "Silla de madera",
+      "description": "Silla rustica hecha en argentina",
+      "price": 16500,
+      "discount": "hasta 18 cuotas",
+      "image": "img-product-1634088175807.png"
    }
 ]
