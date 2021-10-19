@@ -37,7 +37,9 @@ app.use(methodOverride('_method'));
 
 //middleware de aplicacion
 app.use(session({
-  secret:"interioresBelo"
+  secret:"interioresBelo",
+  resave: false,
+  saveUninitialized: true
 }))
 
 

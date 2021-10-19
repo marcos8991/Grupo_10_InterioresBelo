@@ -21,14 +21,16 @@
                     <form action="" method="POST">
 
                         <div class="input-contenedor">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" placeholder="Ingresa tu nombre completo" id="name" name="name">
+                            <label for="nombre">Nombre completo</label>                           
+                            <input type="text" placeholder="Ingresa tu nombre completo" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                            <span class="text-danger"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
                         </div>
 
 
                         <div class="input-contenedor">
                             <label for="email">Email</label>
-                             <input type="email" placeholder="Ingresa tu email" id="email" name="email">
+                            <input type="email" placeholder="Ingresa tu email" id="email" name="email">
+                            <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
                         </div>
 
                         <div class="input-contenedor">
@@ -41,6 +43,9 @@
                             <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password2" minlength="8">
                         </div>
 
+                        
+                        
+                        
                        
                 
                
