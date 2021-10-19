@@ -38,6 +38,10 @@
                             <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password" minlength="8">
                             
                         </div>
+                        <div class="form-checkmt-0">
+                            <input class="" type="checkbox" id="remember" name="remember">
+                            <label class="form-check-label" for="remember">Guardar sesion</label>
+                          </div>
                         <div class="box-error">
                             <span><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                         </div>

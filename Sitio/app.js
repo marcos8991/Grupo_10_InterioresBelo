@@ -10,10 +10,9 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 
 //session
-const session = require('express-session')
-
-//
-const localsUserCheck = require('./middlewares/localsUserCheck')
+const session = require('express-session');
+const localsUserCheck = require('./middlewares/localsUserCheck');
+const cookieCheck = require ('./middlewares/cookieCheck');
 
 //rutas
 var indexRouter = require('./routes/index');
@@ -34,9 +33,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
-app.use(session({ secret:"interioresBelo"}))
+app.use(session({
+  secret : "interioresBelo"
+}));
 
-app.use(localsUserCheck)
+
+app.use(cookieCheck)
+app.use(localsUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

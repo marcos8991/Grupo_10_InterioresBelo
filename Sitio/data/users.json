@@ -1,10 +1,34 @@
 [
    {
+      "id": 1,
+      "name": "marcos zarate",
+      "email": "marcos@gmail.com",
+      "password": "$2a$10$9.0UYDgj6jo6aEsXBJdb8O.O6HG648.pdrYFiX0qfhtcpJNtgXBOq",
+      "avatar": "user-image.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "agustin zarate",
+      "email": "agustin@gmail.com",
+      "password": "$2a$10$dLsQglO/YhJiKpXdJKDvC.i2R.cXKLUpe8GcJUVDk/Uu9xIGDEgXe",
+      "avatar": "user-image.jpg",
+      "rol": "user"
+   },
+   {
       "id": 3,
       "name": "Lucila Rodriguez",
       "email": "lucila@gmail.com",
       "password": "$2a$10$jH1q2.NuzEN30dmDiJNmPenQ8RpGr.gUslOYCnGWDR8aSka7kNZye",
       "avatar": "user-image.jpg",
       "rol": "admin"
+   },
+   {
+      "id": 4,
+      "name": "ailen",
+      "email": "ailen@gmail.com",
+      "password": "$2a$10$11XrQREwUFpJxL9M.OkXDeDMs8eO35f7JGDJM7uAx29QMgsN.EYU2",
+      "avatar": "user-image.jpg",
+      "rol": "user"
    }
 ]

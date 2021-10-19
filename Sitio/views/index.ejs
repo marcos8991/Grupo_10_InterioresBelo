@@ -5,31 +5,6 @@
     <%- include('./partials/header') %> 
     
     <main> 
-        <% if (locals.userLogin) { %>
-
-            <% if (locals.userLogin.rol === 'admin') { %>
-              <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/product/admin"> Administración</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/product/add"> Agregar Producto</a>
-                </li>
-              </ul>
-            <% }else{ %>
-              <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/users/profile">Mi Perfil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/users/add">Agregar un producto</a>
-                </li>
-              </ul>
-            <% } %>
-        <% } %>
-        
-
-
         <section class="carousel">
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
