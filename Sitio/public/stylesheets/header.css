@@ -66,6 +66,9 @@ header .buscador form button i{
 
 header .user a{
     display: none;
+    
+    text-decoration: none;
+    color: black;
 }
 
 header nav{

@@ -3,6 +3,15 @@ main{
     margin-top: 0px;
 }
 
+
+/*navegacion*/
+
+.home main ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
 /* Interiores, Habitacion y Productos */
 
 main .bloqueDeContenido{
