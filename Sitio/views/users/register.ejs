@@ -36,11 +36,13 @@
                         <div class="input-contenedor">
                             <label for="pass">Contraseña</label>
                             <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password" minlength="8">
+                            <span class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
                         </div>
 
                         <div class="input-contenedor">
                             <label for="pass">Confirma tu contraseña</label>
-                            <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password2" minlength="8">
+                            <input type="password" placeholder="Confirma tu contraseña" id="pass" name="password2" minlength="8">
+                            <span class="text-danger"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
                         </div>
 
                         

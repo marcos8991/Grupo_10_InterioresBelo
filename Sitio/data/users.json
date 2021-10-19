@@ -14,5 +14,13 @@
       "password": "$2a$10$dLsQglO/YhJiKpXdJKDvC.i2R.cXKLUpe8GcJUVDk/Uu9xIGDEgXe",
       "avatar": "user-image.jpg",
       "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "pablo",
+      "email": "pablo@gmail.com",
+      "password": "$2a$10$5z5DQFLppmZ.7e1iCdNyeeEWoLqdOMK9x7MFbC5JsSuu..hwXnYc6",
+      "avatar": "user-image.jpg",
+      "rol": "user"
    }
 ]

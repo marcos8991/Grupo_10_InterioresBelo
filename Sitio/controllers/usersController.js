@@ -32,6 +32,14 @@ module.exports = {
             users.push(user);
     
             fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
+
+
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
     
             return res.redirect('/')
         }else{
@@ -84,6 +92,38 @@ module.exports = {
 
 
         res.redirect('/')
+    },
+    profile : (req,res) => {
+        res.render('users/profile',{
+            user : users.find(user => user.id === req.session.userLogin.id)
+        })
+    },
+
+    update : (req,res) => {
+        let user = users.find(user => user.id === req.session)
+        
+        let userModified = {
+            id : user.id,
+            name : req.body.name,
+            email : user.email,
+            password : bcrypt.hashSync(req.body.password,10) ,
+            avatar : req.file ? req.file.filename : user.avatar,
+            rol : user.rol
+        }
+
+        let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user)
+
+        fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(usersModified,null,3),'utf-8')
+    
+        req.session.userLogin = {
+            id : user.id,
+            name : userModified.name,
+            avatar : userModified.avatar,
+            rol : user.rol
+        }
+
+        return res.redirect('users/profile')
+    
     }
    
     
