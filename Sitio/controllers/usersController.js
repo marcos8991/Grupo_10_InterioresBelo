@@ -50,6 +50,11 @@ module.exports = {
                 avatar : user.avatar,
                 rol : user.rol
             }
+
+            if (req.body.remember) {
+                res.cookie('interioresBelo',req.session.userLogin,{maxAge : 5000 *60})
+            }
+
             return res.redirect('/')
 
         }else{
@@ -60,6 +65,13 @@ module.exports = {
         }
 
         
+    },
+
+    logout : (req,res) => {
+        req.session.destroy()
+
+
+        res.redirect('/')
     }
    
     
