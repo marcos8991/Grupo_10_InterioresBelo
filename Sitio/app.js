@@ -1,9 +1,21 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+
+//cookie-parser
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//method override
+const methodOverride = require('method-override');
+
+//session
+const session = require('express-session')
+
+//
+const localsUserCheck = require('./middlewares/localsUserCheck')
+
+//rutas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
@@ -20,6 +32,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(methodOverride('_method'));
+app.use(session({ secret:"interioresBelo"}))
+
+app.use(localsUserCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -4,7 +4,32 @@
 <body class="home">
     <%- include('./partials/header') %> 
     
-    <main>   
+    <main> 
+        <% if (locals.userLogin) { %>
+
+            <% if (locals.userLogin.rol === 'admin') { %>
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/product/admin"> Administración</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/product/add"> Agregar Producto</a>
+                </li>
+              </ul>
+            <% }else{ %>
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/users/profile">Mi Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/users/add">Agregar un producto</a>
+                </li>
+              </ul>
+            <% } %>
+        <% } %>
+        
+
+
         <section class="carousel">
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -31,17 +56,17 @@
         </section>
         <section class="bloqueDeContenido">
             <div class="interiores">
-                <h1><a href="/product/productDetail">Interiores</a></h1>
-                <a href="/product/productDetail"><img src="/images/nathan-interior-oakley-OJ031izrcu8-unsplash 2.png" alt=""></a>
+                <h1><a href="/product/productDetail/1">Interiores</a></h1>
+                <a href="/product/productDetail/1"><img src="/images/nathan-interior-oakley-OJ031izrcu8-unsplash 2.png" alt=""></a>
             </div>
             <div class="habitacion">
-                <h1><a href="/products/productDetail">Habitación</a></h1>
-                <a href="/product/productDetail"><img src="/images/avery-klein-habitacion-JaXs8Tk5Iww-unsplash 2.png" alt=""></a>
+                <h1><a href="/product/productDetail/2">Habitación</a></h1>
+                <a href="/product/productDetail/2"><img src="/images/avery-klein-habitacion-JaXs8Tk5Iww-unsplash 2.png" alt=""></a>
                 
             </div>
             <div class="productos">
-                <h1><a href="/product/productDetail">Productos</a></h1>
-                <a href="/product/productDetail"><img src="/images/kevser-productosxa3zvVw10z8-unsplash 1.png" alt=""></a>
+                <h1><a href="/product/productDetail/3">Productos</a></h1>
+                <a href="/product/productDetail/3"><img src="/images/kevser-productosxa3zvVw10z8-unsplash 1.png" alt=""></a>
             </div>
         </section>
     </main>
