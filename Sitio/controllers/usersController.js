@@ -15,22 +15,42 @@ module.exports = {
 
     //aca recibo los datos que me llegan por el formulario
     processRegister : (req,res) => {
-        const {name,email,password} = req.body;
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            const {name,email,password} = req.body;
         
-        let user = {
-            id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
-            name : name.trim(),
-            email : email.trim(),
-            password : bcrypt.hashSync(password,10),
-            avatar : 'user-image.jpg',
-            rol : 'user'
+            let user = {
+                id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
+                name : name.trim(),
+                email : email.trim(),
+                password : bcrypt.hashSync(password,10),
+                avatar : 'user-image.jpg',
+                rol : 'user'
+    
+            }
+            users.push(user);
+    
+            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
 
+
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
+    
+            return res.redirect('/')
+        }else{
+            return res.render('users/register',{
+                errores : errors.mapped(),
+                old : req.body
+            })
         }
-        users.push(user);
 
-        fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
 
-        return res.redirect('users/login')
+       
     },
 
 
@@ -68,5 +88,37 @@ module.exports = {
 
 
         res.redirect('/')
+    },
+    profile : (req,res) => {
+        res.render('users/profile',{
+            user : users.find(user => user.id === req.session.userLogin.id)
+        })
+    },
+
+    update : (req,res) => {
+        let user = users.find(user => user.id === req.session)
+        
+        let userModified = {
+            id : user.id,
+            name : req.body.name,
+            email : user.email,
+            password : bcrypt.hashSync(req.body.password,10) ,
+            avatar : req.file ? req.file.filename : user.avatar,
+            rol : user.rol
+        }
+
+        let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user)
+
+        fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(usersModified,null,3),'utf-8')
+    
+        req.session.userLogin = {
+            id : user.id,
+            name : userModified.name,
+            avatar : userModified.avatar,
+            rol : user.rol
+        }
+
+        return res.redirect('users/profile')
+    
     }
 }

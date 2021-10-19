@@ -17,17 +17,9 @@
    },
    {
       "id": 3,
-      "name": "Lucila Rodriguez",
-      "email": "lucila@gmail.com",
-      "password": "$2a$10$jH1q2.NuzEN30dmDiJNmPenQ8RpGr.gUslOYCnGWDR8aSka7kNZye",
-      "avatar": "user-image.jpg",
-      "rol": "admin"
-   },
-   {
-      "id": 4,
-      "name": "ailen",
-      "email": "ailen@gmail.com",
-      "password": "$2a$10$11XrQREwUFpJxL9M.OkXDeDMs8eO35f7JGDJM7uAx29QMgsN.EYU2",
+      "name": "pablo",
+      "email": "pablo@gmail.com",
+      "password": "$2a$10$5z5DQFLppmZ.7e1iCdNyeeEWoLqdOMK9x7MFbC5JsSuu..hwXnYc6",
       "avatar": "user-image.jpg",
       "rol": "user"
    }
