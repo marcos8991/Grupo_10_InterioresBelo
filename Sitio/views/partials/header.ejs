@@ -12,13 +12,21 @@
         
         <% if (locals.userLogin) { %>
             <a href="/users/profile"><%= locals.userLogin.name %></a>
-
-            
+            <% if (locals.userLogin.rol === "admin") { %>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/product/admin"> Administración</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/product/add"> Agregar Producto</a>
+                    </li>
+                  </ul>
+            <% } %>
         <% }else{ %>
-        
             <a href="/users/login"><i class="far fa-user"></i></a> 
             <a href="/products/productCart"> <i class="fas fa-shopping-cart"></i></a>
        <% } %>
+       
     </div>
    
         

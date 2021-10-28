@@ -15,15 +15,15 @@ const productValidator = require('../validations/productValidator')
 
 router.get('/productCart', cart );
 router.get('/productDetail/:id', detail);
-router.get('/admin',adminUserCheck,admin);
+router.get('/admin',adminUserCheck, admin);
 
 //añadir un producto
 router.get('/add',adminUserCheck,add);
-router.post('/add',upload.single('image'),productValidator,store)
+router.post('/add',upload.single('image'),productValidator, store)
 
 //editar un producto
-router.get('/edit/:id', adminUserCheck,edit);
-router.put('/edit/:id',productValidator,update)
+router.get('/edit/:id',adminUserCheck,edit);
+router.put('/edit/:id',productValidator, update)
 
 //borrar un producto
 router.delete('/destroy/:id',destroy)

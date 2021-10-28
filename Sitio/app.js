@@ -34,8 +34,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
-
-//middleware de aplicacion
 app.use(session({
   secret:"interioresBelo",
   resave: false,
