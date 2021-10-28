@@ -5,9 +5,9 @@ const loginValidator = require('../validations/loginValidator')
 const registerValidator = require('../validations/registerValidator')
 const userLoginCheck = require('../middlewares/userLoginCheck')
 
-const upload = require('../middlewares/multerImageUser')
+const upload = require('../middlewares/multerImageUser');
 
-const {register,login,logout,processRegister,processLogin,profile, update} = require('../controllers/usersController');
+const {register,login,logout,processRegister,processLogin,profile,update} = require('../controllers/usersController');
 
 
 /* GET users listing. */

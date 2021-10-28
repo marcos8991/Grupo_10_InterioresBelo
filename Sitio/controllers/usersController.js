@@ -93,7 +93,10 @@ module.exports = {
 
         res.redirect('/')
     },
+    
     profile : (req,res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
+
         res.render('users/profile',{
             user : users.find(user => user.id === req.session.userLogin.id)
         })

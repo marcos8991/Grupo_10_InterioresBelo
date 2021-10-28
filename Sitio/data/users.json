@@ -22,5 +22,21 @@
       "password": "$2a$10$5z5DQFLppmZ.7e1iCdNyeeEWoLqdOMK9x7MFbC5JsSuu..hwXnYc6",
       "avatar": "user-image.jpg",
       "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "pablo",
+      "email": "pablo@hotmail.com",
+      "password": "$2a$10$He4SGJA7gFJuoFIsomMcmey8.v2HzSIbWcVvNUbcI1mnsg9MzkIwm",
+      "avatar": "user-image.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "fernando",
+      "email": "fernando@gmail.com",
+      "password": "$2a$10$G2c7icxZ4W9M1Vq0jlhbVOjviZO6UIagI2Qorfeab66zJFwMzUSWS",
+      "avatar": "user-image.jpg",
+      "rol": "user"
    }
 ]
