@@ -71,7 +71,7 @@ module.exports = {
                 rol : user.rol
             }
             if(req.body.remember){
-                res.cookie('interioresBelo',req.sesion.userLogin,{maxAge : 1000 * 60})
+                res.cookie('interioresBelo',req.session.userLogin,{maxAge : 1000 * 60})
             }
             return res.redirect('/')
         }else{
@@ -99,15 +99,18 @@ module.exports = {
     },
 
     update : (req,res) => {
-        let user = users.find(user => user.id === req.session)
-        
-        let userModified = {
-            id : user.id,
-            name : req.body.name,
-            email : user.email,
-            password : bcrypt.hashSync(req.body.password,10) ,
-            avatar : req.file ? req.file.filename : user.avatar,
-            rol : user.rol
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let user = users.find(user => user.id === req.session.userLogin.id)
+            let hashPass = req.body.password ? bcrypt.hashSync(req.body.password,10) : user.password;
+            
+            let userModified = {
+                id : user.id,
+                name : req.body.name,
+                email : user.email,
+                password : hashPass,
+                avatar : req.file ? req.file.filename : user.avatar,
+                rol : user.rol
         }
 
         let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user)
@@ -121,7 +124,16 @@ module.exports = {
             rol : user.rol
         }
 
-        return res.redirect('users/profile')
+        return res.redirect('/')
+        
+    } else {
+        return res.render('users/profile', {
+            
+            errores : errors.mapped()
+
+        })
+        
+    } 
     
     }
 }

@@ -3,17 +3,17 @@ var router = express.Router();
 const loginValidator = require('../validations/loginValidator')
 const registerValidator = require('../validations/registerValidator')
 const userLoginCheck = require('../middlewares/userLoginCheck')
-
+const notEntry = require('../middlewares/notEntry')
 const upload = require('../middlewares/multerImageUser');
 
 const {register,login,logout,processRegister,processLogin,profile,update} = require('../controllers/usersController');
 
 
 /* GET users listing. */
-router.get('/register',register);
+router.get('/register',notEntry,register);
 router.post('/register',registerValidator,processRegister)
 
-router.get('/login',login);
+router.get('/login',notEntry,login);
 router.post('/login',loginValidator, processLogin)
 
 router.get('/logout',logout)

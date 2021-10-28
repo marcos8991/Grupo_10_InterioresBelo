@@ -1,9 +1,9 @@
 [
    {
       "id": 1,
-      "name": "marcos zarate",
+      "name": "Agustin",
       "email": "marcos@gmail.com",
-      "password": "$2a$10$9.0UYDgj6jo6aEsXBJdb8O.O6HG648.pdrYFiX0qfhtcpJNtgXBOq",
+      "password": "$2a$10$EfMN5by/NW5yerhq2CJjN.AsBFogJz1jkDENzOMM6H4VBU24Qi.iu",
       "avatar": "user-image.jpg",
       "rol": "admin"
    },
@@ -36,6 +36,22 @@
       "name": "fernando",
       "email": "fernando@gmail.com",
       "password": "$2a$10$G2c7icxZ4W9M1Vq0jlhbVOjviZO6UIagI2Qorfeab66zJFwMzUSWS",
+      "avatar": "user-image.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "martin",
+      "email": "martin@gmail.com",
+      "password": "$2a$10$tNwFlSI5VwsDwVRzQnVyw.Psy5X3zmWTKNXwiwjyuHiq8jCfAXgIW",
+      "avatar": "user-image.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "Agus",
+      "email": "agustin20@gmail.com",
+      "password": "$2a$10$j1Q4OGhssvTfau/H4ClTrOPfZF6ApkTobmxjkGlKGzdn4VRHPLTTS",
       "avatar": "user-image.jpg",
       "rol": "user"
    }
