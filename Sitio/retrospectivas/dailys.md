@@ -34,25 +34,25 @@
 
 # Que hicimos ayer? 
 
-- Lu : 
+- Lu : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario)
 
-- Flor : 
+- Flor : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario
 
 - Marcos : 
 
 
 # Que vamos a hacer hoy? 
 
-- Lu : 
+- Lu : Apoyar con observacion (crud del producto)
 
-- Flor : 
+- Flor : Apoyar con observacion (crud del producto)
 
 - Marcos : 
 
 # cual es el bloqueo?
 
-- Lu,flor,marcos: 
+
 
 ### Action Items
 
-- Lu,flor,marcos: 
+
