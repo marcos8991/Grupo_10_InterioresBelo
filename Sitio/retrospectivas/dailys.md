@@ -55,4 +55,59 @@
 
 ### Action Items
 
+### Daily Sprint 6 (Observaciones)
+## 01/11
+
+
+# Que hicimos ayer? 
+
+- Lu :  
+
+- Flor : 
+
+- Marcos : 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : 
+- Flor : 
+
+- Marcos : 
+
+# cual es el bloqueo?
+
+
+
+### Action Items
+
+
+### Daily Sprint 5 (Observaciones)
+## 29/10
+
+
+# Que hicimos ayer? 
+
+- Lu : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario)
+
+- Flor : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario
+
+- Marcos : 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : Apoyar con observacion (crud del producto)
+
+- Flor : Apoyar con observacion (crud del producto)
+
+- Marcos : 
+
+# cual es el bloqueo?
+
+
+
+### Action Items
+
+
 
