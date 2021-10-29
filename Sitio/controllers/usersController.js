@@ -86,6 +86,7 @@ module.exports = {
     logout : (req,res) => {
         req.session.destroy()
 
+        res.clearCookie('interioresBelo')
 
         res.redirect('/')
     },
