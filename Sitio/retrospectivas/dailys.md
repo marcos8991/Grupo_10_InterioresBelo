@@ -1,7 +1,6 @@
 ### Daily Sprint 5 (Observaciones)
 ## 28/10
 
-
 # Que hicimos ayer? 
 
 - Lu : Repase contenido para realizar mi observación y se termino la observación de (Implementar rutas de huéspedes y de usuarios),y apoye al equipo en sus observaciones.
@@ -55,13 +54,42 @@
 
 ### Action Items
 
+
 ### Daily Sprint 6 (Observaciones)
 ## 01/11
 
 
 # Que hicimos ayer? 
 
-- Lu :  
+- Lu :  Repaso para hacer el diagrama
+
+- Flor : Repaso para hacer el diagrama
+
+- Marcos : Repaso para hacer el diagrama
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : Ayudar a realizar el diagrama
+
+- Flor : Realizar diagrama
+
+- Marcos : Ayudar a realizar el diagrama
+
+# cual es el bloqueo?
+
+- Lu, flor, marcos: Relacionar tablas
+
+### Action Items
+
+- Lu, flor, marcos: Consultamos a gabi las relaciones de las tablas
+### Daily Sprint 5 (Observaciones)
+## 02/11
+
+
+# Que hicimos ayer? 
+
+- Lu :
 
 - Flor : 
 
@@ -71,6 +99,7 @@
 # Que vamos a hacer hoy? 
 
 - Lu : 
+
 - Flor : 
 
 - Marcos : 
@@ -80,34 +109,4 @@
 
 
 ### Action Items
-
-
-### Daily Sprint 5 (Observaciones)
-## 29/10
-
-
-# Que hicimos ayer? 
-
-- Lu : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario)
-
-- Flor : Termine observaciones (Implementar el login de usuarios - Implementar la función de recordar al usuario
-
-- Marcos : 
-
-
-# Que vamos a hacer hoy? 
-
-- Lu : Apoyar con observacion (crud del producto)
-
-- Flor : Apoyar con observacion (crud del producto)
-
-- Marcos : 
-
-# cual es el bloqueo?
-
-
-
-### Action Items
-
-
 
