@@ -83,30 +83,39 @@
 ### Action Items
 
 - Lu, flor, marcos: Consultamos a gabi las relaciones de las tablas
+
+
+
+
 ### Daily Sprint 5 (Observaciones)
-## 02/11
+## 03/11
 
 
 # Que hicimos ayer? 
 
 - Lu :
 
-- Flor : 
+- Flor : repaso de contenido para finalizar las relaciones del diagrama.  
 
-- Marcos : 
+- Marcos : repaso de contenido para corregir las relaciones del diagrama. 
 
 
 # Que vamos a hacer hoy? 
 
 - Lu : 
 
-- Flor : 
+- Flor : repasar contenido para colaborar en la tarea del CRUD.  
 
-- Marcos : 
+- Marcos : terminar la tarea de migraciones. 
 
 # cual es el bloqueo?
 
+- Lu : 
 
+- Flor : precisa db con migraciones terminadas. 
+
+- Marcos : :'( 
 
 ### Action Items
 
+- lu,Flor : ayudar a marcos a finalizar su tarea.
