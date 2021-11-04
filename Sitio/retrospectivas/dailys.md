@@ -93,7 +93,7 @@
 
 # Que hicimos ayer? 
 
-- Lu :
+- Lu : repaso de contenido para finalizar el diagrama
 
 - Flor : repaso de contenido para finalizar las relaciones del diagrama.  
 
@@ -102,7 +102,7 @@
 
 # Que vamos a hacer hoy? 
 
-- Lu : 
+- Lu : repasar contenido para la tarea del CRUD e implementarlo en un proyecto aparte
 
 - Flor : repasar contenido para colaborar en la tarea del CRUD.  
 
