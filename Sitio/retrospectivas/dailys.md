@@ -87,7 +87,40 @@
 
 
 
-### Daily Sprint 5 (Observaciones)
+### Daily Sprint 6 (Observaciones)
+## 02/11
+
+
+# Que hicimos ayer? 
+
+- Lu : repaso de contenido para finalizar el diagrama
+
+- Flor : repaso de contenido para finalizar las relaciones del diagrama.  
+
+- Marcos : repaso de contenido para corregir las relaciones del diagrama. 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : repasar contenido para la tarea del CRUD e implementarlo en un proyecto aparte
+
+- Flor : repasar contenido para colaborar en la tarea del CRUD.  
+
+- Marcos : terminar la tarea de migraciones. 
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : precisa db con migraciones terminadas. 
+
+- Marcos : :'( 
+
+### Action Items
+
+- lu,Flor : ayudar a marcos a finalizar su tarea.
+
+### Daily Sprint 6 (Observaciones)
 ## 03/11
 
 
@@ -119,3 +152,68 @@
 ### Action Items
 
 - lu,Flor : ayudar a marcos a finalizar su tarea.
+### Daily Sprint 6 (Observaciones)
+## 04/11
+
+
+# Que hicimos ayer? 
+
+- Lu : repaso de contenido para comenzar el Crud
+
+- Flor : repaso de contenido para colaborar con el Crud
+
+- Marcos : 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu :  Practicar el Crud en un proyecto aparte.
+
+- Flor : Practicar el Crud  en un Proyecto.
+
+- Marcos : 
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : 
+
+- Marcos : 
+
+### Action Items
+
+- lu,Flor : ayudar a marcos a finalizar su tarea.
+
+### Daily Sprint 6 (Observaciones)
+## 05/11
+
+
+# Que hicimos ayer? 
+
+- Lu : 
+
+- Flor :  
+
+- Marcos : 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : 
+
+- Flor :   
+
+- Marcos : 
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : 
+
+- Marcos : :
+
+### Action Items
+
+- lu,Flor : 
