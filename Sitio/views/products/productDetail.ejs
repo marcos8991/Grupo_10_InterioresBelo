@@ -38,7 +38,7 @@
             </div>
             <div>
               <button class="btn-Carrito">
-                <a href="/product/productCart">Agregar al carrito</a>
+                <a href="/products/productCart">Agregar al carrito</a>
               </button>
             </div>
             <div class="pagos">
@@ -51,7 +51,7 @@
         <h2>Productos relacionados</h2>
         <div class="productosRelacionados">
           <% products.forEach(product => { %>
-            <a href="/product/productDetail/<%= product.id %> ">
+            <a href="/products/productDetail/<%= product.id %> ">
             <div class="SillaEsmeralda">
               <h3><%= product.name %> </h3>
               <img src="/images/products/<%= product.image %> " alt="" />
@@ -59,27 +59,16 @@
           </a> 
           
           <% }) %>
-          <!-- <a href="/product/productDetail/">
-            <div class="SofaMonaco">
-              <h3>Sofa Monaco</h3>
-              <img src="/images/silla3-removebg-preview.png" alt="" />
-            </div>
-           </a>
-            <a href="/product/productDetail/">
-            <div class="SillaBaltic">
-              <h3>Silla Baltic</h3>
-              <img src="/images/silla4-removebg-preview.png " alt="" />
-            </div></a>
-            <a href="/product/productDetail/">
-            <div class="SillaRoma">
-              <h3>Silla Roma</h3>
-              <img src="/images/silla5-removebg-preview.png" alt="" />
-            </div>
-          </a> -->
+        
         
          
         </div>
       </div>
+
+
+      
+
+
     </main>
     <%- include('../partials/footer') %>
   </body>

@@ -162,7 +162,7 @@
 
 - Flor : repaso de contenido para colaborar con el Crud
 
-- Marcos : 
+- Marcos : repasar contenido para realizar la tarea de migraciones.
 
 
 # Que vamos a hacer hoy? 
@@ -171,7 +171,7 @@
 
 - Flor : Practicar el Crud  en un Proyecto.
 
-- Marcos : 
+- Marcos : terminar la tarea de migraciones.
 
 # cual es el bloqueo?
 
@@ -179,7 +179,7 @@
 
 - Flor : 
 
-- Marcos : 
+- Marcos : Pc en reparacion
 
 ### Action Items
 
@@ -188,12 +188,61 @@
 ### Daily Sprint 6 (Observaciones)
 ## 05/11
 
+# Que hicimos ayer? 
+
+- Lu : 
+
+- Flor : Repasando contenido de las clases para CRUD.
+
+- Agustin : Comienzo de la tarea de migraciones.
+
+- Marcos : Entro al equipo.
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : 
+
+- Flor : Repasar contenido para realizar la tarea de CRUD
+
+- Agustin : Terminar la tarea de migraciones.
+
+- Marcos : Repasar para colaborar en la tarea del CRUD
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : 
+
+- Agustin : Instalacion del workbench.
+
+- Marcos : 
+
+### Action Items
+
+- Lu : 
+
+- Flor :  
+
+- Agustin : 
+
+- Marcos : 
+
+
+
+
+### Daily Sprint 6 (Observaciones)
+## 06/11
+
 
 # Que hicimos ayer? 
 
 - Lu : 
 
-- Flor :  
+- Flor : 
+
+- Agustin : 
 
 - Marcos : 
 
@@ -202,7 +251,9 @@
 
 - Lu : 
 
-- Flor :   
+- Flor :  
+
+- Agustin : 
 
 - Marcos : 
 
@@ -212,8 +263,16 @@
 
 - Flor : 
 
-- Marcos : :
+- Agustin : 
+
+- Marcos : 
 
 ### Action Items
 
-- lu,Flor : 
+- Lu : 
+
+- Flor : 
+
+- Agustin : 
+
+- Marcos : 

@@ -13,7 +13,8 @@ const upload = require('../middlewares/multerImageProduct')
 const productValidator = require('../validations/productValidator')
 
 
-router.get('/productCart', cart );
+router.get('/productCart',cart);
+
 router.get('/productDetail/:id', detail);
 router.get('/admin',adminUserCheck, admin);
 

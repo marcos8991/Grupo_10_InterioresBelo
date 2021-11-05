@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -47,7 +49,7 @@ app.use(localsUserCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product',productsRouter);
+app.use('/products',productsRouter);
 
 
 // catch 404 and forward to error handler

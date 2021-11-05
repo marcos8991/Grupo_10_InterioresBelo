@@ -6,6 +6,47 @@
 
         <%- include('../partials/header') %>
             <main>
+              <% if (locals.userLogin) { %>
+
+                <% if (locals.userLogin.rol === 'admin') { %>
+                  <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/product/admin"> Administración</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/product/add"> Agregar Producto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuario
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+                        <li><a class="dropdown-item" href="/products/productCart">Carrito</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/users/logout">Cerrar sesión</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+         
+                <% }else{ %>
+                  <ul class="nav justify-content-center">
+                   
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuario
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+                        <li><a class="dropdown-item" href="/products/productCart">Carrito</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/users/logout">Cerrar sesión</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                <% } %>
+                
+            <% } %>
                 <div class="row mx-auto"> 
                     <div class="col-12 col-lg-10  mb-5 mx-auto"> 
                         <div class="card shadow mt-5"> 

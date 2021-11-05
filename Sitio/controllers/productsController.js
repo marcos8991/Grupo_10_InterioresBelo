@@ -7,6 +7,8 @@ const {validationResult} = require('express-validator');
 
 
 module.exports = {
+
+
     cart : (req,res) => {
         return res.render('products/productCart')
     },
