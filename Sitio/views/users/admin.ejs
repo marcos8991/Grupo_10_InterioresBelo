@@ -11,10 +11,10 @@
                 <% if (locals.userLogin.rol === 'admin') { %>
                   <ul class="nav justify-content-center">
                     <li class="nav-item">
-                      <a class="nav-link active" href="/product/admin"> Administración</a>
+                      <a class="nav-link active" href="/products/admin"> Administración</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/product/add"> Agregar Producto</a>
+                      <a class="nav-link" href="/products/add"> Agregar Producto</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,9 +76,9 @@
                                                 <td class="admin-price"><%= product.price  %></td>
                                                 <td class="admin-">
                                                  <div class="d-flex justify-content-around"> 
-                                                    <a href="/product/edit/<%= product.id %> " class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                                                    <a href="/products/edit/<%= product.id %> " class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
                                                     <div>
-                                                      <form action="/product/destroy/<%= product.id %>?_method=DELETE " method="POST">
+                                                      <form action="/products/destroy/<%= product.id %>?_method=DELETE " method="POST">
                                                         <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
                                                       </form>
                                                     </div>
