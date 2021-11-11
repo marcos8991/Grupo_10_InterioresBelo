@@ -59,7 +59,7 @@ module.exports = {
       })
       .then(product => {
         if(req.file[0] != undefined) {
-            let image = req.files.map(image => {
+            let image = req.file.map(image => {
                 let img = {
                     file : image.filename,
                     productId : product.id
