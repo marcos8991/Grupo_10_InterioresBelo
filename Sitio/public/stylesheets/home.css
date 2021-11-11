@@ -9,9 +9,12 @@ main{
 .home main ul li a{
     text-decoration: none;
     color: black;
-    
+    transition: all ease-in-out .3s;
 }
-
+.home main ul li a:hover{
+    color: rgb(54, 54, 54);
+    font-size: 16.5px;
+}
 /* Interiores, Habitacion y Productos */
 
 main .bloqueDeContenido{

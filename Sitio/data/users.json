@@ -54,5 +54,13 @@
       "password": "$2a$10$j1Q4OGhssvTfau/H4ClTrOPfZF6ApkTobmxjkGlKGzdn4VRHPLTTS",
       "avatar": "user-image.jpg",
       "rol": "user"
+   },
+   {
+      "id": 8,
+      "name": "Lucila",
+      "email": "lucila@gmail.com",
+      "password": "$2a$10$kv1NbfClqJycqjadhr1z/eDGyMspEC139LFA0yC.Ru7zAChvCUCsG",
+      "avatar": "user-image.jpg",
+      "rol": "admin"
    }
 ]
