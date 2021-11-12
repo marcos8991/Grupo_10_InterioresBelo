@@ -233,6 +233,51 @@
 
 
 ### Daily Sprint 6 (Observaciones)
+## 12/11
+
+
+# Que hicimos ayer? 
+
+- Lu : Realice tarea del Crud (detalle)
+
+- Flor :Realice Tarea del Crud  
+
+- Agustin : 
+
+- Marcos : 
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : Finalizar tarea de detalle y continuar con el buscador.
+
+- Flor :  Repasar video de clases para continuar con tarea de Crud.
+
+- Agustin : 
+
+- Marcos : 
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : eliminar un producto
+
+- Agustin : 
+
+- Marcos : 
+
+### Action Items
+
+- Lu : 
+
+- Flor : pregunte al grupo
+
+- Agustin : 
+
+- Marcos : 
+
+### Daily Sprint 6 (Observaciones)
 ## 06/11
 
 
