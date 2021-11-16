@@ -34,6 +34,16 @@
                                 <option value="hasta 18 cuotas" <%= product.discount === 'hasta 18 cuotas' ? 'selected' : null %> >Hasta 18 cuotas</option>
                               </select>
                           </div>
+                          <div class="col-md-4">
+                            <label for="section" class="form-label">Sección</label>
+                            <select id="section" class="form-select" name="section">
+                                <option value="" selected hidden>Elegir sección</option>
+                                <% sections.forEach(section => { %>
+                                  <option value="<%= section.id %> "><%= section.name%> </option>
+                                <% }) %>
+                               
+                              </select>    
+                        </div>
 
                         <div class="col-12">
                           <label for="description" class="form-label">Descripcion</label>

@@ -31,6 +31,11 @@ module.exports = {
       ),
     });
   },
+  
+  // search : (req,res) => {
+
+  // },
+
 
   //vista para añadir
   add: (req, res) => {
@@ -69,7 +74,7 @@ module.exports = {
             db.Image.bulkCreate(image, {validate : true})
                 .then( () => console.log('Imagen agregada'))
         }
-        return res.redirect('admin')
+        return res.redirect('product/admin')
     })
      .catch(error=> console.log(error))
 
@@ -89,15 +94,33 @@ module.exports = {
   //vista pra editar
 
   edit: (req, res) => {
-    return res.render("users/edit", {
-      product: products.find((product) => product.id === +req.params.id),
-    });
+
+    let product = db.Product.findByPk(req.params.id)
+    let section = db.Section.findAll()
+
+    Promise.all([product,section])
+
+    .then(([product,section])=>{
+      return res.render("users/edit",{
+        section,
+        product
+      })
+    })
+
+
+    // return res.render("users/edit", {
+    //   product: products.find((product) => product.id === +req.params.id),
+    // });
   },
+
+
 
   //logica para actualizar un producto
   update: (req, res) => {
     let errors = validationResult(req);
-    let product = products.find((product) => product.id === +req.params.id);
+    // let product = products.find((product) => product.id === +req.params.id);
+    
+    
     if (errors.isEmpty()) {
       const { name, description, price, discount } = req.body;
 
@@ -119,7 +142,7 @@ module.exports = {
         "utf-8"
       );
 
-      return res.redirect("/product/admin");
+      return res.redirect("product/admin");
     } else {
       return res.render("users/edit", {
         errors: errors.mapped(),
@@ -130,16 +153,32 @@ module.exports = {
 
   //borra un producto
   destroy: (req, res) => {
-    let productsModified = products.filter(
-      (product) => product.id !== +req.params.id
-    );
+    
+    let imageDestroy = db.Image.destroy({
+      where : {
+        productId : req.params.id
+      }
+    })
 
-    fs.writeFileSync(
-      path.join(__dirname, "..", "data", "products.json"),
-      JSON.stringify(productsModified, null, 3),
-      "utf-8"
-    );
+    
+    let productDestroy = db.Product.destroy({
+      where : {
+        id: req.params.id,
+      }
+    })
 
-    res.redirect("/product/admin");
+   
+
+    Promise.all([imageDestroy,productDestroy])
+
+
+      .then( () => {
+        return res.redirect("/products/admin");
+      })
+      .catch(error => console.log(error))
+      
+
+
+   
   },
 };

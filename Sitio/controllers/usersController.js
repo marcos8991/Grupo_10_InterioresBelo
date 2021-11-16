@@ -101,6 +101,9 @@ module.exports = {
 
     update : (req,res) => {
         let errors = validationResult(req);
+
+
+        
         if (errors.isEmpty()) {
             let user = users.find(user => user.id === req.session.userLogin.id)
             let hashPass = req.body.password ? bcrypt.hashSync(req.body.password,10) : user.password;
