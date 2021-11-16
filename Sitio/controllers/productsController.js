@@ -34,15 +34,19 @@ module.exports = {
   },
 
   admin: (req, res) => {
-    return res.render("users/admin", {
-      title: "administracion",
-      products: JSON.parse(
-        fs.readFileSync(
-          path.join(__dirname, "..", "data", "products.json"),
-          "utf-8"
-        )
-      ),
-    });
+   let products = db.Product.findAll({
+     include : ['images','section']
+   })
+   let section = db.Section.findAll()
+
+   Promise.all([products,section])
+   .then(([products,section])=>{
+     return res.render('users/admin',{
+       products,
+       section
+     })
+   })
+   .catch(error => console.log(error))
   },
   
   // search : (req,res) => {
@@ -126,6 +130,7 @@ module.exports = {
         product
       })
     })
+    .catch(error => console.log(error))
 
 
     
@@ -136,38 +141,45 @@ module.exports = {
   //logica para actualizar un producto
   update: (req, res) => {
     let errors = validationResult(req);
-    // let product = products.find((product) => product.id === +req.params.id);
-    
     
     if (errors.isEmpty()) {
-      const { name, description, price, discount } = req.body;
+      const { name, description, price, discount,section} = req.body;
+    
+      db.Product.update({
+  
+          name:name.trim(),
+          description: description.trim(),
+          price,
+          discount,
+          sectionId : section
+      },
+      {
+        where : {
+          id : req.params.id
+        }
+      }
+    )
+    .then(()=>{
+      return res.redirect('product/admin')
+    })
 
-      let productModified = {
-        id: +req.params.id,
-        name: name.trim(),
-        description: description.trim(),
-        price: +price,
-        discount,
-        image: product.image,
-      };
-      let productsModified = products.map((product) =>
-        product.id === +req.params.id ? productModified : product
-      );
+    }else{
+      let product = db.Product.findByPk(req.params.id)
+      let section = db.Section.findAll()
 
-      fs.writeFileSync(
-        path.join(__dirname, "..", "data", "products.json"),
-        JSON.stringify(productsModified, null, 3),
-        "utf-8"
-      );
+      Promise.all([product,section])
 
-      return res.redirect("product/admin");
-    } else {
-      return res.render("users/edit", {
-        errors: errors.mapped(),
-        product,
-      });
+
+      .then(([product,section])=>{
+        return res.render('users/edit',{
+          errors: errors.mapped(),
+          product,
+        })
+      })
+      .catch(error => console.log(error))
     }
-  },
+   
+  }, 
 
   //borra un producto
   destroy: (req, res) => {
