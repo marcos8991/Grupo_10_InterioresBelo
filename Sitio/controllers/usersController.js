@@ -109,7 +109,12 @@ module.exports = {
         
     },
 
+<<<<<<< HEAD
     update: (req,res) => {
+=======
+    update : (req,res) => {
+        return res.send(req.body)
+>>>>>>> 18db54014b780bf8f7b1a6f98ea8a06b35bdb6a2
 
         let errors = validationResult(req);
        
