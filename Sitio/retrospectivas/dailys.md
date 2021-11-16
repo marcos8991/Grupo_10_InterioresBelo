@@ -233,9 +233,6 @@
 
 
 ### Daily Sprint 6 (Observaciones)
-<<<<<<< HEAD
-## 10/11
-=======
 ## 12/11
 
 
@@ -282,7 +279,6 @@
 
 ### Daily Sprint 6 (Observaciones)
 ## 06/11
->>>>>>> 18db54014b780bf8f7b1a6f98ea8a06b35bdb6a2
 
 
 # Que hicimos ayer? 
