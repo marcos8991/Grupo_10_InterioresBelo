@@ -100,6 +100,8 @@ module.exports = {
     },
 
     update : (req,res) => {
+        return res.send(req.body)
+
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let user = users.find(user => user.id === req.session.userLogin.id)

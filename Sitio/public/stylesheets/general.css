@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.login-register, .home, .productCart, .Detalle-Producto , .add , .admin {
+.login-register, .home, .productCart, .Detalle-Producto , .add , .admin, .search {
     background-color: var(--color-celeste);
 }
 
