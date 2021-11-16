@@ -283,41 +283,41 @@
 
 # Que hicimos ayer? 
 
-- Lu : 
+- Lu : Creo archivo .env y comenzar tarea de CRUD.
 
-- Flor : 
+- Flor : Repasando clases para la tarea de CRUD.
 
-- Agustin : 
+- Marcos : Repasando contenido para la tarea de CRUD.
 
-- Marcos : 
+- Marcos U : Repasando contenido para la tarea de CRUD.
 
 
 # Que vamos a hacer hoy? 
 
-- Lu : 
+- Lu : Continuar con tarea de CRUD. 
 
-- Flor :  
+- Flor : Colaborar con la tarea de CRUD. 
 
-- Agustin : 
+- Marcos : Colaborar con la tarea de CRUD.
 
-- Marcos : 
+- Marcos U : Comenzar con la tarea de CRUD.
 
 # cual es el bloqueo?
 
-- Lu : 
+- Lu : Crear base de datos del proyecto.(Migraciones)
 
 - Flor : 
 
-- Agustin : 
+- Marcos : Metodos de sequalize(CRUD)
 
-- Marcos : 
+- Marcos U : 
 
 ### Action Items
 
-- Lu : 
+- Lu : Pidio ayuda al equipo.
 
 - Flor : 
 
-- Agustin : 
-
 - Marcos : 
+
+- Marcos U : 

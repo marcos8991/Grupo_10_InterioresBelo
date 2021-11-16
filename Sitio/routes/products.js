@@ -20,7 +20,7 @@ router.get('/admin',adminUserCheck, admin);
 
 //añadir un producto
 router.get('/add',adminUserCheck,add);
-router.post('/add',upload.single('image'),productValidator, store)
+router.post('/add',upload.array('image'),productValidator, store)
 
 //editar un producto
 router.get('/edit/:id',adminUserCheck,edit);

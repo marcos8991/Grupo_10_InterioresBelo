@@ -14,10 +14,23 @@ module.exports = {
   },
 
   detail: (req, res) => {
-    return res.render("products/productDetail", {
-      product: products.find((product) => product.id === +req.params.id),
-      products,
-    });
+     db.Product.findByPk(req.params.id, {
+      include : [{all: true}]
+    })
+     .then(product =>{
+       db.Section.findByPk(product.sectionId, {
+         include : [{association : 'products', 
+        include: ['images']
+        }]
+       })
+       .then(section =>{
+          return res.render("products/productDetail", {
+            product,
+            products : section.products
+          });
+       })
+      })
+    
   },
 
   admin: (req, res) => {
@@ -63,8 +76,8 @@ module.exports = {
         sectionId: section,
       })
       .then(product => {
-        if(req.file[0] != undefined) {
-            let image = req.file.map(image => {
+        if(req.files[0] != undefined) {
+            let image = req.files.map(image => {
                 let img = {
                     file : image.filename,
                     productId : product.id
@@ -73,6 +86,13 @@ module.exports = {
             })
             db.Image.bulkCreate(image, {validate : true})
                 .then( () => console.log('Imagen agregada'))
+        } else{
+          db.Image.create({
+            file : 'no-image.png',
+            productId : product.id
+          })
+          .then(() => console.log('Imagen por defecto agregada'))
+
         }
         return res.redirect('product/admin')
     })
@@ -108,9 +128,7 @@ module.exports = {
     })
 
 
-    // return res.render("users/edit", {
-    //   product: products.find((product) => product.id === +req.params.id),
-    // });
+    
   },
 
 

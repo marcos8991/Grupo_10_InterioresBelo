@@ -2,8 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
+const db = require('../database/models')
+const { Op } = require('sequelize');
+const { find } = require('../validations/loginValidator');
 
-let users = require(path.join(__dirname,'../data/users.json'))
+
 
 
 
@@ -19,29 +22,24 @@ module.exports = {
 
         if (errors.isEmpty()) {
             const {name,email,password} = req.body;
-        
-            let user = {
-                id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
+
+            db.User.create({
                 name : name.trim(),
                 email : email.trim(),
                 password : bcrypt.hashSync(password,10),
                 avatar : 'user-image.jpg',
                 rol : 'user'
-    
-            }
-            users.push(user);
-    
-            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
+            })
+                .then (user =>{
+                    req.session.userLogin = {
+                        id : user.id,
+                        name : user.name,
+                        avatar : user.avatar,
+                        rol : user.rol
+                    }
+                    return res.redirect('/')
 
-
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                avatar : user.avatar,
-                rol : user.rol
-            }
-    
-            return res.redirect('/')
+                })   
         }else{
             return res.render('users/register',{
                 errores : errors.mapped(),
@@ -62,24 +60,28 @@ module.exports = {
     processLogin : (req,res) =>  {
         let errors = validationResult(req);
 
-        if (errors.isEmpty()){
-            let user = users.find(user => user.email === req.body.email);
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                avatar : user.avatar,
-                rol : user.rol
-            }
-            if(req.body.remember){
+          let email = db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            }).then(user=>{
+              if(user && bcrypt.compareSync(req.body.password,user.password)){
+                req.session.userLogin = {
+                    id: user.id,
+                    name : user.name,
+                    avatar : user.avatar,
+                    rol : user.rol
+                }
+                return res.redirect('/')
+              }
+               if(req.body.remember){
                 res.cookie('interioresBelo',req.session.userLogin,{maxAge : 1000 * 60})
             }
-            return res.redirect('/')
-        }else{
-            return res.render('users/login',{
-                errores : errors.mapped()
-            })
-        }
-
+            return res.redirect('/') 
+          })
+        
+            
+            
         
     },
 
@@ -92,43 +94,54 @@ module.exports = {
     },
     
     profile : (req,res) => {
-        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
-
-        res.render('users/profile',{
-            user : users.find(user => user.id === req.session.userLogin.id)
+        db.User.findOne({
+            where :{
+                id: req.session.userLogin.id
+            }
         })
-    },
-
-    update : (req,res) => {
-        let errors = validationResult(req);
-
+        .then(user=>{
+            res.render('users/profile',{
+                user
+            })
+        })
+        .catch(error => console.log(error))
 
         
+    },
+
+    update: (req,res) => {
+
+        let errors = validationResult(req);
+       
         if (errors.isEmpty()) {
-            let user = users.find(user => user.id === req.session.userLogin.id)
-            let hashPass = req.body.password ? bcrypt.hashSync(req.body.password,10) : user.password;
+            const {name,password} = req.body;
+
+            db.User.update({
+                name : name,
+                password : bcrypt.hashSync(password,10)
+        },
+        {
+            where: {
+                id: req.session.userLogin.id
+            }
+        }).then( () =>{
+            db.User.findOne({
+                where : {
+                    id: req.session.userLogin.id
+                }
+            }).then(user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    name : user.name,
+                    avatar : user.avatar,
+                    rol : user.rol
+                }
+                return res.redirect('/')
+            })
             
-            let userModified = {
-                id : user.id,
-                name : req.body.name,
-                email : user.email,
-                password : hashPass,
-                avatar : req.file ? req.file.filename : user.avatar,
-                rol : user.rol
-        }
-
-        let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user)
-
-        fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(usersModified,null,3),'utf-8')
-    
-        req.session.userLogin = {
-            id : user.id,
-            name : userModified.name,
-            avatar : userModified.avatar,
-            rol : user.rol
-        }
-
-        return res.redirect('/')
+            
+        })
+        .catch(error => console.log(error))
         
     } else {
         return res.render('users/profile', {
