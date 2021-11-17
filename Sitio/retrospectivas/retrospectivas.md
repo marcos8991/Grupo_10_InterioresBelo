@@ -104,3 +104,29 @@
 5. Dejar de hacer
 
 - Dejar pasar el tiempo
+
+## Retrospectiva 5
+
+1. Comenzar a hacer
+
+- No subestimar el tiempo
+- 
+2. Hacer más
+
+
+- Reuniones semanales
+
+3. Continuar haciendo
+
+
+- Comunicacion 
+- Estar al tanto de lo que esta haciendo el resto del equipo
+
+4. Hacer menos
+
+- Comenzar tarde
+
+5. Dejar de hacer
+
+- Dejar pasar el tiempo
+
