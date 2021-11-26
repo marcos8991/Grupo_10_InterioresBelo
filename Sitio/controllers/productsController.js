@@ -41,6 +41,8 @@ module.exports = {
 
    Promise.all([products,section])
    .then(([products,section])=>{
+
+    //  return res.send(products)
      return res.render('users/admin',{
        products,
        section
@@ -49,9 +51,7 @@ module.exports = {
    .catch(error => console.log(error))
   },
   
-  // search : (req,res) => {
-
-  // },
+  
 
 
   //vista para añadir

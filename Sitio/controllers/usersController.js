@@ -28,15 +28,18 @@ module.exports = {
                 email : email.trim(),
                 password : bcrypt.hashSync(password,10),
                 avatar : 'user-image.jpg',
-                rol : 'user'
+                rolId : 1
+                
             })
                 .then (user =>{
                     req.session.userLogin = {
                         id : user.id,
                         name : user.name,
                         avatar : user.avatar,
-                        rol : user.rol
+                        rol : user.rolId
                     }
+
+                    console.log(user);
                     return res.redirect('/')
 
                 })   
@@ -70,7 +73,7 @@ module.exports = {
                     id: user.id,
                     name : user.name,
                     avatar : user.avatar,
-                    rol : user.rol
+                    rol : user.rolId
                 }
                 return res.redirect('/')
               }

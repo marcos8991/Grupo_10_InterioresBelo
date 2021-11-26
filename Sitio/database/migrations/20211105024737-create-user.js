@@ -21,10 +21,12 @@ module.exports = {
         allowNull: false
       },
       avatar: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue : 'user-image.jpg'
       },
       rolId: {
         type: Sequelize.INTEGER,
+        defaultValue : 1,
         references : {
           model :{
             tableName : 'Rols'
