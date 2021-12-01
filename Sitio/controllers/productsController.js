@@ -45,7 +45,7 @@ module.exports = {
     //  return res.send(products)
      return res.render('users/admin',{
        products,
-       section
+       section, 
      })
    })
    .catch(error => console.log(error))
@@ -98,7 +98,7 @@ module.exports = {
           .then(() => console.log('Imagen por defecto agregada'))
 
         }
-        return res.redirect('product/admin')
+        return res.redirect('/products/admin')
     })
      .catch(error=> console.log(error))
 
