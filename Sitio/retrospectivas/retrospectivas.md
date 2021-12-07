@@ -130,3 +130,39 @@
 
 - Dejar pasar el tiempo
 
+
+## Retrospectiva 6
+
+1. Comenzar a hacer
+
+- Reuniones de equipo semanal 
+- 
+
+2. Hacer más
+
+- Preguntar dudas a los profes 
+
+- Leer observaciones
+
+- Repartir tareas a tiempo
+
+
+3. Continuar haciendo
+
+- dailys 
+
+- comunicarnos entre el equipo
+
+- entregar a tiempo el sprint
+
+4. Hacer menos
+
+- 
+- 
+
+5. Dejar de hacer
+
+- dejar pasar tiempo para resolver las observaciones
+
+- 
+

@@ -321,3 +321,109 @@
 - Marcos : 
 
 - Marcos U : 
+
+
+
+
+
+
+
+### Daily Sprint 7 
+## 06/12
+
+
+# Que hicimos ayer? 
+
+- Lu : Participe en la visualizacion de la seccion administrativa. 
+
+- Flor : avanze con la observacion de Script de datos.
+
+- Marcos : Avanze con las observaciones de relaciones del CRUD de producto.
+
+- Marcos U : Apoyo en metodo admin (CRUD).
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : -
+
+- Flor : Comenzar con Login de usuarios (Validaciones FRONT-END)
+
+- Marcos : Comenzar con Creación y modificación de productos (Validaciones BACK-END)
+
+- Marcos U : -
+
+# cual es el bloqueo?
+
+- Lu : -
+
+- Flor : -
+
+- Marcos : -
+
+- Marcos U : -
+
+### Action Items
+
+- Lu : -
+
+- Flor : -
+
+- Marcos : -
+
+- Marcos U : -
+
+
+
+### Daily Sprint 7 
+## 07/12
+
+
+# Que hicimos ayer? 
+
+- Lu : Repase contenido.
+
+- Flor : Repase contenido y no logre avanzara con la tarea.
+
+- Marcos : Repase contenido y avanze con la tarea.
+
+- Marcos U : Repase contenido y no logre avanzar en la tarea.
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : Avanzar con la tarea de LOGIN DE USUARIOS (FRONT END)
+
+- Flor : Avanzar con la tarea de LOGIN DE USUARIOS (FRONT END)
+
+- Marcos : Terminar con la tarea de Creación y modificación de productos (Back)
+
+- Marcos U : Terminar con la tarea de Registro de usuarios(BACK) y las observaciones(CRUD).
+
+# cual es el bloqueo?
+
+- Lu : 
+
+- Flor : No se como comenzar con la tarea(LOGIN DE USUARIOS (FRONT END)
+
+- Marcos : -
+
+- Marcos U : -
+
+### Action Items
+
+- Lu : -
+
+- Flor : Pedir feedback a mis compañeros por whatsApp.
+
+- Marcos : -
+
+- Marcos U : -
+
+- Equipo : Quedarse luego de la daily para realizar la retro.
+
+- Flor y lu : Juntarse para avanzar con la tarea 08/12 5PM. 
+
+- MAÑANA DAILY POR WHATSAPP 12AM. 
+
+
