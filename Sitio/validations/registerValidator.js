@@ -1,28 +1,30 @@
 const {body, check} = require('express-validator');
-users = require('../data/users.json')
-bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs')
+const db = require('../database/models');
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('El nombre es obligatorio'),
-
+    .isLength({
+        min : 2,
+        max : 30
+    }).withMessage('El nombre es obligatorio y debe tener almenos 2 caracteres'),
 
     check('email')
     .notEmpty().withMessage('debes ingresar un email valido').bail()
     .isEmail().withMessage('Email invalido'),
 
-
-
     body('email')
-    .custom((value,{req}) => {
-        let user = users.find(user => user.email === value);
-
-        if (user) {
-            return false
-        } else {
-            return true
-        }
-    }).withMessage('El email ya se encuentra registrado'),
+        .custom(value  => {
+          return db.User.findOne({
+              where : { 
+                  email : value
+                }
+          }).then( user => {
+              if(user){
+                  return Promise.reject('El email ya se encuentra registrado')
+              }
+          })
+        }),
 
     check('password')
     .isLength({
@@ -40,4 +42,5 @@ module.exports = [
             return true
         }
     }).withMessage('La contraseña no coincide'),
+
 ]     
