@@ -9,11 +9,7 @@ const {Op} =  require ('sequelize')
 module.exports = {
     index : (req,res) => {
 
-        // db.Product.findAll()
-        // .then(products => {
-        //     return res.send(products)
-        // })
-        // .catch(error => console.log(error))
+       
         return res.render('index',{
             product : products.find(product => product.id === +req.params.id)
         })

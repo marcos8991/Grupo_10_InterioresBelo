@@ -1,21 +1,14 @@
 console.log('productAdd conectado');
+
+
+
 const $ = id => document.getElementById(id);
 
-const formAdd = $('form-add');
+window.addEventListener('load',()=>{
+    $('input-name').focus();
 
-formAdd.elements[0].addEventListener('blur',function () {
-    switch (true) {
-        case !this.value.trim():
-            this.classList.add('is-invalid');
-            nameError.innerHTML = "El nombre es requerido"
-            
-            break;
+    $('form-add-product').addEventListener('submit',function(e){
+        e.preventDefault()
+    })
     
-        default:
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-            nameError.innerHTML = null;
-            break;
-    }
 })
-

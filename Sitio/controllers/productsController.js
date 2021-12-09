@@ -45,7 +45,8 @@ module.exports = {
     //  return res.send(products)
      return res.render('users/admin',{
        products,
-       section, 
+       
+       section
      })
    })
    .catch(error => console.log(error))
