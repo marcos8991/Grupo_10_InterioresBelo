@@ -28,7 +28,7 @@ module.exports = {
                 email : email.trim(),
                 password : bcrypt.hashSync(password,10),
                 avatar : 'user-image.jpg',
-                rolId : 1
+                rolId : 2
                 
             })
                 .then (user =>{
@@ -49,9 +49,6 @@ module.exports = {
                 old : req.body
             })
         }
-
-
-       
     },
 
 
