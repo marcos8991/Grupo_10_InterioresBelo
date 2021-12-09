@@ -63,25 +63,31 @@ module.exports = {
     processLogin : (req,res) =>  {
         let errors = validationResult(req);
 
-          let email = db.User.findOne({
-                where: {
-                    email: req.body.email
+          if (errors.isEmpty()) {
+            
+            db.User.findOne({
+                where : { 
+                    email : req.body.email
                 }
-            }).then(user=>{
-              if(user && bcrypt.compareSync(req.body.password,user.password)){
+            }).then(user => {
                 req.session.userLogin = {
                     id: user.id,
-                    name : user.name,
-                    avatar : user.avatar,
-                    rol : user.rolId
+                    name: user.name,
+                    avatar: user.avatar,
+                    rol: +user.rolId
+                }
+                if(req.body.remember){
+                    res.cookie('interioresBelo',req.session.userLogin,{maxAge : 1000 * 60})
                 }
                 return res.redirect('/')
-              }
-               if(req.body.remember){
-                res.cookie('interioresBelo',req.session.userLogin,{maxAge : 1000 * 60})
-            }
-            return res.redirect('/') 
-          })
+            })
+
+           
+        } else {
+            return res.render('users/login', {
+                errores: errors.mapped()
+            })
+        }
         
             
             
@@ -121,7 +127,8 @@ module.exports = {
 
             db.User.update({
                 name : name,
-                password : bcrypt.hashSync(password,10)
+                password : bcrypt.hashSync(password,10),
+                avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
         },
         {
             where: {
@@ -138,6 +145,12 @@ module.exports = {
                     name : user.name,
                     avatar : user.avatar,
                     rol : user.rol
+                }
+                if (req.file) {
+                    if (fs.existsSync(path.join(__dirname, '../public/images/users/' + user.avatar)) && user.avatar != "user-image.jpg") {
+                        fs.unlinkSync(path.join(__dirname, '../public/images/users/' + user.avatar))
+                    }
+                    req.session.userLogin.avatar = req.file.filename
                 }
                 return res.redirect('/')
             })
