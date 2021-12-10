@@ -18,31 +18,34 @@
             <div class="ingresar">
                 <h3 class="bienvenido">Crea tu cuenta</h3>
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="form-register" autocomplete="off" novalidate>
 
                         <div class="input-contenedor">
                             <label for="nombre">Nombre completo</label>                           
                             <input type="text" placeholder="Ingresa tu nombre completo" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
-                            <span class="text-danger"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
+                            <span id="error-name" class="small text-danger"><%= locals.errores && errores.name ? errores.name.msg : null %> <br> </span>
+                            <span id="info-name" class="small text-info"></span>
                         </div>
 
 
                         <div class="input-contenedor">
                             <label for="email">Email</label>
                             <input type="email" placeholder="Ingresa tu email" id="email" name="email">
-                            <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+                            <span id="error-email" class="small text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+                            <span id="info-email" class="small text-info"></span>
                         </div>
 
                         <div class="input-contenedor">
                             <label for="pass">Contraseña</label>
                             <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password" minlength="8">
-                            <span class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+                            <span id="error-password" class="small text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+                            <span id="info-password" class="small text-info"></span>
                         </div>
 
                         <div class="input-contenedor">
                             <label for="pass">Confirma tu contraseña</label>
-                            <input type="password" placeholder="Confirma tu contraseña" id="pass" name="password2" minlength="8">
-                            <span class="text-danger"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+                            <input type="password" placeholder="Confirma tu contraseña" id="pass2" name="password2" minlength="8">
+                            <span id="error-password2" class="text-danger"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
                         </div>
 
 
