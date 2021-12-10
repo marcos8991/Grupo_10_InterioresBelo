@@ -65,7 +65,7 @@ module.exports = {
                     email: req.body.email
                 }
             }).then(user=>{
-              if(user && bcrypt.compareSync(req.body.password,user.password)){
+              if(user){
                 req.session.userLogin = {
                     id: user.id,
                     name : user.name,
