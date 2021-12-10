@@ -13,35 +13,44 @@
                 <div class="card-body">
                     <form class="row g-3" method="POST" enctype="multipart/form-data" id="form-add-product">
                         <div class="col-12">
+
+                        
+                          <!-- nombre -->
                           <label for="name" class="form-label">Nombre de Producto</label>
 
-                          <input type="text" name="name" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="input-name" 
+                          <input type="text" name="name" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" 
                           value="<%= locals.old && old.name ? old.name : null %>">
 
-                          <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                          <span class="text-danger small" id="error-name"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                         </div>
                         
+                        
+                        <!-- precio -->
                         <div class="col-md-4">
                             <label for="price" class="form-label">Precio</label>
-                            <input  type="number" name="price" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="input-price" 
+                            <input  type="number" name="price" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" 
                             placeholder="$" value="<%= locals.old && old.price ? old.price : null %>">
-                            <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                            <span class="text-danger small" id="error-price"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                         </div>
 
+                        <!-- Cuotas -->
                         <div class="col-md-4">
                             <label for="discount" class="form-label">Cuotas</label>
-                            <select id="select-discount" class="form-select" name="discount">
+                            <select id="discount" class="form-select" name="discount">
                                 <option value="" selected hidden>Elegir cuotas</option>
                                 <option value="hasta 3 cuotas">Hasta 3 cuotas</option>
                                 <option value="hasta 6 cuotas">Hasta 6 cuotas</option>
                                 <option value="hasta 12 cuotas">Hasta 12 cuotas</option>
                                 <option value="hasta 18 cuotas">Hasta 18 cuotas</option>
                               </select>    
-                              <span class="text-danger small"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>
+                              <span class="text-danger small" id="error-discount"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>
                         </div>
+
+
+                        <!-- Seccion -->
                         <div class="col-md-4">
                           <label for="section" class="form-label">Sección</label>
-                          <select id="select-section" class="form-select" name="section">
+                          <select id="section" class="form-select" name="section">
                               <option value="" selected hidden>Elegir sección</option>
                               <% sections.forEach(section => { %>
                                 <option value="<%= section.id %> "><%= section.name%> </option>
@@ -49,15 +58,18 @@
                               <!-- <option value="novedades">Novedades</option>
                               <option value="renovado">Renovado</option> -->
                             </select>   
-                            <span class="text-danger small"><%= locals.errors && errors.section ? errors.section.msg : null%></span> 
+                            <span class="text-danger small" id="error-section"><%= locals.errors && errors.section ? errors.section.msg : null%></span> 
                       </div>
 
+
+                      <!-- Descripcion -->
                         <div class="col-md-6">
                           <label for="description" class="form-label">Descripcion</label>
-                          <textarea style="resize: none; height: 100px;width: 100%;" type="text" placeholder="Descripcion" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" id="text-description" name="description"><%= locals.old && old.description ? old.description : null %> </textarea>
-                          <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
+                          <textarea style="resize: none; height: 100px;width: 100%;" type="text" placeholder="Descripcion" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" id="description" name="description"><%= locals.old && old.description ? old.description : null %> </textarea>
+                          <span class="text-danger small" id="error-description"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                         </div>
 
+                        <!-- imagen -->
                         <div class="SubirImagen col-md-6 mb-4">
                             <div class="btn-Subir">
                                 <label for="image" class="btn btn-outline-secondary btn-#3b5998 w-100 mt-2">Subir imagen</label>
@@ -65,13 +77,14 @@
                                 
                                 hidden class="form-control" 
                                 type="file" 
-                                id="input-image" 
+                                id="image" 
                                 name="image">
                               </div>
 
-                              <span class="text-danger small"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
+                              <span class="text-danger small" id="error-image"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
                            </div>
 
+                           <!-- Boton agregar -->
                         <div class="btn-Agregar">
                           <button type="submit" class="btn btn-primary">Agregar</button>
                         </div>

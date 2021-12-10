@@ -23,6 +23,5 @@ module.exports = [
     check('discount')
     .notEmpty().withMessage('Indicá las cuotas'),
 
-     check('image')
-    .notEmpty().withMessage('Debes añadir una imagen con formato JPG,PNG,JPEG')
+     
 ]
