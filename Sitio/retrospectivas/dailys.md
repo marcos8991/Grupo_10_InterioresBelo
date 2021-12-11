@@ -426,4 +426,50 @@
 
 - MAÑANA DAILY POR WHATSAPP 12AM. 
 
+ Daily Sprint 7 
+## 10/12
+
+
+# Que hicimos ayer? 
+
+- Lu : Terminamos validaciones back-end login.
+
+- Flor : Terminamos validaciones back-end login.
+
+- Marcos : Termine validaciones back-end y empece front de productos.
+
+- Marcos U : Termine validaciones back-end y empece front de registro.
+
+
+# Que vamos a hacer hoy? 
+
+- Lu : Terminar validaciones login (FRONT END).
+
+- Flor : Terminar validaciones login (FRONT END).
+
+- Marcos : Terminar con la tarea de Creación y modificación de productos (front)
+
+- Marcos U : Agregar opcional a formulario de registro (validaciones front-end).
+
+# cual es el bloqueo?
+
+- Lu : Cosultar dudas sobre validación de Email a gaby.
+
+- Flor : Cosultar dudas sobre validación de Email  a gaby.
+
+- Marcos : -
+
+- Marcos U : Consulta sobre validación de contraseña a gaby-
+
+### Action Items
+
+- Lu : Consultar dudas a gaby.
+
+- Flor : Consultar dudas a gaby.
+
+- Marcos : -
+
+- Marcos U : Consultar dudas a gaby.
+
+
 
