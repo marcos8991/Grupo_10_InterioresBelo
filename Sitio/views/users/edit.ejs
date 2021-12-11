@@ -15,13 +15,13 @@
                         <div class="col-12">
                           <label for="name" class="form-label">Nombre de Producto</label>
                           <input type="text" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" name="name" value="<%= product.name %> "> 
-                          <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                          <span class="text-danger small" id="error-name"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                         </div>
 
                         <div class="col-md-6">
                             <label for="price" class="form-label">Precio</label>
                             <input type="number" class="form-control  <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" placeholder="$" value="<%= product.price %>">
-                            <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                            <span class="text-danger small" id="error-price"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                           </div>
 
                           <div class="col-md-6">
@@ -33,31 +33,38 @@
                                 <option value="hasta 12 cuotas" <%= product.discount === 'hasta 12 cuotas'? 'selected' : null %> >Hasta 12 cuotas</option>
                                 <option value="hasta 18 cuotas" <%= product.discount === 'hasta 18 cuotas' ? 'selected' : null %> >Hasta 18 cuotas</option>
                               </select>
+                              <span class="text-danger small" id="error-discount"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>
                           </div>
+                          
+                          
                           <div class="col-md-4">
                             <label for="section" class="form-label">Sección</label>
                             <select id="section" class="form-select" name="section">
                                 <option value="" selected hidden>Elegir sección</option>
-                                <% sections.forEach(section => { %>
+                                <% section.forEach(section => { %>
                                   <option value="<%= section.id %> "><%= section.name%> </option>
                                 <% }) %>
                                
-                              </select>    
+                              </select>   
+                              <span class="text-danger small" id="error-section"><%= locals.errors && errors.section ? errors.section.msg : null %></span> 
                           </div>
 
                         <div class="col-12">
                           <label for="description" class="form-label">Descripcion</label>
-                          <textarea style="resize: none; height: 100px;width: 100%;"
-                          type="text" placeholder ="Descripcion" class="form-control<%= locals.errors && errors.description ? 'is-invalid' : null %>" id="description"  name="description"><%= product.description %></textarea>
-                          <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
+                          <textarea style="resize: none; height: 100px;width: 100%;" type="text" placeholder ="Descripcion" class="form-control<%= locals.errors && errors.description ? 'is-invalid' : null %>" id="description"  name="description"><%= product.description %></textarea>
+                          <span class="text-danger small" id="error-description"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                         </div>
 
-                        <div class="SubirImagen ">
-                            <div class="btn-Subir">
-                                <label for="image" class="btn btn-outline-secondary btn-#3b5998 w-100 mt-2">Subir imagen</label>
-                                <input hidden class="form-control" type="file" id="image" name="image">
-                              </div>
-                           </div>
+                        <div class="SubirImagen col-md-6 mb-4">
+                          <div class="btn-Subir">
+                            <input type='file' id="image" name="image"/>
+                            <br/>    
+                            <p id="texto"> </p>
+                            <br/>   	
+                            <img id="img" src="" />
+                          </div>
+                          <span class="text-danger small" id="error-image"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
+                        </div>
 
                         <div class="btn-Agregar">
                           <button type="submit" class="btn btn-primary">Editar</button>

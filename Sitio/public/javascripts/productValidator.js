@@ -1,6 +1,6 @@
 console.log('productAdd conectado');
 const $ = id => document.getElementById(id);
-
+const extImage = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
 
 const validation = (id,texto) => {
     if(!$(id).value){
@@ -53,4 +53,26 @@ window.addEventListener('load',()=>{
         validation('discount','Selecciona las cuotas')
     })
 
+
+    $('image').addEventListener('blur', function () {
+
+        switch (true) {
+            case !this.value:
+                validation('image','la imagen es obligatoria')
+                this,this.classList.add('is-invalid')
+                break;
+            case !extImage.test(this.value):
+                $('error-image').innerText="el formato no es compatible"
+                this,this.classList.add('is-invalid')
+                break;
+            default:
+                $('error-image').innerText=null;
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid')
+                break;
+        }
+
+        
+    })
+    
 })

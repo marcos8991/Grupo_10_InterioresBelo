@@ -21,18 +21,17 @@ window.addEventListener('load',()=>{
 
         switch (true) {
             case !this.value: 
-                validation('email',"el email es obligatorio" )
+                validation('email',"el email es obligatorio")
                 this.classList.add('is-invalid')
                 break;
-            case !signosEmail.test(this.value):
-                $('email').innerText="el email tiene que ser válido";
+            case !signosEmail.test(this.value.trim()):
+                $('error-email').innerText="El email tiene que ser válido";
                 this.classList.add('is-invalid')
                 break;
             default:
-                $('email').innerText = null;
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-
+                $('error-email').innerText = null;
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
                 break;
         }
         

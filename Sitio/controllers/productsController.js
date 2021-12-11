@@ -161,7 +161,7 @@ module.exports = {
       }
     )
     .then(()=>{
-      return res.redirect('product/admin')
+      return res.redirect('./product/admin')
     })
 
     }else{
