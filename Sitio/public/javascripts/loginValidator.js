@@ -37,3 +37,26 @@ window.addEventListener('load',()=>{
         
     })
 })
+
+$("password").addEventListener('focus',function(){
+    $("info-password").innerText="escriba su contraseña";
+})
+
+$("password").addEventListener('keydown',function(){
+    $("info-password").innerText=null;
+})
+
+$("password").addEventListener("blur",function(){
+    switch (true) {
+        case !this.value: 
+            $('error-password').innerText="la contraseña es obligatoria";
+            this.classList.add('is-invalid')
+            break;
+        
+        default:
+            $('error-password').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
+    } 
+})

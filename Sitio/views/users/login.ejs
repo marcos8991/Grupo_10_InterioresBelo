@@ -34,9 +34,10 @@
                         </div>
 
                         <div class="input-contenedor">
-                            <label for="pass">Contraseña</label>
-                            <input type="password" placeholder="Ingresa tu contraseña" id="pass" name="password" minlength="8">
-                            <span class="text-danger" id="error-password"><%= locals.errores && errores.password ? errores.password.msg : null %></span>                          
+                            <label for="password">Contraseña</label>
+                            <input type="password" placeholder="Ingresa tu contraseña" id="password" name="password" minlength="8">
+                            <span class="text-danger" id="error-password"><%= locals.errores && errores.password ? errores.password.msg : null %></span> 
+                            <span id="info-password" class="small text-info"></span>                         
                         </div>
                         
                         <div class="form-checkmt-0">
