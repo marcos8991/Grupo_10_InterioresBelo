@@ -2,17 +2,19 @@
     text-align: center ;
    
 }
+ 
+.add div .btn-subir{
+    padding: 0;
+    margin : 0;
+} 
 
-.add .SubirImagen .btn-Subir  {
-    text-align:center; 
-    transition: all linear .5s;
-
-}
 
 /* .add .SubirImagen .btn-Subir label {
     transition: all ease .3s;
     
 }
+
+
 
 .add .SubirImagen .btn-Subir label:hover {
 background-color:var(--color-celesteOscuro) ;
