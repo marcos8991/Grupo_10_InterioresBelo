@@ -19,7 +19,22 @@ window.addEventListener('load',()=>{
 
     
     $('name').addEventListener('blur', function(){
-       validation('name','El nombre es obligatorio')
+
+        switch (true) {
+            case !this.value:
+                validation('name','El nombre es obligatorio')
+                break;
+            case this.value.length < 5 :
+                this.classList.add('is-invalid')
+                $('error-name').innerText = 'Se requiere minimo 5 caractereres'
+                break;
+            default:
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid')
+                $('error-name').innerText = null
+                break;
+        }
+       
     })
 
     $('price').addEventListener('blur',function(){
@@ -75,6 +90,21 @@ window.addEventListener('load',()=>{
         }
 
         
+    })
+
+    $('form-edit-product').addEventListener('submit',function(e){
+        e.preventDefault()
+
+        let error = false;
+
+        for (let i = 0; i < this.elements.length -1; i++) {
+            if(this.elements[1].classList.contains('is-invalid')){
+                error = true;
+                $('error-enviar').innerText = "Los campos son obligatorios"
+            }
+            
+        }
+        !error && this.submit();
     })
     
 })

@@ -4,7 +4,7 @@ module.exports = [
     check('name')
     .notEmpty().withMessage('El nombre del producto es obligatorio').isLength({
         min : 5
-    }),
+    }).withMessage('Se requiere un minimo de 5 caracteres'),
         
     check('description')
     .notEmpty().withMessage('La descripcion es obligatoria').bail()
@@ -23,5 +23,6 @@ module.exports = [
     check('discount')
     .notEmpty().withMessage('Indicá las cuotas'),
 
-     
+    check('image')
+    .withMessage('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)')
 ]

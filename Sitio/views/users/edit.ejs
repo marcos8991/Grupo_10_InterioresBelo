@@ -11,7 +11,7 @@
                     <h4>Editar producto</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/product/edit/<%= product.id %>?_method=PUT" class="mx-auto" method="POST" >
+                    <form action="/product/edit/<%= product.id %>?_method=PUT" class="mx-auto" method="POST" id="form-edit-product">
                         <div class="col-8">
                           <label for="name" class="form-label">Nombre de Producto</label>
                           <input type="text" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" name="name" value="<%= product.name %> "> 
@@ -42,7 +42,7 @@
                             <select id="section" class="form-select" name="section">
                                 <option value="" selected hidden>Elegir sección</option>
                                 <% section.forEach(section => { %>
-                                  <option value="<%= section.id %> "><%= section.name%> </option>
+                                  <option value="<%= section.id %>"><%= section.name%></option>
                                 <% }) %>
                                
                               </select>   
@@ -65,7 +65,7 @@
                           </div>
                           <span class="text-danger" id="error-image"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
                         </div>
-
+                        <span class="text-danger" id="error-enviar"></span>
                         <div class="btn-Agregar">
                           <button type="submit" class="btn btn-primary">Editar</button>
                         </div>
