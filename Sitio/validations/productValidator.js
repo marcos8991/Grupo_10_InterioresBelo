@@ -24,5 +24,5 @@ module.exports = [
     .notEmpty().withMessage('Indicá las cuotas'),
 
     check('image')
-    .withMessage('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)')
+    .notEmpty().withMessage('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)')
 ]
