@@ -26,7 +26,7 @@ inputName.addEventListener('blur', function() {
 inputName.addEventListener('blur', function() {
     switch (true) {
         case !this.value :
-            $('error-name').innerText = "El nombre es requerido";
+            $('error-name').innerText = "El nombre es requerido y debe tener almenos 2 caracteres";
             break;
         case !regExLetras.test(this.value) :
             $('error-name').innerText = "Solo se permiten letras";
