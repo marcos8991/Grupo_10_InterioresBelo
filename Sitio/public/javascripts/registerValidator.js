@@ -103,4 +103,19 @@ inputPassword2.addEventListener('blur', function() {
              $('error-password2').innerText = null;
              break;
      }
+
+     formulario.addEventListener('submit',function(e){
+        e.preventDefault()
+
+        let error = false;
+
+        for (let i = 0; i < this.elements.length -1; i++) {
+            if(this.elements[1].classList.contains('is-invalid')){
+                error = true;
+                $('error-enviar').innerText = "Los campos son obligatorios"
+            }
+            
+        }
+        !error && this.submit();
+    })
  });

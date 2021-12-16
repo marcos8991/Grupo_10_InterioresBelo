@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router(); 
 
 
-const { cart, detail , admin ,store, add, edit,update,destroy} = require('../controllers/productsController');
+const { cart, detail , admin ,store, add, edit,update,destroy, filter} = require('../controllers/productsController');
 
 const adminUserCheck = require('../middlewares/adminUserCheck')
 
@@ -28,6 +28,9 @@ router.put('/edit/:id',productValidator, update)
 
 //borrar un producto
 router.delete('/destroy/:id',destroy)
+
+//filtro
+router.get('/', filter)
 
 
 module.exports = router;
