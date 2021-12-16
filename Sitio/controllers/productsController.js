@@ -5,7 +5,7 @@ const products = JSON.parse(
 );
 
 const { validationResult } = require("express-validator");
-
+const { Op } = require('sequelize')
 const db = require("../database/models");
 
 module.exports = {
@@ -161,7 +161,7 @@ module.exports = {
       }
     )
     .then(()=>{
-      return res.redirect('./product/admin')
+      return res.redirect('/products/admin')
     })
 
     }else{
@@ -174,7 +174,8 @@ module.exports = {
       .then(([product,section])=>{
         return res.render('users/edit',{
           errors: errors.mapped(),
-          product,
+          section,
+          product
         })
       })
       .catch(error => console.log(error))
