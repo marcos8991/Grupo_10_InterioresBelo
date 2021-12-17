@@ -139,9 +139,6 @@ module.exports = {
         })
       })
       .catch(error => console.log(error))
-
-
-
   },
 
 
@@ -166,18 +163,10 @@ module.exports = {
             id: req.params.id
           }
         }
-<<<<<<< HEAD
       )
         .then(() => {
           return res.redirect('/products/admin')
         })
-=======
-      }
-    )
-    .then(()=>{
-      return res.redirect('/products/admin')
-    })
->>>>>>> adfffae9286aa2f6bbb9d93efa3278b4ba5547da
 
     } else {
       let product = db.Product.findByPk(req.params.id)
@@ -186,20 +175,12 @@ module.exports = {
       Promise.all([product, section])
 
 
-<<<<<<< HEAD
         .then(([product, section]) => {
           return res.render('users/edit', {
             errors: errors.mapped(),
             section,
             product
           })
-=======
-      .then(([product,section])=>{
-        return res.render('users/edit',{
-          errors: errors.mapped(),
-          section,
-          product
->>>>>>> adfffae9286aa2f6bbb9d93efa3278b4ba5547da
         })
         .catch(error => console.log(error))
     }
@@ -215,15 +196,11 @@ module.exports = {
       }
     })
 
-
     let productDestroy = db.Product.destroy({
       where: {
         id: req.params.id,
       }
     })
-
-
-
     Promise.all([imageDestroy, productDestroy])
 
 
@@ -231,9 +208,6 @@ module.exports = {
         return res.redirect("/products/admin");
       })
       .catch(error => console.log(error))
-
-
-
 
   },
   filter: (req, res) => {
