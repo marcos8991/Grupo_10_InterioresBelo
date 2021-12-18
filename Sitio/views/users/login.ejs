@@ -25,23 +25,23 @@
             <div class="ingresar">
                 <h3 class="bienvenido">BIENVENIDO</h3>
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="form-login">
 
                         <div class="input-contenedor">
                             <label for="email">Email</label>
-                             <input type="email" placeholder="Ingresa tu email" id="email" name="email">
+                             <input class="form-control type="email" placeholder="Ingresa tu email" id="email" name="email">
                              <span class="text-danger" id="error-email"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                         </div>
 
                         <div class="input-contenedor">
                             <label for="password">Contraseña</label>
-                            <input type="password" placeholder="Ingresa tu contraseña" id="password" name="password" minlength="8">
+                            <input  class="form-control" type="password" placeholder="Ingresa tu contraseña" id="password" name="password" minlength="8">
                             <span class="text-danger" id="error-password"><%= locals.errores && errores.password ? errores.password.msg : null %></span> 
                             <span id="info-password" class="small text-info"></span>                         
                         </div>
                         
                         <div class="form-checkmt-0">
-                            <input class="" type="checkbox" id="remember" name="remember">
+                            <input  class="" type="checkbox" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Guardar sesion</label>
                           </div>
                         <div class="box-error">
@@ -54,6 +54,7 @@
                         <!-- iniciar-sesion -->
                         <div>
                             <button class="btn-iniciar" type="submit">Iniciar sesión</button>
+                            <span class="text-danger" id="error-enviar"></span>
                         </div>
 
                         <div class="comentario">

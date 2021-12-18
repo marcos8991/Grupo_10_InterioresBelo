@@ -1,6 +1,10 @@
 console.log("loginValidator success")
-const $= id => document.getElementById(id);
+const $ = id => document.getElementById(id);
+const formularioLogin = $('form-login')
 const signosEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/
+
+
+
 
 const validation = (id,texto) => {
     if(!$(id).value){
@@ -59,4 +63,19 @@ $("password").addEventListener("blur",function(){
             this.classList.add('is-valid');
             break;
     } 
+})
+
+formularioLogin.addEventListener('submit',function(e){
+    e.preventDefault()
+
+    let error = false;
+
+    for (let i = 0; i < this.elements.length -1; i++) {
+        if(this.elements[i].classList.contains('is-invalid')){
+            error = true;
+            $('error-enviar').innerText = "Los campos son obligatorios"
+        }
+        
+    }
+    !error && this.submit();
 })
