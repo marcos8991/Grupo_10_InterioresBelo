@@ -99,24 +99,21 @@ module.exports = {
         res.redirect('/')
     },
     
-    profile : (req,res) => {
-        db.User.findOne({
-            where :{
-                id: req.session.userLogin.id
-            }
+    profile: (req, res) => {
+        db.User.findByPk(req.session.userLogin.id,{
+            include : [{all:true}]
         })
-        .then(user=>{
-            res.render('users/profile',{
-                user
+            .then(user => {
+                return res.render('users/profile', {
+                    user
+                })
             })
-        })
-        .catch(error => console.log(error))
+            .catch(error => console.log(error))
 
         
     },
 
     update: (req,res) => {
-
         let errors = validationResult(req);
        
         if (errors.isEmpty()) {
@@ -149,7 +146,7 @@ module.exports = {
                     }
                     req.session.userLogin.avatar = req.file.filename
                 }
-                return res.redirect('/')
+                return res.redirect('/users/profile')
             })
             
             
@@ -158,7 +155,7 @@ module.exports = {
         
     } else {
         return res.render('users/profile', {
-            
+            user: users.find(user => user.id === req.session.userLogin.id),
             errores : errors.mapped()
 
         })

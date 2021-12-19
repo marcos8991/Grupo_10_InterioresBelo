@@ -42,7 +42,7 @@
                             <select id="section" class="form-select" name="section">
                                 <option value="" selected hidden>Elegir sección</option>
                                 <% section.forEach(section => { %>
-                                  <option value="<%= section.id %>"><%= section.name%></option>
+                                  <option value="<%= section.id %>"><%= section.name %></option>
                                 <% }) %>
                                
                               </select>   
@@ -68,9 +68,10 @@
                         
                         <div class="btn-Agregar">
                           <button type="submit" class="btn btn-primary">Editar</button>
+                          
                         </div>
-
                         <span class="text-danger" id="error-enviar"></span>
+                        
                       </form>
 
                 </div>
