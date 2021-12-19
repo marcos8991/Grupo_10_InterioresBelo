@@ -52,7 +52,7 @@ module.exports = {
         //  return res.send(products)
         return res.render('users/admin', {
           products,
-
+          
           section
         })
       })
@@ -64,14 +64,24 @@ module.exports = {
 
   //vista para añadir
   add: (req, res) => {
-    db.Section.findAll()
-      .then((sections) => {
+
+    let categories = db.Category.findAll() 
+    let section = db.Section.findAll()
+
+    Promise.all([categories,section])
+
+      .then(([categories,sections]) => {
         return res.render("users/add", {
-          sections,
+          
+          categories,
+          sections
+          
+          
         });
       })
       .catch((error) => console.log(error));
   },
+
 
   //logica para añadir el producto
   store: (req, res) => {
@@ -79,12 +89,13 @@ module.exports = {
 
     if (errors.isEmpty()) {
 
-      const { name, description, price, section, discount } = req.body;
+      const { name, description, price, section, discount,category } = req.body;
       db.Product.create({
         name: name.trim(),
         description: description.trim(),
         price,
         discount,
+        categoryId:category,
         sectionId: section,
       })
         .then(product => {
@@ -127,15 +138,19 @@ module.exports = {
 
   edit: (req, res) => {
 
-    let product = db.Product.findByPk(req.params.id)
+    let product = db.Product.findByPk(req.params.id,{
+      include : [{all:true}]
+    })
+    let categories = db.Category.findAll() 
     let section = db.Section.findAll()
 
-    Promise.all([product, section])
+    Promise.all([product,categories,section])
 
-      .then(([product, section]) => {
+      .then(([product,categories,sections]) => {
         return res.render("users/edit", {
-          section,
-          product
+          categories,
+          product,
+          sections
         })
       })
       .catch(error => console.log(error))
@@ -148,7 +163,7 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      const { name, description, price, discount, section } = req.body;
+      const { name, description, price, discount, section ,category} = req.body;
 
       db.Product.update({
 
@@ -156,6 +171,7 @@ module.exports = {
         description: description.trim(),
         price,
         discount,
+        categoryId : category,
         sectionId: section
       },
         {
@@ -170,16 +186,19 @@ module.exports = {
 
     } else {
       let product = db.Product.findByPk(req.params.id)
-      let section = db.Section.findAll()
+      let sections = db.Section.findAll()
+      let categories = db.Category.findAll()
+      
+      Promise.all([product, sections,categories])
 
-      Promise.all([product, section])
 
-
-        .then(([product, section]) => {
+        .then(([product, sections,categories]) => {
           return res.render('users/edit', {
-            errors: errors.mapped(),
-            section,
-            product
+            categories,
+            sections,
+            product,
+            
+            errors: errors.mapped()
           })
         })
         .catch(error => console.log(error))

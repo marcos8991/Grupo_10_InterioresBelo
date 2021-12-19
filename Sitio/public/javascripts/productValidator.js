@@ -64,6 +64,9 @@ window.addEventListener('load',()=>{
         validation('section','¿Pertenece a una sección?')
     })
 
+
+    
+
     $('discount').addEventListener('blur',function(){
         validation('discount','Selecciona las cuotas')
     })
@@ -74,11 +77,11 @@ window.addEventListener('load',()=>{
         switch (true) {
             case !this.value:
                 validation('image','la imagen es obligatoria')
-                this,this.classList.add('is-invalid')
+                this.classList.add('is-invalid')
                 break;
             case !extImage.test(this.value):
                 $('error-image').innerText="el formato no es compatible"
-                this,this.classList.add('is-invalid')
+                this.classList.add('is-invalid')
                 break;
             default:
                 $('error-image').innerText=null;

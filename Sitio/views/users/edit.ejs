@@ -41,12 +41,24 @@
                             <label for="section" class="form-label">Sección</label>
                             <select id="section" class="form-select" name="section">
                                 <option value="" selected hidden>Elegir sección</option>
-                                <% section.forEach(section => { %>
+                                <% sections.forEach(section => { %>
                                   <option value="<%= section.id %>"><%= section.name%></option>
                                 <% }) %>
                                
                               </select>   
                               <span class="text-danger small" id="error-section"><%= locals.errors && errors.section ? errors.section.msg : null %></span> 
+                          </div>
+
+                          <div class="col-8">
+                            <label for="category" class="form-label">Categoria</label>
+                            <select id="category" class="form-select" name="category">
+                                <option value="" selected hidden>Elegir categoria</option>
+                                <% categories.forEach(category => { %>
+                                  <option value="<%= category.id %>"><%= category.name%></option>
+                                <% }) %>
+                               
+                              </select>   
+                              <span class="text-danger small" id="error-category"><%= locals.errors && errors.category ? errors.category.msg : null %></span> 
                           </div>
 
                         <div class="col-8">

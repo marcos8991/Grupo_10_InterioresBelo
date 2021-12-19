@@ -23,6 +23,8 @@ module.exports = [
     check('discount')
     .notEmpty().withMessage('Indicá las cuotas'),
 
-    check('image')
-    .notEmpty().withMessage('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)')
+    check('category')
+    .notEmpty().withMessage('Selecciona una categoria')
+
+  
 ]
