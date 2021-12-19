@@ -94,17 +94,20 @@ window.addEventListener('load',()=>{
     })
     
     $('form-add-product').addEventListener('submit',function(e){
-        e.preventDefault()
+        e.preventDefault();
+    let error = false;
+    for (let i = 0; i < this.elements.length - 1; i++) {
+        if(this.elements[i].classList.contains('is-invalid') || !this.elements[i].value){
+            error = true
+            this.elements[i].classList.add('is-invalid');
+            $('error-enviar').innerHTML = "Los campos indicados son obligatorios"
+            if(!this.elements[5].value){
+                $('btnImagen').classList.remove('btn-outline-secondary')
 
-        let error = false;
-
-        for (let i = 0; i < this.elements.length -1; i++) {
-            if(this.elements[1].classList.contains('is-invalid')){
-                error = true;
-                $('error-enviar').innerText = "Los campos son obligatorios"
-            }
-            
+                $('btnImagen').classList.add('btn-outline-danger')
+            } 
         }
-        !error && this.submit();
+    }
+    !error && this.submit();
     })
 })

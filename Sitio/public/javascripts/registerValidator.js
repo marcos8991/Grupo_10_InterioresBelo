@@ -33,7 +33,7 @@ inputName.addEventListener('blur', function() {
 inputName.addEventListener('blur', function() {
     switch (true) {
         case !this.value :
-            $('error-name').innerText = "El nombre es requerido y debe tener almenos 2 caracteres";
+            $('error-name').innerText = "El nombre es obligatorio y debe tener almenos 2 caracteres";
             this.classList.add('is-invalid')
             break;
         case !regExLetras.test(this.value) :

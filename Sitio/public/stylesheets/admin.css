@@ -7,7 +7,7 @@
 }
 
 .admin .row .card-body .admin-{
-    display: none;
+    display: table-cell;
 } 
 
 
