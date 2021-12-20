@@ -49,7 +49,7 @@ Nos inspiramos en el diseño del carrousel y productos.
 
 ## Florencia Coquiz, tengo 30 años, me encanta la tecnologia, vivo en San Miguel, realicé un curso de Armado y reparacion de pc ,redes, Operador de pc. Actualmente me estoy capacitando para ser desarrolladora web full strack en Digital House.
 
-## Aylen Belo, tengo 19 años, me gusta la tecnología, los idiomas y la música. Vivo en San Miguel de Tucumán y actualmente me estoy capacitando para ser desarrolladora web full stack en Digital House. 
+## Marcos Urdinola, tengo 20 Años, me gusta mucho la tecnología, soy de Escobar, Buenos Aires. Actualmente me estoy capacitando para ser desarrollador web full stack en Digital House. 
 
 ## Marcos Zarate, tengo 22 años, me gusta el fútbol y me dedico a la música.Actualmente me estoy capacitando para ser desarrollador web full stack en Digital House. 
 
