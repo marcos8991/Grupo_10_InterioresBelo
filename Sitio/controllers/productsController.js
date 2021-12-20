@@ -159,77 +159,74 @@ module.exports = {
 
 
   //logica para actualizar un producto
-  update: (req, res) => {
+  update: async (req, res) => {
     let errors = validationResult(req);
+
 
     if (errors.isEmpty()) {
       const { name, description, price, discount, section ,category} = req.body;
-
-      db.Product.update({
-
-        name: name.trim(),
-        description: description.trim(),
-        price,
-        discount,
-        categoryId : category,
-        sectionId: section
-      },
-        {
-          where: {
-            id: req.params.id
+      try {
+        let userResult = await db.Product.update({
+          name: name.trim(),
+          description: description.trim(),
+          price,
+          discount,
+          categoryId : category,
+          sectionId: section
+        },{
+            where: {
+              id: req.params.id
+            }
           }
-        }
-      )
-        .then(() => {
-          db.Image.destroy({
+        )
+
+          let imagesDeletedResult = await  db.Image.destroy({
             where: {
               productId : req.params.id
             }
-          }).then( () =>{
-            if (req.file) {
-              let image = [req.file].map(image => {
-                let img = {
-                  file: image.filename,
-                  productId: req.params.id
-                }
-                return img
-              })
-              db.Image.bulkCreate(image, { validate: true })
-                .then(() => res.redirect('/products/admin'))
-                .catch(error => console.log(error))
-            } else {
-              db.Image.create({
-                file: 'no-image.png',
+          })
+
+          if (req.file) {
+            let image = [req.file].map(image => {
+              let img = {
+                file: image.filename,
                 productId: req.params.id
-              })
-                .then(() => res.redirect('/products/admin'))
-                .catch(error => console.log(error))
-  
-            }
-            
-          }).catch(error => console.log(error))
-          
-          
-        }).catch(error => console.log(error))
+              }
+              return img
+            })
+            let imagesCrated = await db.Image.bulkCreate(image, { validate: true })
+              
+           return res.redirect('/products/admin')
+          } else {
+            let imageDeafault = await db.Image.create({
+              file: 'no-image.png',
+              productId: req.params.id
+            })
+
+            res.redirect('/products/admin')
+          }
+
+      } catch (error) {
+        console.log(error);
+      }
 
     } else {
-      let product = db.Product.findByPk(req.params.id)
-      let sections = db.Section.findAll()
-      let categories = db.Category.findAll()
-      
-      Promise.all([product, sections,categories])
-
-
-        .then(([product, sections,categories]) => {
-          return res.render('users/edit', {
-            categories,
-            sections,
-            product,
+      try {
+        let product = await db.Product.findByPk(req.params.id)
+        let sections = await db.Section.findAll()
+        let categories = await db.Category.findAll()
+  
+            return res.render('users/edit', {
+              categories,
+              sections,
+              product,
             
-            errors: errors.mapped()
-          })
-        })
-        .catch(error => console.log(error))
+              errors: errors.mapped()
+            })
+      } catch (error) {
+        console.log(error);
+      }
+    
     }
 
   },
