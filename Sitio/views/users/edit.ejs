@@ -7,23 +7,30 @@
      <div class="row mx-auto">
           <div class="col-lg-6 mt-5 mb-5 mx-auto">
             <div class="card shadow mb-2">
-                <div class="card-header">
+                <div class="card-header text-center">
                     <h4>Editar producto</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/products/update/<%= product.id %>?_method=PUT" class="mx-auto" method="POST" enctype="multipart/form-data" id="form-edit-product">
-                        <div class="col-8">
+                    <form action="/products/update/<%= product.id %>?_method=PUT" class="row card" method="POST" enctype="multipart/form-data" id="form-edit-product">
+                        
+                      <!-- NOMBRE -->
+                      
+                      <div class="col-8">
                           <label for="name" class="form-label">Nombre de Producto</label>
                           <input type="text" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" name="name" value="<%= product.name %> "> 
                           <span class="text-danger small" id="error-name"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                         </div>
 
+
+                        <!-- PRECIO -->
                         <div class="col-8">
                             <label for="price" class="form-label">Precio</label>
                             <input type="number" class="form-control  <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" placeholder="$" value="<%= product.price %>">
                             <span class="text-danger small" id="error-price"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                           </div>
 
+
+                        <!-- CUOTAS -->
                           <div class="col-8">
                             <label for="discount" class="form-label">Cuotas</label>
                             <select id="discount" class="form-select" name="discount">
@@ -37,6 +44,7 @@
                           </div>
                           
                           
+                          <!-- SECCION -->
                           <div class="col-8">
                             <label for="section" class="form-label">Sección</label>
                             <select id="section" class="form-select" name="section">
@@ -49,6 +57,7 @@
                               <span class="text-danger small" id="error-section"><%= locals.errors && errors.section ? errors.section.msg : null %></span> 
                           </div>
 
+                          <!-- CATEGORIA -->
                           <div class="col-8">
                             <label for="category" class="form-label">Categoria</label>
                             <select id="category" class="form-select" name="category">
@@ -61,28 +70,33 @@
                               <span class="text-danger small" id="error-category"><%= locals.errors && errors.category ? errors.category.msg : null %></span> 
                           </div>
 
+
+                        <!-- DESCRIPCION -->
                         <div class="col-8">
                           <label for="description" class="form-label">Descripcion</label>
                           <textarea style="resize: none; height: 100px;width: 100%;" type="text" placeholder ="Descripcion" class="form-control<%= locals.errors && errors.description ? 'is-invalid' : null %>" id="description"  name="description"><%= product.description %></textarea>
                           <span class="text-danger small" id="error-description"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                         </div>
 
-                        <div class="col-8">
-                          <div class="btn-Subir">
-                            <input type='file' id="image" name="image"/>
-                            <br/>    
-                            <p id="texto"> </p>
-                            <br/>   	
-                            <img id="img" src="" />
-                          </div>
-                          <span class="text-danger" id="error-image"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
+
+                        <!-- IMAGEN -->
+                        <div class="col-8 align-items-center">
+                          <input type='file' id="image" name="image"/>
+                          <br/>    
+                          <p id="texto"> </p>
+                          <br/>   	
+                          <img id="img" src="" />
+                        
+                        <span class="text-danger small" id="error-image"><%= locals.errors && errors.image ? errors.image.msg : null%></span>
                         </div>
                         
+
+                        <!-- BOTON EDITAR -->
                         <div class="btn-Agregar">
                           <button type="submit" class="btn btn-primary">Editar</button>
-                          
+                          <span class="text-danger" id="error-enviar"></span>
                         </div>
-                        <span class="text-danger" id="error-enviar"></span>
+                        
                         
                       </form>
 
