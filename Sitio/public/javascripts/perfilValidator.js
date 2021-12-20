@@ -76,16 +76,11 @@ inputPassword.addEventListener('blur', function () {
 formularioPerfil.addEventListener('submit', function (e) {
     e.preventDefault();
     let error = false;
-    for (let i = 0; i < this.elements.length - 1; i++) {
+    for (let i = 0; i < this.elements.length - 2; i++) {
         if (this.elements[i].classList.contains('is-invalid') || !this.elements[i].value) {
             error = true
             this.elements[i].classList.add('is-invalid');
             $('error-enviar').innerHTML = "Los campos indicados son obligatorios"
-            if (!this.elements[5].value) {
-                $('btnImagen').classList.remove('btn-outline-secondary')
-
-                $('btnImagen').classList.add('btn-outline-danger')
-            }
         }
     }
     !error && this.submit();

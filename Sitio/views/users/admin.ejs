@@ -70,7 +70,7 @@
                                         <% products.forEach(product => { %>
                                             <tr>
                                                 <th scope="row"><%= product.id %> </th>
-                                                <td class="admin-img"><img width="100" src="/images/products/<%= product.image %>" alt=""></td>
+                                                <td class="admin-img"><img width="100" src="/images/products/<%= product.images[0].file %>" alt=""></td>
                                                 <td  class="admin-name"><%= product.name %> </td>
                                                 <td  class="admin-discount"><%= product.discount  %></td>
                                                 <td class="admin-price"><%= product.price  %></td>
@@ -78,7 +78,7 @@
                                                  <div class="d-flex justify-content-around"> 
                                                     <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
                                                     <div>
-                                                      <form action="/products/destroy/<%= product.id %>?_method=DELETE " method="POST">
+                                                      <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
                                                         <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
                                                       </form>
                                                     </div>

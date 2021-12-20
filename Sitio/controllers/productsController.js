@@ -41,7 +41,7 @@ module.exports = {
   },
 
   admin: (req, res) => {
-    db.Product.findByPk(req.params.id, {
+    let products = db.Product.findAll({
       include: [{ all: true }]
     })
     let section = db.Section.findAll()
@@ -49,7 +49,7 @@ module.exports = {
     Promise.all([products, section])
       .then(([products, section]) => {
 
-        //  return res.send(products)
+         /*  return res.send(products) */
         return res.render('users/admin', {
           products,
           
@@ -181,8 +181,36 @@ module.exports = {
         }
       )
         .then(() => {
-          return res.redirect('/products/admin')
-        })
+          db.Image.destroy({
+            where: {
+              productId : req.params.id
+            }
+          }).then( () =>{
+            if (req.file) {
+              let image = [req.file].map(image => {
+                let img = {
+                  file: image.filename,
+                  productId: req.params.id
+                }
+                return img
+              })
+              db.Image.bulkCreate(image, { validate: true })
+                .then(() => res.redirect('/products/admin'))
+                .catch(error => console.log(error))
+            } else {
+              db.Image.create({
+                file: 'no-image.png',
+                productId: req.params.id
+              })
+                .then(() => res.redirect('/products/admin'))
+                .catch(error => console.log(error))
+  
+            }
+            
+          }).catch(error => console.log(error))
+          
+          
+        }).catch(error => console.log(error))
 
     } else {
       let product = db.Product.findByPk(req.params.id)

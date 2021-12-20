@@ -8,8 +8,6 @@ const {Op} =  require ('sequelize')
 
 module.exports = {
     index : (req,res) => {
-
-       
         return res.render('index',{
             product : products.find(product => product.id === +req.params.id)
         })

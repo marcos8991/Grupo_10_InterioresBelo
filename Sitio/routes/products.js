@@ -24,7 +24,7 @@ router.post('/add',upload.single('image'),productValidator, store)
 
 //editar un producto
 router.get('/edit/:id',adminUserCheck,edit);
-router.put('/update/:id',productValidator,update)
+router.put('/update/:id',upload.single('image'),productValidator,update)
 
 //borrar un producto
 router.delete('/destroy/:id',destroy)
