@@ -1,0 +1,35 @@
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+
+.nosotros .contenedor-nosotros {
+    background-image: url('/images/30906566-inmuebles-imagen-simbólica-aislada-sobre-fondo-blanco-.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.nosotros .contenedor-nosotros .titulo{
+    margin: 50px;
+}
+
+.nosotros .contenedor-nosotros .descripcion{
+    margin: 50px ;
+    
+}
+.nosotros .contenedor-nosotros .descripcion p{
+    padding: 80px;
+    font-size: 25px;
+}
+.nosotros .contenedor-nosotros h1{
+    font-family: 'Sanchez', serif
+}
+.nosotros .contenedor-nosotros .direccion{
+    margin: 50px;
+}

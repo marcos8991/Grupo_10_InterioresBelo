@@ -40,5 +40,8 @@ module.exports = {
         .catch((error) => console.log(error));
 
        
-    }
+    },
+    nosotros : (req,res) => {
+        return res.render('nosotros')
+    },
 }
