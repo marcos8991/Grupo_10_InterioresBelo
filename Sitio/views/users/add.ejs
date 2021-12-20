@@ -7,16 +7,16 @@
      <div class="row mx-auto">
           <div class="col-lg-6 mt-5 mb-5 mx-auto">
             <div class="card shadow mb-2">
-                <div class="card-header">
+                <div class="card-header text-center">
                     <h4>Agregar producto</h4>
                 </div>
                 <div class="card-body">
-                    <form class="mx-auto" method="POST" enctype="multipart/form-data" id="form-add-product">
+                    <form class="row card" method="POST" enctype="multipart/form-data" id="form-add-product">
                         
                       
                       <!-- nombre -->
                       
-                      <div class="col-8">
+                      <div class="col-8 ">
                           <label for="name" class="form-label">Nombre de Producto</label>
 
                           <input type="text" name="name" placeholder = "Nombre del producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" 

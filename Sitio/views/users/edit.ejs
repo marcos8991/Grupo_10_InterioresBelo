@@ -42,7 +42,7 @@
                             <select id="section" class="form-select" name="section">
                                 <option value="" selected hidden>Elegir sección</option>
                                 <% sections.forEach(section => { %>
-                                  <option value="<%= section.id %>"><%= section.name%></option>
+                                  <option value="<%= section.id %>" <%= product.sectionId === section.id ? 'selected' : null %>><%= section.name%></option>
                                 <% }) %>
                                
                               </select>   
@@ -54,7 +54,7 @@
                             <select id="category" class="form-select" name="category">
                                 <option value="" selected hidden>Elegir categoria</option>
                                 <% categories.forEach(category => { %>
-                                  <option value="<%= category.id %>"><%= category.name%></option>
+                                  <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name%></option>
                                 <% }) %>
                                
                               </select>   

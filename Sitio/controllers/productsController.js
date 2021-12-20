@@ -41,11 +41,11 @@ module.exports = {
   },
 
   admin: (req, res) => {
-    let products = db.Product.findAll({
-      include: ['images', 'section']
+    db.Product.findByPk(req.params.id, {
+      include: [{ all: true }]
     })
     let section = db.Section.findAll()
-
+    
     Promise.all([products, section])
       .then(([products, section]) => {
 
@@ -99,8 +99,8 @@ module.exports = {
         sectionId: section,
       })
         .then(product => {
-          if (req.files[0] != undefined) {
-            let image = req.files.map(image => {
+          if (req.file != undefined) {
+            let image = [req.file].map(image => {
               let img = {
                 file: image.filename,
                 productId: product.id

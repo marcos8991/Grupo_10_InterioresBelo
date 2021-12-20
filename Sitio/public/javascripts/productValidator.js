@@ -65,7 +65,22 @@ window.addEventListener('load',()=>{
     })
 
 
-    
+    $('category').addEventListener('blur',function(){
+        switch (true) {
+            case !this.value:
+                validation('category','debes elegir una categoria')
+                this.classList.add('is-invalid')
+                
+                break;
+        
+            default:
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+                $('error-categoria').innerText=null;
+                break;
+        }
+        
+    })
 
     $('discount').addEventListener('blur',function(){
         validation('discount','Selecciona las cuotas')
