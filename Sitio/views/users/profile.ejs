@@ -14,7 +14,7 @@
                     
                     <div class="row mt-5 mb-5 mx-auto">
                         <div class="col-7">
-                            <img class="img-fluid rounded float-end rounded-circle" src="/images/users/<%= user.avatar %>" width="100px" alt="">
+                            <img class="img-fluid rounded float-end rounded-circle" id="image-perfil" src="/images/users/<%= user.avatar %>" width="100px" alt="imagen de perfil">
                         </div>
                         
                         <form action="/users/profile?_method=PUT" class="row g-3 mx-auto" method="POST" id="form-perfil" enctype="multipart/form-data">
@@ -59,13 +59,6 @@
                                </div>
     
     
-                            <!-- <div class="SubirImagen">
-                                <div class="btn-Subir">
-                                    <label for="avatar" class="btn btn-outline-secondary btn-#3b5998 w-100 mt-2">Subir imagen de perfil</label>
-                                    
-                                    <input hidden class="form-control" type="file" id="avatar" name="avatar">
-                                  </div>
-                               </div> -->
     
                             <div class="btn-Agregar">
                               <button type="submit" class="btn-crear">Guardar</button>
