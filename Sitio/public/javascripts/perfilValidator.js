@@ -50,38 +50,24 @@ inputPassword.addEventListener('focus', function () {
     this.classList.remove('is-invalid');
 })
 
-inputPassword.addEventListener('blur', function () {
-    $('info-password').innerText = null;
-})
 
 
-inputPassword.addEventListener('blur', function () {
-    switch (true) {
-        case !this.value:
-            $('error-password').innerText = "La contraseña es requerida";
-            this.classList.add('is-invalid')
-            break;
-        case !regExPassword.test(this.value):
-            $('error-password').innerText = "Debe tener almenos 8 caracteres";
-            this.classList.add('is-invalid');
-            break;
-        default:
-            $('error-password').innerText = null;
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-            break;
-    }
-})
+
+
 
 formularioPerfil.addEventListener('submit', function (e) {
     e.preventDefault();
     let error = false;
-    for (let i = 0; i < this.elements.length - 2; i++) {
+    for (let i = 0; i < this.elements.length - 3; i++) {
         if (this.elements[i].classList.contains('is-invalid') || !this.elements[i].value) {
             error = true
             this.elements[i].classList.add('is-invalid');
             $('error-enviar').innerHTML = "Los campos indicados son obligatorios"
         }
+    }
+    if(inputPassword.classList.contains('is-invalid')){
+        error = true
+        $('error-enviar').innerHTML = "Revisar la contraseña"
     }
     !error && this.submit();
 })

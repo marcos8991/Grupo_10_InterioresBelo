@@ -11,9 +11,12 @@ module.exports = [
             try {
                 let user =await db.User.findByPk(req.session.userLogin.id)
                 console.log(bcryptjs.compareSync(value, user.password));
-                if(bcryptjs.compareSync(value, user.password)){
-                    return Promise.reject('Las contraseñas deben ser diferentes')
+                if(value){
+                    if(bcryptjs.compareSync(value, user.password)){
+                        return Promise.reject('Las contraseñas deben ser diferentes')
+                    }
                 }
+                
             } catch(error) {
                 console.log(error);
             }

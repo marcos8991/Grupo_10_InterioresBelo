@@ -128,10 +128,15 @@ module.exports = {
                         email: req.session.userLogin.email
                     }
                 })
-                let newPassword = bcrypt.hashSync(password, 10)
+                let passwordUser;
+                if(password){
+                    passwordUser = bcrypt.hashSync(password, 10)
+                }else {
+                    passwordUser = user.password
+                }
                 let userResult = await db.User.update({
                     name,
-                    password: newPassword,
+                    password: passwordUser,
                     avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
                 },
                     {
@@ -145,7 +150,6 @@ module.exports = {
                     avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
                     rol: user.rol,
                     email: user.email,
-                    password: newPassword
                 }
                 if (req.file) {
                     if (fs.existsSync(path.join(__dirname, '../public/images/users/' + user.avatar)) && user.avatar != "user-image.jpg") {
