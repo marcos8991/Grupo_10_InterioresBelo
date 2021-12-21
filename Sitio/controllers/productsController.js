@@ -108,16 +108,14 @@ module.exports = {
               return img
             })
             db.Image.bulkCreate(image, { validate: true })
-              .then(() => console.log('Imagen agregada'))
+              .then(() => res.redirect('/products/admin'))
           } else {
             db.Image.create({
               file: 'no-image.png',
               productId: product.id
             })
-              .then(() => console.log('Imagen por defecto agregada'))
-
+            .then(() => res.redirect('/products/admin'))
           }
-          return res.redirect('/products/admin')
         })
         .catch(error => console.log(error))
 
