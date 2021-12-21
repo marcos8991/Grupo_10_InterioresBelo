@@ -68,41 +68,22 @@ main .bloqueDeContenido div a img{
 
 /* Tarjeta de productos */
 
-.home .tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
 
 .home .tarjetas .box{
     width: 100px;
     height: 100px;
-    background: var(--color-celeste);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.090);
-    display: flex;
-    justify-content: center;
-    
     transition: all .4s;
     cursor: pointer;
 }
 
-.home .tarjetas .box .image-product{
-    width: 100px;
-    height: 100px;
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
 
-}
 
-.home .tarjetas .box:nth-child(1),
-.box:nth-child(3){
-    transform: scale(.8);
-}
 
-.home .tarjetas .box:hover{
-    height: 200px;
+
+.home .tarjeta .box:hover{
+    transition: all .1s;
+    zoom: 10;
 }
 
 .home .tarjetas .box .detalle{
@@ -114,7 +95,6 @@ main .bloqueDeContenido div a img{
     font-size: 10px;
     z-index: 1;
     transition: all .0s;
-
 }
 
 .home .tarjetas .box:hover .detalle{
@@ -225,9 +205,7 @@ main .bloqueDeContenido div a img{
         cursor: pointer;
     }
 
-    .home .tarjetas .box:hover{
-        height: 300px;
-    }
+    
 
     .home .tarjetas .box .detalle{
         position: absolute;
@@ -304,7 +282,7 @@ main .bloqueDeContenido div a img{
         cursor: pointer;
     }
 
-    .home .tarjetas .box:hover{
+    .home .tarjetas .box{
         height: 400px;
     }
 

@@ -107,15 +107,15 @@
                     <h3>Novedades</h3>
                   </div>
 
-                  <div class="tarjetas" >
+                  <div class="flex-row d-flex flex-wrap justify-content-around">
                     <% novedades.forEach(product => { %>
                       
-                      <div class="box">
+                      <div class="col-10 col-md-5 col-lg-3 d-flex flex-column">
                         
-                        <a href="/products/productDetail/<%= product.id %> ">
-                          <img src="/images/products/<%= product.images[0].file %>" alt="<% product.name %>">
+                        <a style="flex-grow: 1;" class="w-100 d-flex flex-wrap justify-content-center flex-column" href="/products/productDetail/<%= product.id %> ">
+                          <img class="w-100" src="/images/products/<%= product.images[0].file %>" alt="<% product.name %>">
                         </a>
-                        <div class="detalle">
+                        <div class="detalle" style="margin: 0 auto;">
                           <h1><%= product.name %> </h1>
                         </div>
                       </div>
@@ -143,15 +143,15 @@
                     <h3 style="margin:40px 0;">Renovate</h3>
                   </div>
 
-                  <div class="tarjetas">
+                  <div class="flex-row d-flex flex-wrap justify-content-around">
                     <% products.forEach(product => { %>
                       
-                      <div class="box">
-                        <a href="/products/productDetail/<%= product.id %> ">
-                          <img src="/images/products/<%= product.images[0].file %>" alt="<% product.name %>">
+                      <div class="col-10 col-md-5 col-lg-3 d-flex flex-column">
+                        <a style="flex-grow: 1;" class="w-100 d-flex flex-wrap justify-content-center flex-column" href="/products/productDetail/<%= product.id %> ">
+                          <img class="w-100" src="/images/products/<%= product.images[0].file %>" alt="<% product.name %>">
                         </a>
                         
-                        <div class="detalle">
+                        <div class="detalle" style="margin: 0 auto;">
                           <h1><%= product.name %> </h1>
                         </div>
                       </div>

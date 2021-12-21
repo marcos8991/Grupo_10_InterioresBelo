@@ -9,12 +9,12 @@
 		<div>
 			<div class="resultado">
 				<% if (products.length > 0) { %>
-					<div class="col-12">
+					<div class="col-12" style="margin: 30px 0;">
 					<h2 class="products-title"> Resultado: <%= keywords %> </h2>
 					</div>
 					<% products.forEach(product => { %>
 						<a href="/products/productDetail/<%= product.id %> ">
-						<div class="SillaEsmeralda">
+						<div class="SillaEsmeralda" style="margin: 100px 0;">
 							<div>
 								<img src="/images/products/<%= product.images[0].file %>" alt="<% product.name %> ">
 	

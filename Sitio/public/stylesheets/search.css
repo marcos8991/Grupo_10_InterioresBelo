@@ -7,7 +7,7 @@
 .search .resultado {
   
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   
 }
@@ -22,7 +22,6 @@
   display: flex;
   
   justify-content: center;
-  height: 500px;
   font-size: 30px;
   
 
