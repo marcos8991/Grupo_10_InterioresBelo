@@ -7,10 +7,44 @@ const {Op} =  require ('sequelize')
 
 
 module.exports = {
+
+    
     index : (req,res) => {
-        return res.render('index',{
-            product : products.find(product => product.id === +req.params.id)
+        let products = db.Product.findAll({
+            where : {
+                sectionId : {
+                    [Op.gte] : 2
+                }
+            },
+            limit : 3,
+            include : ['images','section']
         })
+
+        let novedades = db.Product.findAll({
+            where : {
+                sectionId : {
+                    [Op.gte] : 1
+                }
+            },
+            limit : 3,
+            include : [
+                'images',
+                'section'
+            ]
+        })
+        let sections = db.Section.findAll()
+
+        Promise.all([products,sections,novedades])
+        
+        .then(([products,sections,novedades]) => {
+            return res.render('index',{
+                novedades,
+                products,
+                sections
+            })
+        })
+        .catch(error => console.log(error))
+        
     },
     search : (req, res) =>{
         db.Product.findAll({
