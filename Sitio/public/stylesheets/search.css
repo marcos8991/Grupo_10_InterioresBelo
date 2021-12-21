@@ -20,10 +20,12 @@
 
 .search .SillaEsmeralda .nombreSearch h3{
   display: flex;
-  color: blue;
+  
   justify-content: center;
   height: 500px;
   font-size: 30px;
+  
+
 }
 
 .search .resultado .SillaEsmeralda div {

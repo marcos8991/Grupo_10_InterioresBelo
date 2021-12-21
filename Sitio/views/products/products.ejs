@@ -2,14 +2,14 @@
 <html>
 <%- include('../partials/head') %>
 
-    <body class="home">
+    <body class="productsVista">
         <%- include('../partials/header') %>
 
             <main>
 
 
 
-                <div class="subtitulo-destacado" style="margin:30px 0;">
+                <div class="subtitulo-destacado">
                     <h3>PRODUCTOS DESTACADOS</h3>
                 </div>
 
@@ -18,7 +18,7 @@
                         <a href="/products/productDetail/<%= product.id %> ">
                             <div class="box">
                                 <div class="image-product">
-                                    <img src="/images/products/<%= product.images[0].file %> " alt="">
+                                    <img src="/images/products/<%= product.images[0].file %>" alt="">
                                 </div>
                                 <div class="detalle">
                                     <h2><%= product.name %> </h2>
