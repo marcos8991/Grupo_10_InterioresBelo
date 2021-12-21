@@ -76,20 +76,20 @@ main .bloqueDeContenido div a img{
 }
 
 .home .tarjetas .box{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: var(--color-celeste);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.090);
     display: flex;
     justify-content: center;
-    position: relative;
+    
     transition: all .4s;
     cursor: pointer;
 }
 
 .home .tarjetas .box .image-product{
-    width: 225px;
-    height: 225px;
+    width: 100px;
+    height: 100px;
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +98,7 @@ main .bloqueDeContenido div a img{
 
 .home .tarjetas .box:nth-child(1),
 .box:nth-child(3){
-    transform: scale(.9);
+    transform: scale(.8);
 }
 
 .home .tarjetas .box:hover{
@@ -159,8 +159,7 @@ main .bloqueDeContenido div a img{
     
 }
 
-/* 
-PRUEBAS */
+
 
 
 

@@ -6,31 +6,49 @@
 <main>
 	<div class="container mx-auto">
 		
-            <div class="resultado">
-			<% if (products.length > 0) { %>
-				<div class="col-12">
-				<h2 class="products-title"> Resultado: <%= keywords %> </h2>
-			</div>
-				<% products.forEach(product => { %>
-					<a href="/products/productDetail/<%= product.id %> ">
-					<div class="SillaEsmeralda">
-						<div>
-							<img src="/images/products/<%= product.images[0].file %>" alt="<% product.name %> ">
-
-						</div>
-					  <h3><%= product.name %> </h3>
-					</div>
-				  </a> 
-				  <% }) %>
-				
-				  <% } else { %>
+		<div>
+			<div class="resultado">
+				<% if (products.length > 0) { %>
 					<div class="col-12">
-					<h2 class="products-title"> No encontramos resultados de tu busqueda</h2>
-					 </div>
-				<% } %>
-			
+					<h2 class="products-title"> Resultado: <%= keywords %> </h2>
+					</div>
+					<% products.forEach(product => { %>
+						<a href="/products/productDetail/<%= product.id %> ">
+						<div class="SillaEsmeralda">
+							<div>
+								<img src="/images/products/<%= product.images[0].file %>" alt="<% product.name %> ">
+	
+							</div>
+
+							<div class="nombreSearch">
+								<h3><%= product.name %> </h3>
+							</div>
+						  
+						</div>
+						
+					  </a> 
+					  <% }) %>
+					
+					  <% } else { %>
+						<div class="col-12">
+						<h2 class="products-title"> No encontramos resultados de tu busqueda</h2>
+						 </div>
+					<% } %>
+	
+				
+			</div>
 		</div>
+			
+           
 	</div>
+
+	
+				  
+				  
+				  
+				  
+			
+	
 </main>
 <%- include('./partials/footer') %> 
 </body> 
